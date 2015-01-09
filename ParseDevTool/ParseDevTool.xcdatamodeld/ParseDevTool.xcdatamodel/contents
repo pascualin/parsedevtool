@@ -3,6 +3,7 @@
     <entity name="ParseApp" syncable="YES">
         <attribute name="applicationId" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="clientKey" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="tables" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Table" syncable="YES"/>
     </entity>
     <entity name="Table" syncable="YES">
@@ -10,6 +11,6 @@
     </entity>
     <elements>
         <element name="ParseApp" positionX="-63" positionY="-18" width="128" height="88"/>
-        <element name="Table" positionX="-54" positionY="18" width="128" height="60"/>
+        <element name="Table" positionX="81" positionY="135" width="128" height="60"/>
     </elements>
 </model>

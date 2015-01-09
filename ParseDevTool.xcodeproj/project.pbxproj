@@ -42,6 +42,7 @@
 		591E114A1A5F7F2D00044F39 /* ParseDevToolTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ParseDevToolTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		591E114F1A5F7F2D00044F39 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		591E11501A5F7F2D00044F39 /* ParseDevToolTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ParseDevToolTests.m; sourceTree = "<group>"; };
+		591E115A1A5F975900044F39 /* ParseDevTool-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ParseDevTool-Prefix.pch"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +102,7 @@
 			children = (
 				591E11321A5F7F2D00044F39 /* Info.plist */,
 				591E11331A5F7F2D00044F39 /* main.m */,
+				591E115A1A5F975900044F39 /* ParseDevTool-Prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
