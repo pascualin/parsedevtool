@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>B3A8C2F3-A539-4685-9AE9-AAB73D6CD100</string>
+	<key>IDESourceControlProjectName</key>
+	<string>ParseDevTool</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>BEC99772CE60B90EF2A5D2BFF9113A30B42A9D76</key>
+		<string>https://bitbucket.org/niceway/parsedevtool.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>ParseDevTool.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>BEC99772CE60B90EF2A5D2BFF9113A30B42A9D76</key>
+		<string>..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://bitbucket.org/niceway/parsedevtool.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>BEC99772CE60B90EF2A5D2BFF9113A30B42A9D76</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>BEC99772CE60B90EF2A5D2BFF9113A30B42A9D76</string>
+			<key>IDESourceControlWCCName</key>
+			<string>ParseDevTool</string>
+		</dict>
+	</array>
+</dict>
+</plist>
