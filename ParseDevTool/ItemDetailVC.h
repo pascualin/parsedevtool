@@ -11,7 +11,6 @@
 
 @interface ItemDetailVC : UITableViewController <UITableViewDelegate, UITableViewDataSource>
 
-@property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (strong, nonatomic) NSObject* parseApp;
 @property (strong, nonatomic) NSObject* table;
 @property (strong, nonatomic) PFObject* item;
