@@ -170,7 +170,7 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="txtTitle" destination="3xd-I7-caE" id="ZYY-38-zGp"/>
-                                            <segue destination="sz0-uD-acN" kind="push" id="Rkn-NN-wvN"/>
+                                            <segue destination="sz0-uD-acN" kind="push" identifier="toAppDetails" id="Rkn-NN-wvN"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -206,7 +206,7 @@
                         <viewControllerLayoutGuide type="top" id="7au-kC-NEZ"/>
                         <viewControllerLayoutGuide type="bottom" id="aHf-XS-UJs"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="D81-xv-Hfx">
+                    <view key="view" contentMode="scaleToFill" id="D81-xv-Hfx" customClass="UITableView">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>

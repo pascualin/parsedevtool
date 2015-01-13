@@ -11,6 +11,7 @@
 #import "TableCell.h"
 #import "TableDetailsVC.h"
 #import "AddTableVC.h"
+#import <Parse/Parse.h>
 
 @interface AppDetailsVC ()
 
@@ -32,6 +33,12 @@
     [super viewDidLoad];
     
     self.dataSource = [[NSMutableArray alloc] init];
+    
+    NSString* applicationId = [self.parseApp valueForKey:@"applicationId"];
+    NSString* clientKey = [self.parseApp valueForKey:@"clientKey"];
+    
+    [Parse setApplicationId:applicationId
+                  clientKey:clientKey];
     
     [self refresh];                      
 }

@@ -7,6 +7,8 @@
 //
 
 #import "TableDetailsVC.h"
+#import "ItemCell.h"
+#import <Parse/Parse.h>
 
 @interface TableDetailsVC ()
 
@@ -14,24 +16,55 @@
 
 @implementation TableDetailsVC
 
-- (void)viewDidLoad {
+@synthesize table;
+@synthesize parseApp;
+
+-(void)viewDidLoad
+{
+    self.parseClassName = [table valueForKey:@"name"];
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (id)initWithStyle:(UITableViewStyle)style {
+    self = [super initWithStyle:style];
+    if (self) {
+        self.parseClassName = [table valueForKey:@"name"];
+        
+        self.pullToRefreshEnabled = YES;
+        self.paginationEnabled = YES;
+        self.objectsPerPage = 25;
+    }
+    return self;
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+-(void)objectsDidLoad:(NSError *)error
+{
+    [super objectsDidLoad:error];
+    self.title = [NSString stringWithFormat:@"%@ (%lu)", [self.table valueForKey:@"name"], (unsigned long)self.objects.count];
 }
-*/
 
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath object:(NSObject *)object
+{
+    PFObject* item = (PFObject*) object;
+    static NSString *cellIdentifier = @"IntemCell";
+    
+    ItemCell* cell = (ItemCell *)[tableView dequeueReusableCellWithIdentifier:cellIdentifier];
+    if (cell == nil){
+        NSArray *topLevelObjects = [[NSBundle mainBundle] loadNibNamed:@"ItemCell" owner:self options:nil];
+        cell = [topLevelObjects objectAtIndex:0];
+    }
+    
+    cell.item = item;
+    cell.txtObjectId.text = item.objectId;
+    
+    return cell;
+
+}
+
+#pragma mark - UITableViewDelegate
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return 75;
+}
 @end

@@ -7,8 +7,9 @@
 //
 
 #import "PFQueryTableViewController.h"
+#import <ParseUI.h>
 
-@interface TableDetailsVC : UIViewController
+@interface TableDetailsVC : PFQueryTableViewController
 
 @property (strong, nonatomic) NSObject* table;
 @property (strong, nonatomic) NSObject* parseApp;

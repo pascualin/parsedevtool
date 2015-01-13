@@ -20,6 +20,8 @@
 		591E14171A64FEDC0034FCB1 /* ParseAppViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 591E14161A64FEDC0034FCB1 /* ParseAppViewCell.m */; };
 		591E141A1A6510200034FCB1 /* TableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 591E14191A6510200034FCB1 /* TableCell.m */; };
 		591E141D1A6512DD0034FCB1 /* AddTableVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 591E141C1A6512DD0034FCB1 /* AddTableVC.m */; };
+		591E14221A651FA40034FCB1 /* ItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 591E14201A651FA40034FCB1 /* ItemCell.m */; };
+		591E14231A651FA40034FCB1 /* ItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 591E14211A651FA40034FCB1 /* ItemCell.xib */; };
 		592A3FC31A64BB1E0077C0CB /* AddParseAppVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 592A3FC21A64BB1E0077C0CB /* AddParseAppVC.m */; };
 		592A3FCA1A64BCC00077C0CB /* TableDetailsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 592A3FC91A64BCC00077C0CB /* TableDetailsVC.m */; };
 /* End PBXBuildFile section */
@@ -57,6 +59,9 @@
 		591E14191A6510200034FCB1 /* TableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableCell.m; sourceTree = "<group>"; };
 		591E141B1A6512DD0034FCB1 /* AddTableVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddTableVC.h; sourceTree = "<group>"; };
 		591E141C1A6512DD0034FCB1 /* AddTableVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddTableVC.m; sourceTree = "<group>"; };
+		591E141F1A651FA40034FCB1 /* ItemCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ItemCell.h; sourceTree = "<group>"; };
+		591E14201A651FA40034FCB1 /* ItemCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ItemCell.m; sourceTree = "<group>"; };
+		591E14211A651FA40034FCB1 /* ItemCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ItemCell.xib; sourceTree = "<group>"; };
 		592A3FC11A64BB1E0077C0CB /* AddParseAppVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddParseAppVC.h; sourceTree = "<group>"; };
 		592A3FC21A64BB1E0077C0CB /* AddParseAppVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddParseAppVC.m; sourceTree = "<group>"; };
 		592A3FC81A64BCC00077C0CB /* TableDetailsVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableDetailsVC.h; sourceTree = "<group>"; };
@@ -134,6 +139,9 @@
 				591E113B1A5F7F2D00044F39 /* HomeVC.h */,
 				591E113C1A5F7F2D00044F39 /* HomeVC.m */,
 				591E113E1A5F7F2D00044F39 /* Main.storyboard */,
+				591E141F1A651FA40034FCB1 /* ItemCell.h */,
+				591E14201A651FA40034FCB1 /* ItemCell.m */,
+				591E14211A651FA40034FCB1 /* ItemCell.xib */,
 				591E14151A64FEDC0034FCB1 /* ParseAppViewCell.h */,
 				591E14161A64FEDC0034FCB1 /* ParseAppViewCell.m */,
 				591E11411A5F7F2D00044F39 /* Images.xcassets */,
@@ -290,6 +298,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				591E14231A651FA40034FCB1 /* ItemCell.xib in Resources */,
 				591E11401A5F7F2D00044F39 /* Main.storyboard in Resources */,
 				591E11451A5F7F2D00044F39 /* LaunchScreen.xib in Resources */,
 				591E11421A5F7F2D00044F39 /* Images.xcassets in Resources */,
@@ -348,6 +357,7 @@
 				591E113A1A5F7F2D00044F39 /* ParseDevTool.xcdatamodeld in Sources */,
 				592A3FC31A64BB1E0077C0CB /* AddParseAppVC.m in Sources */,
 				591E11371A5F7F2D00044F39 /* AppDelegate.m in Sources */,
+				591E14221A651FA40034FCB1 /* ItemCell.m in Sources */,
 				591E14141A64FAB90034FCB1 /* AppDetailsVC.m in Sources */,
 				591E14171A64FEDC0034FCB1 /* ParseAppViewCell.m in Sources */,
 				591E113D1A5F7F2D00044F39 /* HomeVC.m in Sources */,
