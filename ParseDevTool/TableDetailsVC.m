@@ -7,8 +7,9 @@
 //
 
 #import "TableDetailsVC.h"
-#import "ItemCell.h"
+#import "FinalItemCell.h"
 #import <Parse/Parse.h>
+#import "ItemDetailVC.h"
 
 @interface TableDetailsVC ()
 
@@ -46,9 +47,9 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath object:(NSObject *)object
 {
     PFObject* item = (PFObject*) object;
-    static NSString *cellIdentifier = @"IntemCell";
+    static NSString *cellIdentifier = @"ItemCell";
     
-    ItemCell* cell = (ItemCell *)[tableView dequeueReusableCellWithIdentifier:cellIdentifier];
+    FinalItemCell* cell = (FinalItemCell *)[tableView dequeueReusableCellWithIdentifier:cellIdentifier];
     if (cell == nil){
         NSArray *topLevelObjects = [[NSBundle mainBundle] loadNibNamed:@"ItemCell" owner:self options:nil];
         cell = [topLevelObjects objectAtIndex:0];
@@ -66,5 +67,18 @@
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     return 75;
+}
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([segue.identifier isEqualToString:@"toItemDetails"])
+    {
+        ItemDetailVC *itemDetailsVC = segue.destinationViewController;
+        FinalItemCell* cell = (FinalItemCell*)sender;
+        itemDetailsVC.item = cell.item;
+        itemDetailsVC.parseApp = self.parseApp;
+        itemDetailsVC.table = self.table;
+        itemDetailsVC.title = itemDetailsVC.item.objectId;
+    }
 }
 @end

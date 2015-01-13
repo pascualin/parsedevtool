@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import <Parse/Parse.h>
 
-@interface ItemCell : UITableViewCell
+@interface FinalItemCell : UITableViewCell
 
 @property (weak, nonatomic) IBOutlet UILabel *txtObjectId;
 @property (weak, nonatomic) PFObject* item;

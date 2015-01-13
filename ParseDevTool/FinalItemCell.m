@@ -6,9 +6,9 @@
 //  Copyright (c) 2015 Niceway. All rights reserved.
 //
 
-#import "ItemCell.h"
+#import "FinalItemCell.h"
 
-@implementation ItemCell
+@implementation FinalItemCell
 
 - (void)awakeFromNib {
     // Initialization code
