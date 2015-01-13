@@ -21,6 +21,10 @@
     [super viewDidLoad];
     self.dataSource = [[NSMutableArray alloc] init];
     
+    [self.dataSource addObject:@"objectId"];
+    [self.dataSource addObject:@"createdAt"];
+    [self.dataSource addObject:@"updatedAt"];
+    
     [self.dataSource addObjectsFromArray:[self.item allKeys]];
 }
 
@@ -53,6 +57,13 @@
     else if ([temp isKindOfClass:[NSNumber class]])
     {
         cell.txtValue.text = [(NSNumber*)[self.item valueForKey:propertyKey] stringValue];
+    }
+    else if ([temp isKindOfClass:[NSDate class]])
+    {
+        NSDateFormatter* dateFormatter = [[NSDateFormatter alloc] init];
+
+        dateFormatter.dateFormat = @"yyyy-MM-dd HH:mm:ss";
+        cell.txtValue.text =[dateFormatter stringFromDate:[self.item valueForKey:propertyKey]];
     }
     else if ([temp isKindOfClass:[PFRelation class]])
     {
