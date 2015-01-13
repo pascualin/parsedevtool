@@ -1,16 +1,15 @@
 //
-//  TableDetailsVC.h
+//  TableCell.h
 //  ParseDevTool
 //
 //  Created by Ignacio Martin on 13/1/15.
 //  Copyright (c) 2015 Niceway. All rights reserved.
 //
 
-#import "PFQueryTableViewController.h"
+#import <UIKit/UIKit.h>
 
-@interface TableDetailsVC : UIViewController
-
+@interface TableCell : UITableViewCell
 @property (strong, nonatomic) NSObject* table;
-@property (strong, nonatomic) NSObject* parseApp;
+@property (weak, nonatomic) IBOutlet UILabel *txtTitle;
 
 @end

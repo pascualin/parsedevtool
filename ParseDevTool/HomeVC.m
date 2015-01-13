@@ -8,21 +8,19 @@
 
 #import "HomeVC.h"
 #import "AppDelegate.h"
+#import "ParseAppViewCell.h"
+#import "AppDetailsVC.h"
 
 @interface HomeVC ()
 
-@property (strong, nonatomic) NSMutableArray* name;
+@property (strong, nonatomic) NSMutableArray* dataSource;
 
 @end
 
 @implementation HomeVC
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    
-    
-    self.name = [[NSMutableArray alloc] init];
-    
+- (void)refresh {
+    [self.dataSource removeAllObjects];
     AppDelegate* appDelegate = [[UIApplication sharedApplication] delegate];
     NSManagedObjectContext* context = [appDelegate managedObjectContext];
     NSEntityDescription* entityDesc = [NSEntityDescription entityForName:@"ParseApp" inManagedObjectContext:context];
@@ -42,34 +40,60 @@
         for (int i = 0; i < [objects count]; i++)
         {
             matches = objects[i];
-            [self.name addObject:[matches valueForKey:@"name"]];
+            [self.dataSource addObject:matches];
         }
     }
+}
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    
+    self.dataSource = [[NSMutableArray alloc] init];
+    
+    [self refresh];
+}
+
+-(void) viewWillAppear:(BOOL)animated
+{
+    [self refresh];
+}
+
+#pragma mark - UITableViewDelegate
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    NSManagedObject* parseApp = (NSManagedObject*)[self.dataSource objectAtIndex:indexPath.row];
+    
+    static NSString *cellIdentifier = @"ParseAppCell";
+    
+    ParseAppViewCell* cell = (ParseAppViewCell *)[tableView dequeueReusableCellWithIdentifier:cellIdentifier];
+    if (cell == nil){
+        NSArray *topLevelObjects = [[NSBundle mainBundle] loadNibNamed:@"ParseAppViewCell" owner:self options:nil];
+        cell = [topLevelObjects objectAtIndex:0];
+    }
+    
+    cell.parseApp = parseApp;
+    cell.txtTitle.text = [parseApp valueForKey:@"name"];
+    
+    return cell;
 }
 
 #pragma Table View
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return self.name.count;
-}
-
--(UITableViewCell *) tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    static NSString* cellID = @"parseTableCell";
-    UITableViewCell* cell = [tableView dequeueReusableCellWithIdentifier:cellID];
-    if (cell == nil)
-    {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellID];
-    }
-    
-    cell.textLabel.text = [self.name objectAtIndex:indexPath.row];
-    return cell;
+    return self.dataSource.count;
 }
 
 -(void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    [super prepareForSegue:segue sender:sender];
+    if ([segue.identifier isEqualToString:@"toAppDetails"])
+    {
+        AppDetailsVC *appDetailsVC = segue.destinationViewController;
+        ParseAppViewCell* cell = (ParseAppViewCell*)sender;
+        appDetailsVC.parseApp = cell.parseApp;
+        appDetailsVC.title = [appDetailsVC.parseApp valueForKey:@"name"];
+    }
 }
 
 @end

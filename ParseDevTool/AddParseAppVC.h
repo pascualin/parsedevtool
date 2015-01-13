@@ -8,9 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface AddTableVC : UIViewController
+@interface AddParseAppVC : UIViewController
 
 @property (weak, nonatomic) IBOutlet UITextField *txtName;
-@property (strong, nonatomic) NSObject* parseApp;
-
+@property (weak, nonatomic) IBOutlet UITextField *txtApplicationId;
+@property (weak, nonatomic) IBOutlet UITextField *txtClientKey;
 @end

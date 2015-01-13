@@ -1,5 +1,5 @@
 //
-//  AddTableVC.h
+//  ParseAppViewCell.h
 //  ParseDevTool
 //
 //  Created by Ignacio Martin on 13/1/15.
@@ -8,9 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface AddTableVC : UIViewController
+@interface ParseAppViewCell : UITableViewCell
 
-@property (weak, nonatomic) IBOutlet UITextField *txtName;
 @property (strong, nonatomic) NSObject* parseApp;
-
+@property (weak, nonatomic) IBOutlet UILabel *txtTitle;
 @end

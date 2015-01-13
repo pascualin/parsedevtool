@@ -16,7 +16,11 @@
 		591E11421A5F7F2D00044F39 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 591E11411A5F7F2D00044F39 /* Images.xcassets */; };
 		591E11451A5F7F2D00044F39 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 591E11431A5F7F2D00044F39 /* LaunchScreen.xib */; };
 		591E11511A5F7F2D00044F39 /* ParseDevToolTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 591E11501A5F7F2D00044F39 /* ParseDevToolTests.m */; };
-		592A3FC31A64BB1E0077C0CB /* AddTableVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 592A3FC21A64BB1E0077C0CB /* AddTableVC.m */; };
+		591E14141A64FAB90034FCB1 /* AppDetailsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 591E14131A64FAB90034FCB1 /* AppDetailsVC.m */; };
+		591E14171A64FEDC0034FCB1 /* ParseAppViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 591E14161A64FEDC0034FCB1 /* ParseAppViewCell.m */; };
+		591E141A1A6510200034FCB1 /* TableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 591E14191A6510200034FCB1 /* TableCell.m */; };
+		591E141D1A6512DD0034FCB1 /* AddTableVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 591E141C1A6512DD0034FCB1 /* AddTableVC.m */; };
+		592A3FC31A64BB1E0077C0CB /* AddParseAppVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 592A3FC21A64BB1E0077C0CB /* AddParseAppVC.m */; };
 		592A3FCA1A64BCC00077C0CB /* TableDetailsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 592A3FC91A64BCC00077C0CB /* TableDetailsVC.m */; };
 /* End PBXBuildFile section */
 
@@ -45,8 +49,16 @@
 		591E114A1A5F7F2D00044F39 /* ParseDevToolTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ParseDevToolTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		591E114F1A5F7F2D00044F39 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		591E11501A5F7F2D00044F39 /* ParseDevToolTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ParseDevToolTests.m; sourceTree = "<group>"; };
-		592A3FC11A64BB1E0077C0CB /* AddTableVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddTableVC.h; sourceTree = "<group>"; };
-		592A3FC21A64BB1E0077C0CB /* AddTableVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddTableVC.m; sourceTree = "<group>"; };
+		591E14121A64FAB90034FCB1 /* AppDetailsVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDetailsVC.h; sourceTree = "<group>"; };
+		591E14131A64FAB90034FCB1 /* AppDetailsVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDetailsVC.m; sourceTree = "<group>"; };
+		591E14151A64FEDC0034FCB1 /* ParseAppViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParseAppViewCell.h; sourceTree = "<group>"; };
+		591E14161A64FEDC0034FCB1 /* ParseAppViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ParseAppViewCell.m; sourceTree = "<group>"; };
+		591E14181A6510200034FCB1 /* TableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableCell.h; sourceTree = "<group>"; };
+		591E14191A6510200034FCB1 /* TableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableCell.m; sourceTree = "<group>"; };
+		591E141B1A6512DD0034FCB1 /* AddTableVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddTableVC.h; sourceTree = "<group>"; };
+		591E141C1A6512DD0034FCB1 /* AddTableVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddTableVC.m; sourceTree = "<group>"; };
+		592A3FC11A64BB1E0077C0CB /* AddParseAppVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddParseAppVC.h; sourceTree = "<group>"; };
+		592A3FC21A64BB1E0077C0CB /* AddParseAppVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddParseAppVC.m; sourceTree = "<group>"; };
 		592A3FC81A64BCC00077C0CB /* TableDetailsVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableDetailsVC.h; sourceTree = "<group>"; };
 		592A3FC91A64BCC00077C0CB /* TableDetailsVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableDetailsVC.m; sourceTree = "<group>"; };
 		5DFF007E25191009BC811568 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -113,13 +125,17 @@
 		591E11301A5F7F2D00044F39 /* ParseDevTool */ = {
 			isa = PBXGroup;
 			children = (
+				591E14111A64FA970034FCB1 /* App Details */,
 				592A3FC71A64BCAD0077C0CB /* Table Details */,
-				592A3FC01A64BAED0077C0CB /* Add Table */,
+				592A3FC01A64BAED0077C0CB /* Add Parse App */,
+				591E141E1A6512E20034FCB1 /* Add Table */,
 				591E11351A5F7F2D00044F39 /* AppDelegate.h */,
 				591E11361A5F7F2D00044F39 /* AppDelegate.m */,
 				591E113B1A5F7F2D00044F39 /* HomeVC.h */,
 				591E113C1A5F7F2D00044F39 /* HomeVC.m */,
 				591E113E1A5F7F2D00044F39 /* Main.storyboard */,
+				591E14151A64FEDC0034FCB1 /* ParseAppViewCell.h */,
+				591E14161A64FEDC0034FCB1 /* ParseAppViewCell.m */,
 				591E11411A5F7F2D00044F39 /* Images.xcassets */,
 				591E11431A5F7F2D00044F39 /* LaunchScreen.xib */,
 				591E11381A5F7F2D00044F39 /* ParseDevTool.xcdatamodeld */,
@@ -154,13 +170,33 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		592A3FC01A64BAED0077C0CB /* Add Table */ = {
+		591E14111A64FA970034FCB1 /* App Details */ = {
 			isa = PBXGroup;
 			children = (
-				592A3FC11A64BB1E0077C0CB /* AddTableVC.h */,
-				592A3FC21A64BB1E0077C0CB /* AddTableVC.m */,
+				591E14121A64FAB90034FCB1 /* AppDetailsVC.h */,
+				591E14131A64FAB90034FCB1 /* AppDetailsVC.m */,
+				591E14181A6510200034FCB1 /* TableCell.h */,
+				591E14191A6510200034FCB1 /* TableCell.m */,
+			);
+			name = "App Details";
+			sourceTree = "<group>";
+		};
+		591E141E1A6512E20034FCB1 /* Add Table */ = {
+			isa = PBXGroup;
+			children = (
+				591E141B1A6512DD0034FCB1 /* AddTableVC.h */,
+				591E141C1A6512DD0034FCB1 /* AddTableVC.m */,
 			);
 			name = "Add Table";
+			sourceTree = "<group>";
+		};
+		592A3FC01A64BAED0077C0CB /* Add Parse App */ = {
+			isa = PBXGroup;
+			children = (
+				592A3FC11A64BB1E0077C0CB /* AddParseAppVC.h */,
+				592A3FC21A64BB1E0077C0CB /* AddParseAppVC.m */,
+			);
+			name = "Add Parse App";
 			sourceTree = "<group>";
 		};
 		592A3FC71A64BCAD0077C0CB /* Table Details */ = {
@@ -307,9 +343,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				591E141A1A6510200034FCB1 /* TableCell.m in Sources */,
+				591E141D1A6512DD0034FCB1 /* AddTableVC.m in Sources */,
 				591E113A1A5F7F2D00044F39 /* ParseDevTool.xcdatamodeld in Sources */,
-				592A3FC31A64BB1E0077C0CB /* AddTableVC.m in Sources */,
+				592A3FC31A64BB1E0077C0CB /* AddParseAppVC.m in Sources */,
 				591E11371A5F7F2D00044F39 /* AppDelegate.m in Sources */,
+				591E14141A64FAB90034FCB1 /* AppDetailsVC.m in Sources */,
+				591E14171A64FEDC0034FCB1 /* ParseAppViewCell.m in Sources */,
 				591E113D1A5F7F2D00044F39 /* HomeVC.m in Sources */,
 				592A3FCA1A64BCC00077C0CB /* TableDetailsVC.m in Sources */,
 				591E11341A5F7F2D00044F39 /* main.m in Sources */,

@@ -15,30 +15,23 @@
 
 @implementation AddTableVC
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    // Do any additional setup after loading the view.
-}
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
 - (IBAction)saveNewTable:(id)sender
 {
-    if ((self.txtApplicationId.text.length > 0) && (self.txtClientKey.text.length > 0) && (self.txtName.text.length > 0))
+    if ((self.txtName.text.length > 0))
     {
         AppDelegate* appDelegate = [[UIApplication sharedApplication] delegate];
         NSManagedObjectContext* context = [appDelegate managedObjectContext];
-        NSManagedObject* newParseApp;
-        newParseApp = [NSEntityDescription insertNewObjectForEntityForName:@"ParseApp" inManagedObjectContext:context];
-        [newParseApp setValue:self.txtName.text forKey:@"name"];
-        [newParseApp setValue:self.txtApplicationId.text forKey:@"applicationId"];
-        [newParseApp setValue:self.txtClientKey.text forKey:@"clientKey"];
+        NSEntityDescription *tableDescription = [NSEntityDescription entityForName:@"Table" inManagedObjectContext:context];
+        NSManagedObject* newTable;
+        newTable = [[NSManagedObject alloc] initWithEntity:tableDescription insertIntoManagedObjectContext:context];
+        [newTable setValue:self.txtName.text forKey:@"name"];
+        
+        NSMutableSet *tables = [(NSManagedObject*)self.parseApp mutableSetValueForKey:@"tables"];
+        [tables addObject:newTable];
         
         NSError* error;
         [context save:&error];
+        
         [self.presentingViewController dismissViewControllerAnimated:YES completion:nil];
     }
     else

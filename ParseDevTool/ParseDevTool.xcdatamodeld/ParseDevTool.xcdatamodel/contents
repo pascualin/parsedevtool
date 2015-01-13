@@ -4,13 +4,14 @@
         <attribute name="applicationId" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="clientKey" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="tables" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Table" syncable="YES"/>
+        <relationship name="tables" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Table" inverseName="pasreApp" inverseEntity="Table" syncable="YES"/>
     </entity>
     <entity name="Table" syncable="YES">
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="pasreApp" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ParseApp" inverseName="tables" inverseEntity="ParseApp" syncable="YES"/>
     </entity>
     <elements>
-        <element name="ParseApp" positionX="-63" positionY="-18" width="128" height="88"/>
-        <element name="Table" positionX="81" positionY="135" width="128" height="60"/>
+        <element name="ParseApp" positionX="-63" positionY="-18" width="128" height="103"/>
+        <element name="Table" positionX="178" positionY="9" width="128" height="73"/>
     </elements>
 </model>
