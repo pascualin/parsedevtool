@@ -6,16 +6,16 @@
 //  Copyright (c) 2015 Niceway. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "HomeVC.h"
 #import "AppDelegate.h"
 
-@interface ViewController ()
-@property (weak, nonatomic) IBOutlet UITableView *tableView;
+@interface HomeVC ()
+
 @property (strong, nonatomic) NSMutableArray* name;
 
 @end
 
-@implementation ViewController
+@implementation HomeVC
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -28,8 +28,6 @@
     NSEntityDescription* entityDesc = [NSEntityDescription entityForName:@"ParseApp" inManagedObjectContext:context];
     NSFetchRequest* request = [[NSFetchRequest alloc] init];
     [request setEntity:entityDesc];
-    NSPredicate* pred = [NSPredicate predicateWithFormat:@"(name = %@)", @"SwopDev"];
-    [request setPredicate:pred];
     NSManagedObject* matches = nil;
     
     NSError* error;
@@ -49,24 +47,6 @@
     }
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
-- (IBAction)add:(id)sender
-{
-    AppDelegate* appDelegate = [[UIApplication sharedApplication] delegate];
-    NSManagedObjectContext* context = [appDelegate managedObjectContext];
-    NSManagedObject* newParseApp;
-    newParseApp = [NSEntityDescription insertNewObjectForEntityForName:@"ParseApp" inManagedObjectContext:context];
-    [newParseApp setValue:@"SwopDev" forKey:@"name"];
-    [self.name addObject:@"SwopDev"];
-    NSError* error;
-    [context save:&error];
-    [self.tableView reloadData];
-}
-
 #pragma Table View
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
@@ -76,7 +56,7 @@
 
 -(UITableViewCell *) tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString* cellID = @"cellID";
+    static NSString* cellID = @"parseTableCell";
     UITableViewCell* cell = [tableView dequeueReusableCellWithIdentifier:cellID];
     if (cell == nil)
     {
@@ -85,6 +65,11 @@
     
     cell.textLabel.text = [self.name objectAtIndex:indexPath.row];
     return cell;
+}
+
+-(void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    [super prepareForSegue:segue sender:sender];
 }
 
 @end
