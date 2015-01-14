@@ -9,6 +9,7 @@
 #import "AppDetailsVC.h"
 #import "AppDelegate.h"
 #import "TableCell.h"
+#import "TableChartDetailVC.h"
 #import "TableDetailsVC.h"
 #import "AddTableVC.h"
 #import <Parse/Parse.h>
@@ -79,11 +80,12 @@
 {
     if ([segue.identifier isEqualToString:@"toAppDetails"])
     {
-        TableDetailsVC *tableDetailsVC = segue.destinationViewController;
+        TableChartDetailVC *tableChartDetailVC = segue.destinationViewController;
         TableCell* cell = (TableCell*)sender;
-        tableDetailsVC.table = cell.table;
-        tableDetailsVC.parseApp = self.parseApp;
-        tableDetailsVC.title = [tableDetailsVC.table valueForKey:@"name"];
+        
+        tableChartDetailVC.table = cell.table;
+        tableChartDetailVC.parseApp = self.parseApp;
+        tableChartDetailVC.title = [tableChartDetailVC.table valueForKey:@"name"];
     }
     else if ([segue.identifier isEqualToString:@"toAddTable"])
     {

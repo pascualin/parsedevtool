@@ -24,6 +24,7 @@
 {
     self.parseClassName = [table valueForKey:@"name"];
     [super viewDidLoad];
+
 }
 
 - (id)initWithStyle:(UITableViewStyle)style {
@@ -47,11 +48,11 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath object:(NSObject *)object
 {
     PFObject* item = (PFObject*) object;
-    static NSString *cellIdentifier = @"ItemCell";
+    static NSString *cellIdentifier = @"FinalItemCell";
     
     FinalItemCell* cell = (FinalItemCell *)[tableView dequeueReusableCellWithIdentifier:cellIdentifier];
     if (cell == nil){
-        NSArray *topLevelObjects = [[NSBundle mainBundle] loadNibNamed:@"ItemCell" owner:self options:nil];
+        NSArray *topLevelObjects = [[NSBundle mainBundle] loadNibNamed:@"FinalItemCell" owner:self options:nil];
         cell = [topLevelObjects objectAtIndex:0];
     }
     

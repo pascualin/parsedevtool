@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0D4397EAD74968096EE47032 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DFF007E25191009BC811568 /* libPods.a */; };
+		143B44AF1A66458D007175C4 /* TableChartDetailVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 143B44AE1A66458D007175C4 /* TableChartDetailVC.m */; };
 		591E11341A5F7F2D00044F39 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 591E11331A5F7F2D00044F39 /* main.m */; };
 		591E11371A5F7F2D00044F39 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 591E11361A5F7F2D00044F39 /* AppDelegate.m */; };
 		591E113A1A5F7F2D00044F39 /* ParseDevTool.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 591E11381A5F7F2D00044F39 /* ParseDevTool.xcdatamodeld */; };
@@ -38,6 +39,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		143B44AD1A66458D007175C4 /* TableChartDetailVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableChartDetailVC.h; sourceTree = "<group>"; };
+		143B44AE1A66458D007175C4 /* TableChartDetailVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableChartDetailVC.m; sourceTree = "<group>"; };
 		591E112E1A5F7F2D00044F39 /* ParseDevTool.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ParseDevTool.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		591E11321A5F7F2D00044F39 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		591E11331A5F7F2D00044F39 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -214,6 +217,8 @@
 		592A3FC71A64BCAD0077C0CB /* Table Details */ = {
 			isa = PBXGroup;
 			children = (
+				143B44AD1A66458D007175C4 /* TableChartDetailVC.h */,
+				143B44AE1A66458D007175C4 /* TableChartDetailVC.m */,
 				592A3FC81A64BCC00077C0CB /* TableDetailsVC.h */,
 				592A3FC91A64BCC00077C0CB /* TableDetailsVC.m */,
 			);
@@ -374,6 +379,7 @@
 				592A3FC31A64BB1E0077C0CB /* AddParseAppVC.m in Sources */,
 				591E11371A5F7F2D00044F39 /* AppDelegate.m in Sources */,
 				591E14221A651FA40034FCB1 /* FinalItemCell.m in Sources */,
+				143B44AF1A66458D007175C4 /* TableChartDetailVC.m in Sources */,
 				591E14141A64FAB90034FCB1 /* AppDetailsVC.m in Sources */,
 				591E14171A64FEDC0034FCB1 /* ParseAppViewCell.m in Sources */,
 				59D1F8971A65698500F36839 /* ItemDetailVC.m in Sources */,
