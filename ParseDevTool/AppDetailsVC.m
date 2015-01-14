@@ -25,8 +25,25 @@
 
 - (void)refresh {
     [self.dataSource removeAllObjects];
-
+    
+    // We need to retrieve the data for the app again
+    AppDelegate* appDelegate = [[UIApplication sharedApplication] delegate];
+    NSManagedObjectContext* context = [appDelegate managedObjectContext];
+//    NSEntityDescription* entityDesc = [NSEntityDescription entityForName:@"ParseApp" inManagedObjectContext:context];
+//    NSFetchRequest* request = [[NSFetchRequest alloc] init];
+//    [request setEntity:entityDesc];
+//    NSPredicate* pred = [NSPredicate predicateWithFormat:@"(SELF = %@)", self.parseApp];
+//    NSManagedObject* matches = nil;
+//    
+//    NSError* error;
+//    NSArray* objects = [context executeFetchRequest:request error:&error];
+    
+    self.parseApp = [context objectWithID:[(NSManagedObject*)self.parseApp objectID]];
+    
+    // and we read the relation with tables
     [self.dataSource addObjectsFromArray:[[parseApp valueForKey:@"tables"] allObjects]];
+    
+    [self.tableView reloadData];
 }
 
 - (void)viewDidLoad {
@@ -73,6 +90,30 @@
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     return self.dataSource.count;
+}
+
+-(BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return YES;
+}
+
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (editingStyle == UITableViewCellEditingStyleDelete) {
+        
+        AppDelegate* appDelegate = [[UIApplication sharedApplication] delegate];
+        NSManagedObjectContext* context = [appDelegate managedObjectContext];
+        
+        NSManagedObject* table = (NSManagedObject*)[self.dataSource objectAtIndex:indexPath.row];
+        
+        [context deleteObject:table];
+        
+        NSError* error;
+        if (![context save:&error]) {
+            NSLog(@"Couldn't save: %@", error);
+        }
+        
+        [self refresh];
+    }
 }
 
 -(void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender

@@ -19,7 +19,8 @@
 
 @implementation HomeVC
 
-- (void)refresh {
+- (void)refresh
+{
     [self.dataSource removeAllObjects];
     AppDelegate* appDelegate = [[UIApplication sharedApplication] delegate];
     NSManagedObjectContext* context = [appDelegate managedObjectContext];
@@ -43,6 +44,7 @@
             [self.dataSource addObject:matches];
         }
     }
+    [self.tableView reloadData];
 }
 
 - (void)viewDidLoad {
@@ -83,6 +85,30 @@
 {
     return self.dataSource.count;
 }
+
+-(BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return YES;
+}
+
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (editingStyle == UITableViewCellEditingStyleDelete) {
+        
+        AppDelegate* appDelegate = [[UIApplication sharedApplication] delegate];
+        NSManagedObjectContext* context = [appDelegate managedObjectContext];
+        
+        NSManagedObject* parseApp = (NSManagedObject*)[self.dataSource objectAtIndex:indexPath.row];
+        
+        [context deleteObject:parseApp];
+        
+        NSError* error;
+        [context save:&error];
+        
+        [self refresh];
+    }
+}
+
+#pragma Navigation
 
 -(void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
