@@ -9,7 +9,6 @@
 #import "AppDetailsVC.h"
 #import "AppDelegate.h"
 #import "TableCell.h"
-#import "TableChartDetailVC.h"
 #import "TableDetailsVC.h"
 #import "AddTableVC.h"
 #import <Parse/Parse.h>
@@ -80,7 +79,7 @@
         cell = [topLevelObjects objectAtIndex:0];
     }
     
-    cell.table = table;
+    cell.parseTable = table;
     cell.txtTitle.text = [table valueForKey:@"name"];
     
     return cell;
@@ -121,12 +120,13 @@
 {
     if ([segue.identifier isEqualToString:@"toAppDetails"])
     {
-        TableChartDetailVC *tableChartDetailVC = segue.destinationViewController;
+        TableDetailsVC *tableDetailVC = segue.destinationViewController;
         TableCell* cell = (TableCell*)sender;
         
-        tableChartDetailVC.table = cell.table;
-        tableChartDetailVC.parseApp = self.parseApp;
-        tableChartDetailVC.title = [tableChartDetailVC.table valueForKey:@"name"];
+        tableDetailVC.parseTable = cell.parseTable;
+        tableDetailVC.parseApp = self.parseApp;
+        
+        tableDetailVC.title = [tableDetailVC.parseTable valueForKey:@"name"];
     }
     else if ([segue.identifier isEqualToString:@"toAddTable"])
     {

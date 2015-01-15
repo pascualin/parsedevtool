@@ -8,7 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		0D4397EAD74968096EE47032 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DFF007E25191009BC811568 /* libPods.a */; };
-		143B44AF1A66458D007175C4 /* TableChartDetailVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 143B44AE1A66458D007175C4 /* TableChartDetailVC.m */; };
+		14F12AAC1A677D6600F3A424 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14F12AAB1A677D6600F3A424 /* CoreGraphics.framework */; };
+		14F12AAE1A677D6D00F3A424 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14F12AAD1A677D6D00F3A424 /* UIKit.framework */; };
+		14F12AB01A677D7800F3A424 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14F12AAF1A677D7800F3A424 /* QuartzCore.framework */; };
+		14F12AB21A677D8500F3A424 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14F12AB11A677D8500F3A424 /* Foundation.framework */; };
 		591E11341A5F7F2D00044F39 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 591E11331A5F7F2D00044F39 /* main.m */; };
 		591E11371A5F7F2D00044F39 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 591E11361A5F7F2D00044F39 /* AppDelegate.m */; };
 		591E113A1A5F7F2D00044F39 /* ParseDevTool.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 591E11381A5F7F2D00044F39 /* ParseDevTool.xcdatamodeld */; };
@@ -39,8 +42,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		143B44AD1A66458D007175C4 /* TableChartDetailVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableChartDetailVC.h; sourceTree = "<group>"; };
-		143B44AE1A66458D007175C4 /* TableChartDetailVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableChartDetailVC.m; sourceTree = "<group>"; };
+		14F12AAB1A677D6600F3A424 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		14F12AAD1A677D6D00F3A424 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		14F12AAF1A677D7800F3A424 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		14F12AB11A677D8500F3A424 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		591E112E1A5F7F2D00044F39 /* ParseDevTool.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ParseDevTool.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		591E11321A5F7F2D00044F39 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		591E11331A5F7F2D00044F39 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -83,6 +88,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				14F12AB21A677D8500F3A424 /* Foundation.framework in Frameworks */,
+				14F12AB01A677D7800F3A424 /* QuartzCore.framework in Frameworks */,
+				14F12AAE1A677D6D00F3A424 /* UIKit.framework in Frameworks */,
+				14F12AAC1A677D6600F3A424 /* CoreGraphics.framework in Frameworks */,
 				0D4397EAD74968096EE47032 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -109,6 +118,10 @@
 		4E17E85EB9135942743089FB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				14F12AB11A677D8500F3A424 /* Foundation.framework */,
+				14F12AAF1A677D7800F3A424 /* QuartzCore.framework */,
+				14F12AAD1A677D6D00F3A424 /* UIKit.framework */,
+				14F12AAB1A677D6600F3A424 /* CoreGraphics.framework */,
 				5DFF007E25191009BC811568 /* libPods.a */,
 			);
 			name = Frameworks;
@@ -146,11 +159,9 @@
 				591E11361A5F7F2D00044F39 /* AppDelegate.m */,
 				591E113B1A5F7F2D00044F39 /* HomeVC.h */,
 				591E113C1A5F7F2D00044F39 /* HomeVC.m */,
-				591E113E1A5F7F2D00044F39 /* Main.storyboard */,
-				591E141F1A651FA40034FCB1 /* FinalItemCell.h */,
-				591E14201A651FA40034FCB1 /* FinalItemCell.m */,
 				591E14151A64FEDC0034FCB1 /* ParseAppViewCell.h */,
 				591E14161A64FEDC0034FCB1 /* ParseAppViewCell.m */,
+				591E113E1A5F7F2D00044F39 /* Main.storyboard */,
 				591E11411A5F7F2D00044F39 /* Images.xcassets */,
 				591E11431A5F7F2D00044F39 /* LaunchScreen.xib */,
 				591E11381A5F7F2D00044F39 /* ParseDevTool.xcdatamodeld */,
@@ -217,10 +228,10 @@
 		592A3FC71A64BCAD0077C0CB /* Table Details */ = {
 			isa = PBXGroup;
 			children = (
-				143B44AD1A66458D007175C4 /* TableChartDetailVC.h */,
-				143B44AE1A66458D007175C4 /* TableChartDetailVC.m */,
 				592A3FC81A64BCC00077C0CB /* TableDetailsVC.h */,
 				592A3FC91A64BCC00077C0CB /* TableDetailsVC.m */,
+				591E141F1A651FA40034FCB1 /* FinalItemCell.h */,
+				591E14201A651FA40034FCB1 /* FinalItemCell.m */,
 			);
 			name = "Table Details";
 			sourceTree = "<group>";
@@ -379,7 +390,6 @@
 				592A3FC31A64BB1E0077C0CB /* AddParseAppVC.m in Sources */,
 				591E11371A5F7F2D00044F39 /* AppDelegate.m in Sources */,
 				591E14221A651FA40034FCB1 /* FinalItemCell.m in Sources */,
-				143B44AF1A66458D007175C4 /* TableChartDetailVC.m in Sources */,
 				591E14141A64FAB90034FCB1 /* AppDetailsVC.m in Sources */,
 				591E14171A64FEDC0034FCB1 /* ParseAppViewCell.m in Sources */,
 				59D1F8971A65698500F36839 /* ItemDetailVC.m in Sources */,

@@ -8,10 +8,14 @@
 
 #import "PFQueryTableViewController.h"
 #import <ParseUI.h>
+#import "PNChart.h"
+#import "PNChartLabel.h"
 
 @interface TableDetailsVC : PFQueryTableViewController
 
-@property (strong, nonatomic) NSObject* table;
+@property (strong, nonatomic) NSObject* parseTable;
 @property (strong, nonatomic) NSObject* parseApp;
+
+@property (strong, nonatomic) IBOutlet PNBarChart *barChart;
 
 @end

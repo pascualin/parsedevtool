@@ -7,6 +7,6 @@ pod 'ParseUI'
 
 # Components
 pod 'MBProgressHUD'
-pod 'PNChart', '~> 0.5'
+pod 'PNChart'
 
 link_with "ParseDevTool"

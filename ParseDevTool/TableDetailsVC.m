@@ -17,32 +17,31 @@
 
 @implementation TableDetailsVC
 
-@synthesize table;
-@synthesize parseApp;
-
 -(void)viewDidLoad
 {
-    self.parseClassName = [table valueForKey:@"name"];
+    self.parseClassName = [self.parseTable valueForKey:@"name"];
     [super viewDidLoad];
+    
+    self.barChart = [[PNBarChart alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 200.0)];
+    [self.barChart setXLabels:@[@"SEP 1",@"SEP 2",@"SEP 3",@"SEP 4",@"SEP 5"]];
+    
+    self.barChart.yLabelFormatter = ^(CGFloat yValue){
+        CGFloat yValueParsed = yValue;
+        NSString * labelText = [NSString stringWithFormat:@"%1.f",yValueParsed];
+        return labelText;
+    };
 
-}
-
-- (id)initWithStyle:(UITableViewStyle)style {
-    self = [super initWithStyle:style];
-    if (self) {
-        self.parseClassName = [table valueForKey:@"name"];
-        
-        self.pullToRefreshEnabled = YES;
-        self.paginationEnabled = YES;
-        self.objectsPerPage = 25;
-    }
-    return self;
+    [self.barChart setYValues:@[@1, @5, @1, @20, @1]];
+    [self.barChart strokeChart];
+    
+    
+    [self.view addSubview:self.barChart];
 }
 
 -(void)objectsDidLoad:(NSError *)error
 {
     [super objectsDidLoad:error];
-    self.title = [NSString stringWithFormat:@"%@ (%lu)", [self.table valueForKey:@"name"], (unsigned long)self.objects.count];
+    self.title = [NSString stringWithFormat:@"%@ (%lu)", [self.parseTable valueForKey:@"name"], (unsigned long)self.objects.count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath object:(NSObject *)object
@@ -60,7 +59,6 @@
     cell.txtObjectId.text = item.objectId;
     
     return cell;
-
 }
 
 #pragma mark - UITableViewDelegate
@@ -78,7 +76,7 @@
         FinalItemCell* cell = (FinalItemCell*)sender;
         itemDetailsVC.item = cell.item;
         itemDetailsVC.parseApp = self.parseApp;
-        itemDetailsVC.table = self.table;
+        itemDetailsVC.parseTable = self.parseTable;
         itemDetailsVC.title = itemDetailsVC.item.objectId;
     }
 }

@@ -12,7 +12,7 @@
 @interface ItemDetailVC : UITableViewController <UITableViewDelegate, UITableViewDataSource>
 
 @property (strong, nonatomic) NSObject* parseApp;
-@property (strong, nonatomic) NSObject* table;
+@property (strong, nonatomic) NSObject* parseTable;
 @property (strong, nonatomic) PFObject* item;
 
 @end

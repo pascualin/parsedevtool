@@ -19,7 +19,7 @@ DEPENDENCIES:
   - MBProgressHUD
   - Parse
   - ParseUI
-  - PNChart (~> 0.5)
+  - PNChart
 
 SPEC CHECKSUMS:
   Bolts: 3db0a875235e0c9042b013af13af0f00f79b102c
