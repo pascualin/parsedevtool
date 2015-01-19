@@ -18,4 +18,7 @@
 
 @property (strong, nonatomic) IBOutlet PNBarChart *barChart;
 
+@property NSArray *reversedDate;
+@property (strong, nonatomic) PFObject* item;
+
 @end

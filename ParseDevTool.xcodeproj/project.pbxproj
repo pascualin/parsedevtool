@@ -8,10 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		0D4397EAD74968096EE47032 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DFF007E25191009BC811568 /* libPods.a */; };
-		14F12AAC1A677D6600F3A424 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14F12AAB1A677D6600F3A424 /* CoreGraphics.framework */; };
-		14F12AAE1A677D6D00F3A424 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14F12AAD1A677D6D00F3A424 /* UIKit.framework */; };
-		14F12AB01A677D7800F3A424 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14F12AAF1A677D7800F3A424 /* QuartzCore.framework */; };
-		14F12AB21A677D8500F3A424 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14F12AB11A677D8500F3A424 /* Foundation.framework */; };
 		591E11341A5F7F2D00044F39 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 591E11331A5F7F2D00044F39 /* main.m */; };
 		591E11371A5F7F2D00044F39 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 591E11361A5F7F2D00044F39 /* AppDelegate.m */; };
 		591E113A1A5F7F2D00044F39 /* ParseDevTool.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 591E11381A5F7F2D00044F39 /* ParseDevTool.xcdatamodeld */; };
@@ -88,10 +84,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				14F12AB21A677D8500F3A424 /* Foundation.framework in Frameworks */,
-				14F12AB01A677D7800F3A424 /* QuartzCore.framework in Frameworks */,
-				14F12AAE1A677D6D00F3A424 /* UIKit.framework in Frameworks */,
-				14F12AAC1A677D6600F3A424 /* CoreGraphics.framework in Frameworks */,
 				0D4397EAD74968096EE47032 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -152,9 +144,9 @@
 			children = (
 				591E14111A64FA970034FCB1 /* App Details */,
 				592A3FC71A64BCAD0077C0CB /* Table Details */,
+				59D1F8941A65696500F36839 /* Item Details */,
 				592A3FC01A64BAED0077C0CB /* Add Parse App */,
 				591E141E1A6512E20034FCB1 /* Add Table */,
-				59D1F8941A65696500F36839 /* Item Details */,
 				591E11351A5F7F2D00044F39 /* AppDelegate.h */,
 				591E11361A5F7F2D00044F39 /* AppDelegate.m */,
 				591E113B1A5F7F2D00044F39 /* HomeVC.h */,
