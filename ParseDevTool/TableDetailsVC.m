@@ -96,14 +96,12 @@
     self.title = [NSString stringWithFormat:@"%@ (%lu)", [self.parseTable valueForKey:@"name"], (unsigned long)self.objects.count];
 }
 
-//-(PFQuery *)queryForTable
-//{
-//    PFQuery* query = [PFQuery queryWithClassName:self.parseClassName];
-//    query.limit = 1000;
-//    return query;
-//}
-
 #pragma mark - UITableViewDelegate
+
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView
+{
+    self.barChart.frame = CGRectMake(0, self.tableView.contentOffset.y + self.navigationController.navigationBar.frame.size.height + 20, self.barChart.frame.size.width, self.barChart.frame.size.height);
+}
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
