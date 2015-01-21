@@ -29,14 +29,6 @@
     // We need to retrieve the data for the app again
     AppDelegate* appDelegate = [[UIApplication sharedApplication] delegate];
     NSManagedObjectContext* context = [appDelegate managedObjectContext];
-//    NSEntityDescription* entityDesc = [NSEntityDescription entityForName:@"ParseApp" inManagedObjectContext:context];
-//    NSFetchRequest* request = [[NSFetchRequest alloc] init];
-//    [request setEntity:entityDesc];
-//    NSPredicate* pred = [NSPredicate predicateWithFormat:@"(SELF = %@)", self.parseApp];
-//    NSManagedObject* matches = nil;
-//    
-//    NSError* error;
-//    NSArray* objects = [context executeFetchRequest:request error:&error];
     
     self.parseApp = [context objectWithID:[(NSManagedObject*)self.parseApp objectID]];
     

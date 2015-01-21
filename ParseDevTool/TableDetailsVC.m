@@ -13,21 +13,29 @@
 
 @interface TableDetailsVC ()
 
-@property (strong, nonatomic) NSMutableArray* dataSource;
-
 @end
 
 @implementation TableDetailsVC
 
+- (id)initWithStyle:(UITableViewStyle)style
+{
+    self = [super initWithStyle:style];
+    if (self)
+    {
+        self.pullToRefreshEnabled = YES;
+        self.paginationEnabled = YES;
+        self.objectsPerPage = 1000;
+    }
+    return self;
+}
+
 -(void)viewDidLoad
 {
     self.parseClassName = [self.parseTable valueForKey:@"name"];
-    [super viewDidLoad];
+    self.paginationEnabled = YES;
+    self.objectsPerPage = 1000;
     
-    [self.dataSource addObject:@"objectId"];
-    [self.dataSource addObject:@"createdAt"];
-    [self.dataSource addObjectsFromArray:[self.item allKeys]];
-    NSLog(@"%@", self.dataSource);
+    [super viewDidLoad];
     
     self.barChart = [[PNBarChart alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 200.0)];
     // Set up X-asix
@@ -81,6 +89,19 @@
     
     return cell;
 }
+
+-(void)objectsDidLoad:(NSError *)error
+{
+    [super objectsDidLoad:error];
+    self.title = [NSString stringWithFormat:@"%@ (%lu)", [self.parseTable valueForKey:@"name"], (unsigned long)self.objects.count];
+}
+
+//-(PFQuery *)queryForTable
+//{
+//    PFQuery* query = [PFQuery queryWithClassName:self.parseClassName];
+//    query.limit = 1000;
+//    return query;
+//}
 
 #pragma mark - UITableViewDelegate
 
