@@ -8,11 +8,12 @@
 
 #import "ItemDetailVC.h"
 #import "PropertyCell.h"
+#import "NWMapVC.h"
 
 @interface ItemDetailVC ()
 
 @property (strong, nonatomic) NSMutableArray* dataSource;
-
+@property (strong, nonatomic) PFGeoPoint* geopoint;
 @end
 
 @implementation ItemDetailVC
@@ -65,6 +66,17 @@
         dateFormatter.dateFormat = @"yyyy-MM-dd HH:mm:ss";
         cell.txtValue.text =[dateFormatter stringFromDate:[self.item valueForKey:propertyKey]];
     }
+    else if ([temp isKindOfClass:[PFGeoPoint class]])
+    {
+        PFGeoPoint* geopoint = (PFGeoPoint*)temp;
+        
+        UIButton *button = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+        
+        cell.geoPoint = geopoint;
+        cell.txtValue.text = @"See Map";
+        cell.txtValue.textColor = [UIColor blueColor];
+        
+    }
     else if ([temp isKindOfClass:[PFRelation class]])
     {
         NSLog(@"we have a PFRelation here.");
@@ -75,6 +87,25 @@
     }
     
     return cell;
+}
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    PropertyCell *cell = (PropertyCell *)[self.tableView cellForRowAtIndexPath:indexPath];
+    if (cell.geoPoint)
+    {
+        self.geopoint = cell.geoPoint;
+        [self performSegueWithIdentifier:@"toMap" sender:self];
+    }
+}
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([segue.identifier isEqualToString:@"toMap"])
+    {
+        NWMapVC* mapController = segue.destinationViewController;
+        mapController.geopoint = self.geopoint;
+    }
 }
 
 #pragma Table View

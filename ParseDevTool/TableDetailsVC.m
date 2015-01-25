@@ -36,6 +36,11 @@
     self.objectsPerPage = 1000;
     
     [super viewDidLoad];
+}
+
+-(void)objectsDidLoad:(NSError *)error
+{
+    [super objectsDidLoad:error];
     
     self.barChart = [[PNBarChart alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 200.0)];
     // Set up X-asix
@@ -44,7 +49,7 @@
     NSTimeZone *timeZone = [NSTimeZone timeZoneWithName:@"GMT"]; // UTC is same as GMT
     [dateFormatter setTimeZone:timeZone];
     [dateFormatter setDateFormat:@"MMM DD"];
-
+    
     NSDate *now = [NSDate date];
     
     NSMutableArray *results = [NSMutableArray arrayWithCapacity:8];
@@ -63,7 +68,7 @@
         NSString * labelText = [NSString stringWithFormat:@"%1.f",yValueParsed];
         return labelText;
     };
-
+    
     // Set up Data
     // TODO: Chunk new users by dat and put in array
     [self.barChart setYValues:@[@1, @5, @1, @20, @1, @4]];
@@ -71,6 +76,8 @@
     // Display chart
     [self.barChart strokeChart];
     [self.view addSubview:self.barChart];
+    self.title = [NSString stringWithFormat:@"%@ (%lu)", [self.parseTable valueForKey:@"name"], (unsigned long)self.objects.count];
+
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath object:(NSObject *)object
@@ -88,12 +95,6 @@
     cell.txtObjectId.text = item.objectId;
     
     return cell;
-}
-
--(void)objectsDidLoad:(NSError *)error
-{
-    [super objectsDidLoad:error];
-    self.title = [NSString stringWithFormat:@"%@ (%lu)", [self.parseTable valueForKey:@"name"], (unsigned long)self.objects.count];
 }
 
 #pragma mark - UITableViewDelegate

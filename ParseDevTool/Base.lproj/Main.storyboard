@@ -283,10 +283,32 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="agk-83-bta"/>
+                    <connections>
+                        <segue destination="OEO-tX-TSl" kind="push" identifier="toMap" id="fkh-Ar-KUR"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="A1g-8h-KPt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2274" y="1201"/>
+        </scene>
+        <!--MapVC-->
+        <scene sceneID="gek-9N-gxZ">
+            <objects>
+                <viewController id="OEO-tX-TSl" customClass="NWMapVC" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="5gy-YJ-ixF"/>
+                        <viewControllerLayoutGuide type="bottom" id="pQm-lH-hvl"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="9XL-yR-ina">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="HWe-Fc-vmN"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="f3k-Nw-Ugy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2752" y="1200"/>
         </scene>
         <!--Add TableVC-->
         <scene sceneID="6AW-DV-dOI">

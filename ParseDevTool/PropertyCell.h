@@ -7,11 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <Parse/Parse.h>
 
 @interface PropertyCell : UITableViewCell
 
 @property (weak, nonatomic) IBOutlet UILabel *txtKey;
 @property (weak, nonatomic) IBOutlet UILabel *txtValue;
-
+@property (weak, nonatomic) PFGeoPoint *geoPoint;
 
 @end
