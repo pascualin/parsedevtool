@@ -7,6 +7,7 @@
 //
 
 #import "PFQueryTableViewController.h"
+#import <Parse/Parse.h>
 #import <ParseUI.h>
 #import "PNChart.h"
 #import "PNChartLabel.h"
@@ -15,6 +16,7 @@
 
 @property (strong, nonatomic) NSObject* parseTable;
 @property (strong, nonatomic) NSObject* parseApp;
+@property (strong, nonatomic) PFRelation* relation;
 
 @property (strong, nonatomic) IBOutlet PNBarChart *barChart;
 

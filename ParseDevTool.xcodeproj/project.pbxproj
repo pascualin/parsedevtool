@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0D4397EAD74968096EE47032 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DFF007E25191009BC811568 /* libPods.a */; };
+		5913DDAD1A755736005AD7DC /* NWImageVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 5913DDAC1A755736005AD7DC /* NWImageVC.m */; };
 		591E11341A5F7F2D00044F39 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 591E11331A5F7F2D00044F39 /* main.m */; };
 		591E11371A5F7F2D00044F39 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 591E11361A5F7F2D00044F39 /* AppDelegate.m */; };
 		591E113A1A5F7F2D00044F39 /* ParseDevTool.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 591E11381A5F7F2D00044F39 /* ParseDevTool.xcdatamodeld */; };
@@ -43,6 +44,8 @@
 		14F12AAD1A677D6D00F3A424 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		14F12AAF1A677D7800F3A424 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		14F12AB11A677D8500F3A424 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		5913DDAB1A755736005AD7DC /* NWImageVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NWImageVC.h; sourceTree = "<group>"; };
+		5913DDAC1A755736005AD7DC /* NWImageVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NWImageVC.m; sourceTree = "<group>"; };
 		591E112E1A5F7F2D00044F39 /* ParseDevTool.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ParseDevTool.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		591E11321A5F7F2D00044F39 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		591E11331A5F7F2D00044F39 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -122,6 +125,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		5913DDAA1A755717005AD7DC /* Image */ = {
+			isa = PBXGroup;
+			children = (
+				5913DDAB1A755736005AD7DC /* NWImageVC.h */,
+				5913DDAC1A755736005AD7DC /* NWImageVC.m */,
+			);
+			name = Image;
+			sourceTree = "<group>";
+		};
 		591E11251A5F7F2D00044F39 = {
 			isa = PBXGroup;
 			children = (
@@ -145,6 +157,7 @@
 		591E11301A5F7F2D00044F39 /* ParseDevTool */ = {
 			isa = PBXGroup;
 			children = (
+				5913DDAA1A755717005AD7DC /* Image */,
 				595D1A641A753E18002E9AD3 /* Location */,
 				591E14111A64FA970034FCB1 /* App Details */,
 				592A3FC71A64BCAD0077C0CB /* Table Details */,
@@ -397,6 +410,7 @@
 				595D1A671A753E60002E9AD3 /* NWMapVC.m in Sources */,
 				591E14221A651FA40034FCB1 /* FinalItemCell.m in Sources */,
 				591E14141A64FAB90034FCB1 /* AppDetailsVC.m in Sources */,
+				5913DDAD1A755736005AD7DC /* NWImageVC.m in Sources */,
 				591E14171A64FEDC0034FCB1 /* ParseAppViewCell.m in Sources */,
 				59D1F8971A65698500F36839 /* ItemDetailVC.m in Sources */,
 				591E113D1A5F7F2D00044F39 /* HomeVC.m in Sources */,

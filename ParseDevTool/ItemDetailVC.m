@@ -7,13 +7,16 @@
 //
 
 #import "ItemDetailVC.h"
+#import "TableDetailsVC.h"
 #import "PropertyCell.h"
 #import "NWMapVC.h"
+#import "NWImageVC.h"
 
 @interface ItemDetailVC ()
 
 @property (strong, nonatomic) NSMutableArray* dataSource;
 @property (strong, nonatomic) PFGeoPoint* geopoint;
+@property (strong, nonatomic) PFFile* pfFile;
 @end
 
 @implementation ItemDetailVC
@@ -26,7 +29,12 @@
     [self.dataSource addObject:@"createdAt"];
     [self.dataSource addObject:@"updatedAt"];
     
-    [self.dataSource addObjectsFromArray:[self.item allKeys]];
+    NSArray* sortedArray = [[self.item allKeys] sortedArrayUsingComparator:^(NSString *firstObject, NSString *secondObject)
+    {
+        return [firstObject caseInsensitiveCompare:secondObject];
+    }];
+    
+    [self.dataSource addObjectsFromArray:sortedArray];
 }
 
 #pragma mark - UITableViewDelegate
@@ -80,6 +88,25 @@
     else if ([temp isKindOfClass:[PFRelation class]])
     {
         NSLog(@"we have a PFRelation here.");
+        PFRelation* relation = (PFRelation*)temp;
+        cell.relation = relation;
+        cell.txtValue.text = [relation valueForKey:@"_key"];
+        cell.txtValue.textColor = [UIColor blueColor];
+    }
+    else if ([temp isKindOfClass:[PFObject class]])
+    {
+        NSLog(@"we have a pointer here.");
+        PFObject* object = (PFObject*)temp;
+        cell.pfObject = object;
+        cell.txtValue.text = object.parseClassName;
+        cell.txtValue.textColor = [UIColor blueColor];
+    }
+    else if ([temp isKindOfClass:[PFFile class]])
+    {
+        // Image
+        cell.pfFile =(PFFile*) temp;
+        cell.txtValue.text = @"Image";
+        cell.txtValue.textColor = [UIColor blueColor];
     }
     else
     {
@@ -97,6 +124,46 @@
         self.geopoint = cell.geoPoint;
         [self performSegueWithIdentifier:@"toMap" sender:self];
     }
+    else if (cell.pfObject)
+    {
+        // Pointer
+        ItemDetailVC *itemDetailsVC =
+        [[UIStoryboard storyboardWithName:@"Main"
+                                   bundle:NULL] instantiateViewControllerWithIdentifier:@"ItemDetailVC"];
+        
+        [cell.pfObject fetchInBackgroundWithBlock:^(PFObject *object, NSError *error)
+        {
+            if (!error)
+            {
+                itemDetailsVC.item = object;
+                itemDetailsVC.parseApp = self.parseApp;
+                itemDetailsVC.parseTable = object.parseClassName;
+                itemDetailsVC.title = object.objectId;
+                
+                [self.navigationController pushViewController:itemDetailsVC animated:YES];
+            }
+        }];
+    }
+    else if (cell.relation)
+    {
+        //Relation
+        TableDetailsVC *tableDetailVC =
+        [[UIStoryboard storyboardWithName:@"Main"
+                                   bundle:NULL] instantiateViewControllerWithIdentifier:@"TableDetailsVC"];
+        
+        tableDetailVC.relation = cell.relation;
+        tableDetailVC.parseApp = self.parseApp;
+        
+        tableDetailVC.title = [cell.relation valueForKey:@"_key"];
+        
+         [self.navigationController pushViewController:tableDetailVC animated:YES];
+    }
+    else if(cell.pfFile)
+    {
+        // Image
+        self.pfFile = cell.pfFile;
+        [self performSegueWithIdentifier:@"toImage" sender:self];
+    }
 }
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
@@ -105,6 +172,11 @@
     {
         NWMapVC* mapController = segue.destinationViewController;
         mapController.geopoint = self.geopoint;
+    }
+    else if ([segue.identifier isEqualToString:@"toImage"])
+    {
+        NWImageVC* imageController = segue.destinationViewController;
+        imageController.pfFile = self.pfFile;
     }
 }
 

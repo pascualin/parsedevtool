@@ -14,5 +14,8 @@
 @property (weak, nonatomic) IBOutlet UILabel *txtKey;
 @property (weak, nonatomic) IBOutlet UILabel *txtValue;
 @property (weak, nonatomic) PFGeoPoint *geoPoint;
+@property (weak, nonatomic) PFRelation *relation;
+@property (weak, nonatomic) PFObject *pfObject;
+@property (weak, nonatomic) PFFile *pfFile;
 
 @end

@@ -32,6 +32,7 @@
 -(void)viewDidLoad
 {
     self.parseClassName = [self.parseTable valueForKey:@"name"];
+    
     self.paginationEnabled = YES;
     self.objectsPerPage = 1000;
     
@@ -76,7 +77,14 @@
     // Display chart
     [self.barChart strokeChart];
     [self.view addSubview:self.barChart];
-    self.title = [NSString stringWithFormat:@"%@ (%lu)", [self.parseTable valueForKey:@"name"], (unsigned long)self.objects.count];
+    if (self.relation)
+    {
+        self.title = [NSString stringWithFormat:@"%@ (%lu)", [self.relation valueForKey:@"key"], (unsigned long)self.objects.count];
+    }
+    else
+    {
+        self.title = [NSString stringWithFormat:@"%@ (%lu)", [self.parseTable valueForKey:@"name"], (unsigned long)self.objects.count];
+    }
 
 }
 
@@ -95,6 +103,20 @@
     cell.txtObjectId.text = item.objectId;
     
     return cell;
+}
+
+-(PFQuery *)queryForTable
+{
+    PFQuery* query;
+    if (self.relation)
+    {
+        query = [self.relation query];
+    }
+    else
+    {
+        query = [super queryForTable];
+    }
+    return query;
 }
 
 #pragma mark - UITableViewDelegate
