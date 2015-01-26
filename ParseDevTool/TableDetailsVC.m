@@ -43,40 +43,9 @@
 {
     [super objectsDidLoad:error];
     
-    self.barChart = [[PNBarChart alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 200.0)];
-    // Set up X-asix
-    // Get dates from 6 days
-    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
-    NSTimeZone *timeZone = [NSTimeZone timeZoneWithName:@"GMT"]; // UTC is same as GMT
-    [dateFormatter setTimeZone:timeZone];
-    [dateFormatter setDateFormat:@"MMM DD"];
+    self.barChart.objects = self.objects;
+    [self.barChart refreshChart];
     
-    NSDate *now = [NSDate date];
-    
-    NSMutableArray *results = [NSMutableArray arrayWithCapacity:8];
-    
-    for (int i = 0; i < 6; i++)
-    {
-        NSDate *date = [NSDate dateWithTimeInterval:-(i * (60 * 60 * 24)) sinceDate:now];
-        [results addObject:[dateFormatter stringFromDate:date]];
-    }
-    self.reversedDate = [[results reverseObjectEnumerator] allObjects];
-    
-    [self.barChart setXLabels:self.reversedDate];
-    
-    self.barChart.yLabelFormatter = ^(CGFloat yValue){
-        CGFloat yValueParsed = yValue;
-        NSString * labelText = [NSString stringWithFormat:@"%1.f",yValueParsed];
-        return labelText;
-    };
-    
-    // Set up Data
-    // TODO: Chunk new users by dat and put in array
-    [self.barChart setYValues:@[@1, @5, @1, @20, @1, @4]];
-    
-    // Display chart
-    [self.barChart strokeChart];
-    [self.view addSubview:self.barChart];
     if (self.relation)
     {
         self.title = [NSString stringWithFormat:@"%@ (%lu)", [self.relation valueForKey:@"key"], (unsigned long)self.objects.count];

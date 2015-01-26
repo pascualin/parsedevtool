@@ -9,7 +9,7 @@
 #import "PFQueryTableViewController.h"
 #import <Parse/Parse.h>
 #import <ParseUI.h>
-#import "PNChart.h"
+#import "NWChartVC.h"
 #import "PNChartLabel.h"
 
 @interface TableDetailsVC : PFQueryTableViewController
@@ -17,10 +17,8 @@
 @property (strong, nonatomic) NSObject* parseTable;
 @property (strong, nonatomic) NSObject* parseApp;
 @property (strong, nonatomic) PFRelation* relation;
+@property (weak, nonatomic) IBOutlet NWChartVC *barChart;
 
-@property (strong, nonatomic) IBOutlet PNBarChart *barChart;
-
-@property NSArray *reversedDate;
 @property (strong, nonatomic) PFObject* item;
 
 @end
