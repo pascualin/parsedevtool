@@ -8,8 +8,9 @@
 
 #import <UIKit/UIKit.h>
 #import "NWChartView.h"
+#import "NWBaseVC.h"
 
-@interface NWChartVC : UIViewController
+@interface NWChartVC : NWBaseVC
 
 @property (strong, nonatomic) NSArray* objects;
 @property (strong, nonatomic) IBOutlet NWChartView *chartView;

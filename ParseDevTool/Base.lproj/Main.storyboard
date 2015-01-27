@@ -242,7 +242,7 @@
                     <navigationItem key="navigationItem" id="yB5-dg-c9j">
                         <barButtonItem key="rightBarButtonItem" title="Chart" id="sjr-Q5-OEJ">
                             <connections>
-                                <segue destination="4f8-tg-nd0" kind="push" identifier="toChart" id="EWi-KL-ZwY"/>
+                                <segue destination="4f8-tg-nd0" kind="modal" identifier="toChart" id="EWi-KL-ZwY"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -329,30 +329,39 @@
                         <viewControllerLayoutGuide type="bottom" id="gUF-9p-EJ3"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Lko-D0-39m">
-                        <rect key="frame" x="0.0" y="64" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="568" height="320"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="g4N-M7-I4d" customClass="NWChartView">
-                                <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                                <rect key="frame" x="0.0" y="28" width="568" height="292"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="detailDisclosure" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sl3-Kj-L2D">
+                                        <rect key="frame" x="524" y="8" width="22" height="22"/>
+                                        <connections>
+                                            <action selector="dismiss:" destination="4f8-tg-nd0" eventType="touchUpInside" id="acL-Oz-7g4"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="g4N-M7-I4d" secondAttribute="trailing" id="3Ps-uY-YPv"/>
-                            <constraint firstItem="gUF-9p-EJ3" firstAttribute="top" secondItem="g4N-M7-I4d" secondAttribute="bottom" id="Ncb-NF-wTb"/>
-                            <constraint firstItem="g4N-M7-I4d" firstAttribute="leading" secondItem="Lko-D0-39m" secondAttribute="leading" id="V7k-LE-B53"/>
-                            <constraint firstItem="g4N-M7-I4d" firstAttribute="top" secondItem="uHI-hN-q8X" secondAttribute="bottom" id="pRo-0c-0du"/>
+                            <constraint firstItem="g4N-M7-I4d" firstAttribute="top" secondItem="uHI-hN-q8X" secondAttribute="bottom" constant="8" id="EUq-dC-56O"/>
+                            <constraint firstItem="g4N-M7-I4d" firstAttribute="leading" secondItem="Lko-D0-39m" secondAttribute="leadingMargin" constant="-16" id="PZy-zF-1oP"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="g4N-M7-I4d" secondAttribute="trailing" constant="-16" id="XIf-d0-hY5"/>
+                            <constraint firstItem="gUF-9p-EJ3" firstAttribute="top" secondItem="g4N-M7-I4d" secondAttribute="bottom" id="ucs-wF-SuE"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="ioV-Oj-JDK"/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <connections>
                         <outlet property="chartView" destination="g4N-M7-I4d" id="jjr-4n-C3m"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5Wx-gV-t70" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1882" y="1952"/>
+            <point key="canvasLocation" x="1882" y="1958"/>
         </scene>
         <!--ImageVC-->
         <scene sceneID="8c8-lP-7YA">

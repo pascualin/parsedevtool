@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "NWBaseVC.h"
 
-@interface AddTableVC : UIViewController
+@interface AddTableVC : NWBaseVC
 
 @property (weak, nonatomic) IBOutlet UITextField *txtName;
 @property (strong, nonatomic) NSObject* parseApp;
