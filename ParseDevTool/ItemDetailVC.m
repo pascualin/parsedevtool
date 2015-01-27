@@ -85,9 +85,6 @@
     else if ([temp isKindOfClass:[PFGeoPoint class]])
     {
         PFGeoPoint* geopoint = (PFGeoPoint*)temp;
-        
-        UIButton *button = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-        
         cell.geoPoint = geopoint;
         cell.txtValue.text = @"See Map";
         cell.txtValue.textColor = [UIColor blueColor];
