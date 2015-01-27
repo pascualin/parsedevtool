@@ -49,6 +49,7 @@
 {
     // Set up X-asix
     // Get dates from 6 days
+    int numberOfItems = 20;
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
     NSTimeZone *timeZone = [NSTimeZone timeZoneWithName:@"GMT"]; // UTC is same as GMT
     [dateFormatter setTimeZone:timeZone];
@@ -56,12 +57,15 @@
     
     NSDate *now = [NSDate date];
     
-    NSMutableArray *results = [NSMutableArray arrayWithCapacity:8];
+    NSMutableArray *results = [NSMutableArray arrayWithCapacity:10];
+    NSMutableArray* tempValues = [NSMutableArray arrayWithCapacity:10];
     
-    for (int i = 0; i < 6; i++)
+    for (int i = 0; i < numberOfItems; i++)
     {
         NSDate *date = [NSDate dateWithTimeInterval:-(i * (60 * 60 * 24)) sinceDate:now];
         [results addObject:[dateFormatter stringFromDate:date]];
+        // Initialise to empty values
+        [tempValues addObject:@0];
     }
     self.reversedDate = [[results reverseObjectEnumerator] allObjects];
     
@@ -76,10 +80,9 @@
     
     // Set up Data
     
-    // Initialise to empty values
-    NSMutableArray* tempValues = [[NSMutableArray alloc] initWithArray:@[@0, @0, @0, @0, @0, @0]];
+   
     
-    int j = 5;
+    int j = numberOfItems-1;
     
     for (PFObject* object in self.objects)
     {

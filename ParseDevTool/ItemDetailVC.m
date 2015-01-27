@@ -58,15 +58,18 @@
     cell.txtKey.text = propertyKey;
     cell.txtValue.text = @"";
     
+    // Set items to null to avoid problems when reusing a cell
+    cell.geoPoint = nil;
+    cell.relation = nil;
+    cell.pfObject = nil;
+    cell.pfFile = nil;
+    cell.txtValue.textColor = [UIColor blackColor];
+    
     NSObject* temp = [self.item valueForKey:propertyKey];
     
     if ([temp isKindOfClass:[NSString class]])
     {
         cell.txtValue.text = (NSString*)[self.item valueForKey:propertyKey];
-    }
-    else if ([temp isKindOfClass:[NSData class]])
-    {
-        NSLog(@"someData is a bag of bits.");
     }
     else if ([temp isKindOfClass:[NSNumber class]])
     {
