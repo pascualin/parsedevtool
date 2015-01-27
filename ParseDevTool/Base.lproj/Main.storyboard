@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="kyK-ZS-PMP">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--HomeVC-->
@@ -9,14 +10,14 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="HomeVC" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                        <viewControllerLayoutGuide type="top" id="pIt-yO-bTL"/>
+                        <viewControllerLayoutGuide type="bottom" id="Ne6-ap-367"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="GLQ-AE-fFZ">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="GLQ-AE-fFZ">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
@@ -46,6 +47,12 @@
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="GLQ-AE-fFZ" secondAttribute="trailing" id="Nos-Qa-GqA"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="GLQ-AE-fFZ" secondAttribute="trailing" constant="-16" id="Xjz-Km-LdP"/>
+                            <constraint firstItem="GLQ-AE-fFZ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="fXL-U4-fbp"/>
+                            <constraint firstItem="GLQ-AE-fFZ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-16" id="txp-vc-KJH"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="xrW-ek-IC7">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="uUi-ie-wZb">
@@ -68,8 +75,8 @@
             <objects>
                 <viewController id="KSX-UR-W3e" customClass="AddParseAppVC" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="NOw-K6-efx"/>
-                        <viewControllerLayoutGuide type="bottom" id="xpF-SL-Pfl"/>
+                        <viewControllerLayoutGuide type="top" id="RGO-Ed-i6s"/>
+                        <viewControllerLayoutGuide type="bottom" id="Rl3-R6-p44"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="x7k-2n-l7Z">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
@@ -144,14 +151,14 @@
             <objects>
                 <viewController id="dTK-Hv-9xX" customClass="AppDetailsVC" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="CA1-eV-mhN"/>
-                        <viewControllerLayoutGuide type="bottom" id="TGK-8m-5eo"/>
+                        <viewControllerLayoutGuide type="top" id="GF0-o0-UwE"/>
+                        <viewControllerLayoutGuide type="bottom" id="Ivg-zQ-9CY"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="nE1-cW-DSM">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="Pcv-fI-i30">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="Pcv-fI-i30">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="573"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
@@ -181,6 +188,10 @@
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="Pcv-fI-i30" secondAttribute="trailing" constant="-16" id="SSk-ja-ZGB"/>
+                            <constraint firstItem="Pcv-fI-i30" firstAttribute="leading" secondItem="nE1-cW-DSM" secondAttribute="leadingMargin" constant="-16" id="zNg-Ld-Wgd"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="VsI-Du-u7H">
                         <barButtonItem key="rightBarButtonItem" style="plain" systemItem="add" id="fWV-B4-Kpk">
@@ -203,14 +214,9 @@
             <objects>
                 <viewController storyboardIdentifier="TableDetailsVC" id="OcK-xW-zFB" customClass="TableDetailsVC" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="kxG-WK-5pp">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <view key="tableHeaderView" contentMode="scaleToFill" id="rXE-Nw-8JA" customClass="NWChartVC">
-                            <rect key="frame" x="0.0" y="64" width="320" height="200"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                        </view>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="FinalItemCell" id="BjW-4S-qdz" customClass="FinalItemCell">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -233,10 +239,13 @@
                             </tableViewCell>
                         </prototypes>
                     </tableView>
-                    <navigationItem key="navigationItem" id="yB5-dg-c9j"/>
-                    <connections>
-                        <outlet property="barChart" destination="rXE-Nw-8JA" id="pTI-BA-LWE"/>
-                    </connections>
+                    <navigationItem key="navigationItem" id="yB5-dg-c9j">
+                        <barButtonItem key="rightBarButtonItem" title="Chart" id="sjr-Q5-OEJ">
+                            <connections>
+                                <segue destination="4f8-tg-nd0" kind="push" identifier="toChart" id="EWi-KL-ZwY"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Scn-Rb-iFj" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <customObject id="sXK-dB-EPa" customClass="TableDetailsVC"/>
@@ -248,7 +257,7 @@
             <objects>
                 <tableViewController storyboardIdentifier="ItemDetailVC" id="5kP-Xz-J4t" customClass="ItemDetailVC" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="qsu-wA-YWo">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
@@ -297,11 +306,11 @@
             <objects>
                 <viewController id="OEO-tX-TSl" customClass="NWMapVC" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="5gy-YJ-ixF"/>
-                        <viewControllerLayoutGuide type="bottom" id="pQm-lH-hvl"/>
+                        <viewControllerLayoutGuide type="top" id="mZU-1F-xTo"/>
+                        <viewControllerLayoutGuide type="bottom" id="aHe-nk-dBD"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="9XL-yR-ina">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -311,16 +320,50 @@
             </objects>
             <point key="canvasLocation" x="2752" y="1200"/>
         </scene>
+        <!--ChartVC-->
+        <scene sceneID="kvU-nU-sVG">
+            <objects>
+                <viewController id="4f8-tg-nd0" customClass="NWChartVC" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="uHI-hN-q8X"/>
+                        <viewControllerLayoutGuide type="bottom" id="gUF-9p-EJ3"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Lko-D0-39m">
+                        <rect key="frame" x="0.0" y="64" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="g4N-M7-I4d" customClass="NWChartView">
+                                <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="g4N-M7-I4d" secondAttribute="trailing" id="3Ps-uY-YPv"/>
+                            <constraint firstItem="gUF-9p-EJ3" firstAttribute="top" secondItem="g4N-M7-I4d" secondAttribute="bottom" id="Ncb-NF-wTb"/>
+                            <constraint firstItem="g4N-M7-I4d" firstAttribute="leading" secondItem="Lko-D0-39m" secondAttribute="leading" id="V7k-LE-B53"/>
+                            <constraint firstItem="g4N-M7-I4d" firstAttribute="top" secondItem="uHI-hN-q8X" secondAttribute="bottom" id="pRo-0c-0du"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="ioV-Oj-JDK"/>
+                    <connections>
+                        <outlet property="chartView" destination="g4N-M7-I4d" id="jjr-4n-C3m"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5Wx-gV-t70" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1882" y="1952"/>
+        </scene>
         <!--ImageVC-->
         <scene sceneID="8c8-lP-7YA">
             <objects>
                 <viewController id="xEr-Ym-599" customClass="NWImageVC" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="6dl-WL-9Sp"/>
-                        <viewControllerLayoutGuide type="bottom" id="dFZ-uk-DKC"/>
+                        <viewControllerLayoutGuide type="top" id="oUz-T8-JXf"/>
+                        <viewControllerLayoutGuide type="bottom" id="Ige-Ge-4dT"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="VgZ-cq-q2Q">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1RD-0h-8qw" customClass="PFImageView">
@@ -343,8 +386,8 @@
             <objects>
                 <viewController id="TbF-0D-cg8" customClass="AddTableVC" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="lzi-Ik-WCr"/>
-                        <viewControllerLayoutGuide type="bottom" id="jKo-t0-lUq"/>
+                        <viewControllerLayoutGuide type="top" id="9jG-QC-DDo"/>
+                        <viewControllerLayoutGuide type="bottom" id="6eZ-nx-0Fw"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="TdM-nN-hxc">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>

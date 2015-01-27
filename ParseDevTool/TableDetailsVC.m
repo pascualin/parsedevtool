@@ -42,10 +42,7 @@
 -(void)objectsDidLoad:(NSError *)error
 {
     [super objectsDidLoad:error];
-    
-    self.barChart.objects = self.objects;
-    [self.barChart refreshChart];
-    
+
     if (self.relation)
     {
         self.title = [NSString stringWithFormat:@"%@ (%lu)", [self.relation valueForKey:@"key"], (unsigned long)self.objects.count];
@@ -90,11 +87,6 @@
 
 #pragma mark - UITableViewDelegate
 
-- (void)scrollViewDidScroll:(UIScrollView *)scrollView
-{
-    self.barChart.frame = CGRectMake(0, self.tableView.contentOffset.y + self.navigationController.navigationBar.frame.size.height + 20, self.barChart.frame.size.width, self.barChart.frame.size.height);
-}
-
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     return 43;
@@ -110,6 +102,11 @@
         itemDetailsVC.parseApp = self.parseApp;
         itemDetailsVC.parseTable = self.parseTable;
         itemDetailsVC.title = itemDetailsVC.item.objectId;
+    }
+    if ([segue.identifier isEqualToString:@"toChart"])
+    {
+        NWChartVC *chartVC = segue.destinationViewController;
+        chartVC.objects = self.objects;
     }
 }
 @end

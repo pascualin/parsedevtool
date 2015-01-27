@@ -17,7 +17,6 @@
 @property (strong, nonatomic) NSObject* parseTable;
 @property (strong, nonatomic) NSObject* parseApp;
 @property (strong, nonatomic) PFRelation* relation;
-@property (weak, nonatomic) IBOutlet NWChartVC *barChart;
 
 @property (strong, nonatomic) PFObject* item;
 

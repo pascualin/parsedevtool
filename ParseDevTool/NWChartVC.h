@@ -2,17 +2,16 @@
 //  NWChartVC.h
 //  ParseDevTool
 //
-//  Created by Ignacio Martin on 26/1/15.
+//  Created by Ignacio Martin on 27/1/15.
 //  Copyright (c) 2015 Niceway. All rights reserved.
 //
 
-#import <PNChart.h>
+#import <UIKit/UIKit.h>
+#import "NWChartView.h"
 
-@interface NWChartVC : PNBarChart
+@interface NWChartVC : UIViewController
 
-@property NSArray *reversedDate;
-@property NSArray *objects;
-
--(void)refreshChart;
+@property (strong, nonatomic) NSArray* objects;
+@property (strong, nonatomic) IBOutlet NWChartView *chartView;
 
 @end
