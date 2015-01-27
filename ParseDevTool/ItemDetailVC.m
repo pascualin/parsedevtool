@@ -11,12 +11,15 @@
 #import "PropertyCell.h"
 #import "NWMapVC.h"
 #import "NWImageVC.h"
+#import "LargeTextVC.h"
 
 @interface ItemDetailVC ()
 
 @property (strong, nonatomic) NSMutableArray* dataSource;
 @property (strong, nonatomic) PFGeoPoint* geopoint;
 @property (strong, nonatomic) PFFile* pfFile;
+@property (strong, nonatomic) NSString* largeText;
+
 @end
 
 @implementation ItemDetailVC
@@ -169,6 +172,16 @@
         self.pfFile = cell.pfFile;
         [self performSegueWithIdentifier:@"toImage" sender:self];
     }
+    else
+    {
+        // we might have a long text, lest see
+        CGSize size = [cell.txtValue.text sizeWithFont:cell.txtValue.font];
+        if (size.width > cell.txtValue.bounds.size.width)
+        {
+            self.largeText = cell.txtValue.text;
+            [self performSegueWithIdentifier:@"toLargeText" sender:self];
+        }
+    }
 }
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
@@ -182,6 +195,11 @@
     {
         NWImageVC* imageController = segue.destinationViewController;
         imageController.pfFile = self.pfFile;
+    }
+    else if ([segue.identifier isEqualToString:@"toLargeText"])
+    {
+        LargeTextVC* textController = segue.destinationViewController;
+        textController.largeText = self.largeText;
     }
 }
 

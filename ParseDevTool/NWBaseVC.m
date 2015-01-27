@@ -12,7 +12,24 @@
 
 @end
 
+
 @implementation NWBaseVC
+
+
+-(void)viewDidLoad
+{
+    [super viewDidLoad];
+    
+}
+
+-(void)viewWillTransitionToSize:(CGSize)size withTransitionCoordinator:(id<UIViewControllerTransitionCoordinator>)coordinator
+{
+    [super viewWillTransitionToSize:size withTransitionCoordinator:coordinator];
+    
+    
+    NSNumber *value = [NSNumber numberWithInt:UIInterfaceOrientationPortrait];
+    [[UIDevice currentDevice] setValue:value forKey:@"orientation"];
+}
 
 - (NSUInteger)supportedInterfaceOrientations
 {
