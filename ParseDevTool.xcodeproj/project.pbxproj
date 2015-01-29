@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0D4397EAD74968096EE47032 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DFF007E25191009BC811568 /* libPods.a */; };
+		14A9CC441A7A264400B1C0EA /* NWNavigationVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 14A9CC431A7A264400B1C0EA /* NWNavigationVC.m */; };
 		5913DDAD1A755736005AD7DC /* NWImageVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 5913DDAC1A755736005AD7DC /* NWImageVC.m */; };
 		591E11341A5F7F2D00044F39 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 591E11331A5F7F2D00044F39 /* main.m */; };
 		591E11371A5F7F2D00044F39 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 591E11361A5F7F2D00044F39 /* AppDelegate.m */; };
@@ -43,6 +44,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		14A9CC421A7A264400B1C0EA /* NWNavigationVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NWNavigationVC.h; sourceTree = "<group>"; };
+		14A9CC431A7A264400B1C0EA /* NWNavigationVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NWNavigationVC.m; sourceTree = "<group>"; };
 		14F12AAB1A677D6600F3A424 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		14F12AAD1A677D6D00F3A424 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		14F12AAF1A677D7800F3A424 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
@@ -177,6 +180,8 @@
 				591E141E1A6512E20034FCB1 /* Add Table */,
 				591E11351A5F7F2D00044F39 /* AppDelegate.h */,
 				591E11361A5F7F2D00044F39 /* AppDelegate.m */,
+				14A9CC421A7A264400B1C0EA /* NWNavigationVC.h */,
+				14A9CC431A7A264400B1C0EA /* NWNavigationVC.m */,
 				591E113B1A5F7F2D00044F39 /* HomeVC.h */,
 				591E113C1A5F7F2D00044F39 /* HomeVC.m */,
 				591E14151A64FEDC0034FCB1 /* ParseAppViewCell.h */,
@@ -440,6 +445,7 @@
 				591E113A1A5F7F2D00044F39 /* ParseDevTool.xcdatamodeld in Sources */,
 				592A3FC31A64BB1E0077C0CB /* AddParseAppVC.m in Sources */,
 				591E11371A5F7F2D00044F39 /* AppDelegate.m in Sources */,
+				14A9CC441A7A264400B1C0EA /* NWNavigationVC.m in Sources */,
 				59C590E31A76236C00046063 /* NWChartView.m in Sources */,
 				595D1A671A753E60002E9AD3 /* NWMapVC.m in Sources */,
 				591E14221A651FA40034FCB1 /* FinalItemCell.m in Sources */,
