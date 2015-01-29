@@ -366,28 +366,22 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="g4N-M7-I4d" customClass="NWChartView">
-                                <rect key="frame" x="-6" y="0.0" width="568" height="320"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="detailDisclosure" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sl3-Kj-L2D">
-                                        <rect key="frame" x="538" y="30" width="22" height="22"/>
-                                        <connections>
-                                            <action selector="dismiss:" destination="4f8-tg-nd0" eventType="touchUpInside" id="acL-Oz-7g4"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
+                                <rect key="frame" x="0.0" y="0.0" width="568" height="320"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="sl3-Kj-L2D" secondAttribute="trailing" constant="5" id="ONr-dT-iIx"/>
-                                    <constraint firstItem="sl3-Kj-L2D" firstAttribute="top" secondItem="g4N-M7-I4d" secondAttribute="top" constant="5" id="ywx-EF-7tC"/>
-                                </constraints>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="detailDisclosure" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sl3-Kj-L2D">
+                                <rect key="frame" x="530" y="25" width="22" height="22"/>
+                                <connections>
+                                    <action selector="dismiss:" destination="4f8-tg-nd0" eventType="touchUpInside" id="acL-Oz-7g4"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="g4N-M7-I4d" firstAttribute="leading" secondItem="Lko-D0-39m" secondAttribute="leading" id="AR7-cK-feg"/>
-                            <constraint firstItem="gUF-9p-EJ3" firstAttribute="top" secondItem="g4N-M7-I4d" secondAttribute="bottom" id="I63-kX-pEI"/>
-                            <constraint firstAttribute="trailing" secondItem="g4N-M7-I4d" secondAttribute="trailing" constant="15" id="Nik-yw-DOa"/>
-                            <constraint firstItem="g4N-M7-I4d" firstAttribute="top" secondItem="Lko-D0-39m" secondAttribute="top" id="Zwg-Z4-3jm"/>
+                            <constraint firstItem="gUF-9p-EJ3" firstAttribute="top" secondItem="g4N-M7-I4d" secondAttribute="bottom" constant="5" id="CMv-hU-988"/>
+                            <constraint firstItem="g4N-M7-I4d" firstAttribute="leading" secondItem="Lko-D0-39m" secondAttribute="leadingMargin" constant="5" id="Ybx-Al-1ed"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="g4N-M7-I4d" secondAttribute="trailing" constant="5" id="b2x-Ij-acH"/>
+                            <constraint firstItem="g4N-M7-I4d" firstAttribute="top" secondItem="Lko-D0-39m" secondAttribute="topMargin" constant="5" id="w6G-9U-sk5"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="ioV-Oj-JDK"/>

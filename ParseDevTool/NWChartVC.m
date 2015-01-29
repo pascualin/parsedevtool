@@ -19,6 +19,13 @@
 
     // Do any additional setup after loading the view.
     self.chartView.objects = self.objects;
+
+}
+
+- (void)viewDidLayoutSubviews {
+    [super viewDidLayoutSubviews];
+    
+    self.chartView.frame = self.view.bounds;
     [self.chartView refreshChart];
 }
 
