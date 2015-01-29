@@ -28,6 +28,7 @@
 		592CDEB41A77374500B70490 /* NWChartVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 592CDEB31A77374500B70490 /* NWChartVC.m */; };
 		595D1A671A753E60002E9AD3 /* NWMapVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 595D1A661A753E60002E9AD3 /* NWMapVC.m */; };
 		597DEEB61A777A7900737CC7 /* NWBaseVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 597DEEB51A777A7900737CC7 /* NWBaseVC.m */; };
+		597DEEBB1A77A56800737CC7 /* LargeTextVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 597DEEBA1A77A56800737CC7 /* LargeTextVC.m */; };
 		59C590E31A76236C00046063 /* NWChartView.m in Sources */ = {isa = PBXBuildFile; fileRef = 59C590E21A76236C00046063 /* NWChartView.m */; };
 		59D1F8971A65698500F36839 /* ItemDetailVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 59D1F8961A65698500F36839 /* ItemDetailVC.m */; };
 		59D1F89A1A65764700F36839 /* PropertyCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 59D1F8991A65764700F36839 /* PropertyCell.m */; };
@@ -86,6 +87,8 @@
 		595D1A661A753E60002E9AD3 /* NWMapVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NWMapVC.m; sourceTree = "<group>"; };
 		597DEEB41A777A7900737CC7 /* NWBaseVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NWBaseVC.h; sourceTree = "<group>"; };
 		597DEEB51A777A7900737CC7 /* NWBaseVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NWBaseVC.m; sourceTree = "<group>"; };
+		597DEEB91A77A56800737CC7 /* LargeTextVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LargeTextVC.h; sourceTree = "<group>"; };
+		597DEEBA1A77A56800737CC7 /* LargeTextVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LargeTextVC.m; sourceTree = "<group>"; };
 		59C590E11A76236C00046063 /* NWChartView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NWChartView.h; sourceTree = "<group>"; };
 		59C590E21A76236C00046063 /* NWChartView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NWChartView.m; sourceTree = "<group>"; };
 		59D1F8951A65698500F36839 /* ItemDetailVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ItemDetailVC.h; sourceTree = "<group>"; };
@@ -169,6 +172,7 @@
 		591E11301A5F7F2D00044F39 /* ParseDevTool */ = {
 			isa = PBXGroup;
 			children = (
+				597DEEB81A77A54000737CC7 /* LargeText */,
 				597DEEB31A777A6400737CC7 /* Util */,
 				59C590E01A76234300046063 /* Chart */,
 				5913DDAA1A755717005AD7DC /* Image */,
@@ -277,6 +281,15 @@
 				597DEEB51A777A7900737CC7 /* NWBaseVC.m */,
 			);
 			name = Util;
+			sourceTree = "<group>";
+		};
+		597DEEB81A77A54000737CC7 /* LargeText */ = {
+			isa = PBXGroup;
+			children = (
+				597DEEB91A77A56800737CC7 /* LargeTextVC.h */,
+				597DEEBA1A77A56800737CC7 /* LargeTextVC.m */,
+			);
+			name = LargeText;
 			sourceTree = "<group>";
 		};
 		59C590E01A76234300046063 /* Chart */ = {
@@ -437,6 +450,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				597DEEBB1A77A56800737CC7 /* LargeTextVC.m in Sources */,
 				591E141A1A6510200034FCB1 /* TableCell.m in Sources */,
 				591E141D1A6512DD0034FCB1 /* AddTableVC.m in Sources */,
 				59D1F89A1A65764700F36839 /* PropertyCell.m in Sources */,
