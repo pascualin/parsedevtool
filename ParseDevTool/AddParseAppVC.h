@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface AddParseAppVC : UIViewController
+@interface AddParseAppVC : UIViewController <UIBarPositioningDelegate>
 
 @property (weak, nonatomic) IBOutlet UITextField *txtName;
 @property (weak, nonatomic) IBOutlet UITextField *txtApplicationId;

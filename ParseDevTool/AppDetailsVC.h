@@ -8,9 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface AppDetailsVC : UIViewController <UITableViewDelegate, UITableViewDataSource>
+@interface AppDetailsVC : UITableViewController
 
-@property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (strong, nonatomic) NSObject* parseApp;
 
 @end

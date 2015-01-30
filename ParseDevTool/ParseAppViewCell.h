@@ -12,4 +12,5 @@
 
 @property (strong, nonatomic) NSObject* parseApp;
 @property (weak, nonatomic) IBOutlet UILabel *txtTitle;
+
 @end

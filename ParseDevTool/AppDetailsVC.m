@@ -110,7 +110,7 @@
 
 -(void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    if ([segue.identifier isEqualToString:@"toAppDetails"])
+    if ([segue.identifier isEqualToString:@"toTableDetails"])
     {
         TableDetailsVC *tableDetailVC = segue.destinationViewController;
         TableCell* cell = (TableCell*)sender;
