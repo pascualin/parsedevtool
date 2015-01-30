@@ -184,9 +184,30 @@
                                 <segue destination="4f8-tg-nd0" kind="modal" identifier="toChart" id="EWi-KL-ZwY"/>
                             </connections>
                         </barButtonItem>
+                        <connections>
+                            <outlet property="titleView" destination="Q4e-cF-2S3" id="NrE-XE-Wf3"/>
+                        </connections>
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Scn-Rb-iFj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <navigationBar contentMode="scaleToFill" id="Q4e-cF-2S3">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                    <color key="barTintColor" red="0.25490196078431371" green="0.47058823529411764" blue="0.98039215686274506" alpha="1" colorSpace="calibratedRGB"/>
+                    <textAttributes key="titleTextAttributes">
+                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </textAttributes>
+                    <items>
+                        <navigationItem title="Title" id="U7j-Mw-aM2">
+                            <barButtonItem key="rightBarButtonItem" systemItem="edit" id="frM-Uh-y6e">
+                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <segue destination="OFV-ez-99H" kind="modal" identifier="toEditTable" id="2ux-EV-U69"/>
+                                </connections>
+                            </barButtonItem>
+                        </navigationItem>
+                    </items>
+                </navigationBar>
                 <customObject id="sXK-dB-EPa" customClass="TableDetailsVC"/>
             </objects>
             <point key="canvasLocation" x="1882" y="1200"/>
@@ -411,6 +432,17 @@
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CPk-9B-SBX">
+                                <rect key="frame" x="20" y="164" width="280" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Display Property (objectId if empty)" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Au-tf-UOW">
+                                <rect key="frame" x="20" y="143" width="212" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <constraints>
@@ -420,6 +452,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="txtDisplayname" destination="CPk-9B-SBX" id="HXQ-ot-I92"/>
                         <outlet property="txtName" destination="fmE-2E-TjZ" id="86d-LB-mk0"/>
                     </connections>
                 </viewController>
@@ -435,7 +468,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="wKO-3q-JOM">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="barTintColor" red="0.2666666667" green="0.52941176469999995" blue="0.98431372549999996" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="barTintColor" red="0.25490196078431371" green="0.47058823529411764" blue="0.98039215686274506" alpha="1" colorSpace="calibratedRGB"/>
                         <textAttributes key="titleTextAttributes">
                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         </textAttributes>
@@ -495,6 +528,71 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JxF-bb-nH8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="952" y="623"/>
+        </scene>
+        <!--Edit TableVC-->
+        <scene sceneID="mLm-mZ-dY4">
+            <objects>
+                <viewController id="OFV-ez-99H" customClass="EditTableVC" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="suY-4a-jqy"/>
+                        <viewControllerLayoutGuide type="bottom" id="cs8-Sh-BKM"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="gyV-NK-vqR">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dl1-Yu-buf">
+                                <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                                <color key="barTintColor" red="0.2666666667" green="0.52941176469999995" blue="0.98431372549999996" alpha="1" colorSpace="calibratedRGB"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </textAttributes>
+                                <items>
+                                    <navigationItem title="Title" id="yPG-mD-GJk">
+                                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="vIM-qE-ZXe">
+                                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <connections>
+                                                <action selector="cancel:" destination="OFV-ez-99H" id="8tz-f3-pGi"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" title="Save" id="rNu-IL-Nfd">
+                                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <connections>
+                                                <action selector="saveTable:" destination="OFV-ez-99H" id="DOg-WA-b6z"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                                <connections>
+                                    <outlet property="delegate" destination="OFV-ez-99H" id="x7F-bz-XK2"/>
+                                </connections>
+                            </navigationBar>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BWD-Xw-Vde">
+                                <rect key="frame" x="20" y="105" width="280" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Display Property (objectId if empty)" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n2H-FS-Sfw">
+                                <rect key="frame" x="20" y="82" width="212" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Dl1-Yu-buf" firstAttribute="leading" secondItem="gyV-NK-vqR" secondAttribute="leading" id="3LT-sJ-2mf"/>
+                            <constraint firstAttribute="trailing" secondItem="Dl1-Yu-buf" secondAttribute="trailing" id="K2m-VN-L7e"/>
+                            <constraint firstItem="Dl1-Yu-buf" firstAttribute="top" secondItem="suY-4a-jqy" secondAttribute="bottom" id="YXL-g3-K8G"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="txtDisplayProperty" destination="BWD-Xw-Vde" id="t1h-DD-HHE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ztY-UV-MXJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2320" y="568"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

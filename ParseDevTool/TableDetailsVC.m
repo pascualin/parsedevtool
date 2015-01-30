@@ -10,6 +10,7 @@
 #import "FinalItemCell.h"
 #import <Parse/Parse.h>
 #import "ItemDetailVC.h"
+#import "EditTableVC.h"
 
 @interface TableDetailsVC ()
 
@@ -44,17 +45,23 @@
     [super viewDidLoad];
 }
 
+-(void)viewWillAppear:(BOOL)animated
+{
+    [self loadObjects];
+}
+
 -(void)objectsDidLoad:(NSError *)error
 {
     [super objectsDidLoad:error];
 
+    UINavigationBar* navBar = (UINavigationBar*)self.navigationItem.titleView;
     if (self.relation)
     {
-        self.title = [NSString stringWithFormat:@"%@ (%lu)", [self.relation valueForKey:@"key"], (unsigned long)self.objects.count];
+        navBar.topItem.title = [NSString stringWithFormat:@"%@ (%lu)", [self.relation valueForKey:@"key"], (unsigned long)self.objects.count];
     }
     else
     {
-        self.title = [NSString stringWithFormat:@"%@ (%lu)", [self.parseTable valueForKey:@"name"], (unsigned long)self.objects.count];
+        navBar.topItem.title = [NSString stringWithFormat:@"%@ (%lu)", [self.parseTable valueForKey:@"name"], (unsigned long)self.objects.count];
     }
 
 }
@@ -71,7 +78,15 @@
     }
     
     cell.item = item;
-    cell.txtObjectId.text = [item valueForKey:[self.parseTable valueForKey:@"displayProperty"]];
+    NSObject* assignableText = [item valueForKey:[self.parseTable valueForKey:@"displayProperty"]];
+    if ([assignableText isKindOfClass:[NSString class]])
+    {
+        cell.txtObjectId.text = (NSString*)assignableText;
+    }
+    else
+    {
+        cell.txtObjectId.text = @"!!Invalid display property!!";
+    }
     
     return cell;
 }
@@ -112,6 +127,12 @@
     {
         NWChartVC *chartVC = segue.destinationViewController;
         chartVC.objects = self.objects;
+    }
+    if ([segue.identifier isEqualToString:@"toEditTable"])
+    {
+        EditTableVC *editTableVC = segue.destinationViewController;
+        editTableVC.parseTable = self.parseTable;
+        editTableVC.parseApp = self.parseApp;
     }
 }
 @end
