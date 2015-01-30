@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface AddTableVC : UIViewController
+@interface AddTableVC : UIViewController  <UIBarPositioningDelegate>
 
 @property (weak, nonatomic) IBOutlet UITextField *txtName;
 @property (strong, nonatomic) NSObject* parseApp;
