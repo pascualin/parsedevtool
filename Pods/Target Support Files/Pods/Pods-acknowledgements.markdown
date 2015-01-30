@@ -243,6 +243,11 @@ You can get the attribution text by making a call to
 [GMSServices openSourceLicenseInfo].
 
 
+## GoogleAnalytics-iOS-SDK
+
+Copyright 2009 - 2014 Google, Inc. All rights reserved.
+
+
 ## MBProgressHUD
 
 Copyright (c) 2013 Matej Bukovinski

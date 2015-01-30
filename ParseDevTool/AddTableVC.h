@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "NWBaseVC.h"
 
-@interface AddTableVC : UIViewController  <UIBarPositioningDelegate>
+@interface AddTableVC : NWBaseVC  <UIBarPositioningDelegate>
 
 @property (weak, nonatomic) IBOutlet UITextField *txtName;
 @property (weak, nonatomic) IBOutlet UITextField *txtDisplayname;

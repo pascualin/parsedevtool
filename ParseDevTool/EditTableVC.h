@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "NWBaseVC.h"
 
-@interface EditTableVC : UIViewController
+@interface EditTableVC : NWBaseVC
 
 @property (weak, nonatomic) IBOutlet UITextField *txtDisplayProperty;
 @property (strong, nonatomic) NSObject* parseTable;

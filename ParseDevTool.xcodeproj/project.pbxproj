@@ -26,6 +26,9 @@
 		592A3FC31A64BB1E0077C0CB /* AddParseAppVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 592A3FC21A64BB1E0077C0CB /* AddParseAppVC.m */; };
 		592A3FCA1A64BCC00077C0CB /* TableDetailsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 592A3FC91A64BCC00077C0CB /* TableDetailsVC.m */; };
 		592CDEB41A77374500B70490 /* NWChartVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 592CDEB31A77374500B70490 /* NWChartVC.m */; };
+		5934164B1A7B6D7700503B58 /* NWBaseVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 5934164A1A7B6D7700503B58 /* NWBaseVC.m */; };
+		5934164E1A7B6FFE00503B58 /* NWBaseTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 5934164D1A7B6FFE00503B58 /* NWBaseTVC.m */; };
+		593416511A7B709700503B58 /* NWBaseQTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 593416501A7B709700503B58 /* NWBaseQTVC.m */; };
 		5935AE4D1A7B4CD2006637A5 /* EditTableVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 5935AE4C1A7B4CD2006637A5 /* EditTableVC.m */; };
 		595D1A671A753E60002E9AD3 /* NWMapVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 595D1A661A753E60002E9AD3 /* NWMapVC.m */; };
 		597DEEBB1A77A56800737CC7 /* LargeTextVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 597DEEBA1A77A56800737CC7 /* LargeTextVC.m */; };
@@ -83,6 +86,12 @@
 		592A3FC91A64BCC00077C0CB /* TableDetailsVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableDetailsVC.m; sourceTree = "<group>"; };
 		592CDEB21A77374500B70490 /* NWChartVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NWChartVC.h; sourceTree = "<group>"; };
 		592CDEB31A77374500B70490 /* NWChartVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NWChartVC.m; sourceTree = "<group>"; };
+		593416491A7B6D7700503B58 /* NWBaseVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NWBaseVC.h; sourceTree = "<group>"; };
+		5934164A1A7B6D7700503B58 /* NWBaseVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NWBaseVC.m; sourceTree = "<group>"; };
+		5934164C1A7B6FFE00503B58 /* NWBaseTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NWBaseTVC.h; sourceTree = "<group>"; };
+		5934164D1A7B6FFE00503B58 /* NWBaseTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NWBaseTVC.m; sourceTree = "<group>"; };
+		5934164F1A7B709700503B58 /* NWBaseQTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NWBaseQTVC.h; sourceTree = "<group>"; };
+		593416501A7B709700503B58 /* NWBaseQTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NWBaseQTVC.m; sourceTree = "<group>"; };
 		5935AE4B1A7B4CD2006637A5 /* EditTableVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditTableVC.h; sourceTree = "<group>"; };
 		5935AE4C1A7B4CD2006637A5 /* EditTableVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditTableVC.m; sourceTree = "<group>"; };
 		595D1A651A753E60002E9AD3 /* NWMapVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NWMapVC.h; sourceTree = "<group>"; };
@@ -172,6 +181,7 @@
 		591E11301A5F7F2D00044F39 /* ParseDevTool */ = {
 			isa = PBXGroup;
 			children = (
+				593416481A7B6D6300503B58 /* Utils */,
 				5935AE4A1A7B4CBF006637A5 /* Edit Table */,
 				597DEEB81A77A54000737CC7 /* LargeText */,
 				59C590E01A76234300046063 /* Chart */,
@@ -263,6 +273,19 @@
 				591E14201A651FA40034FCB1 /* FinalItemCell.m */,
 			);
 			name = "Table Details";
+			sourceTree = "<group>";
+		};
+		593416481A7B6D6300503B58 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				593416491A7B6D7700503B58 /* NWBaseVC.h */,
+				5934164A1A7B6D7700503B58 /* NWBaseVC.m */,
+				5934164C1A7B6FFE00503B58 /* NWBaseTVC.h */,
+				5934164D1A7B6FFE00503B58 /* NWBaseTVC.m */,
+				5934164F1A7B709700503B58 /* NWBaseQTVC.h */,
+				593416501A7B709700503B58 /* NWBaseQTVC.m */,
+			);
+			name = Utils;
 			sourceTree = "<group>";
 		};
 		5935AE4A1A7B4CBF006637A5 /* Edit Table */ = {
@@ -457,12 +480,14 @@
 				592CDEB41A77374500B70490 /* NWChartVC.m in Sources */,
 				591E113A1A5F7F2D00044F39 /* ParseDevTool.xcdatamodeld in Sources */,
 				592A3FC31A64BB1E0077C0CB /* AddParseAppVC.m in Sources */,
+				593416511A7B709700503B58 /* NWBaseQTVC.m in Sources */,
 				591E11371A5F7F2D00044F39 /* AppDelegate.m in Sources */,
 				14A9CC441A7A264400B1C0EA /* NWNavigationVC.m in Sources */,
 				59C590E31A76236C00046063 /* NWChartView.m in Sources */,
 				595D1A671A753E60002E9AD3 /* NWMapVC.m in Sources */,
 				5935AE4D1A7B4CD2006637A5 /* EditTableVC.m in Sources */,
 				591E14221A651FA40034FCB1 /* FinalItemCell.m in Sources */,
+				5934164B1A7B6D7700503B58 /* NWBaseVC.m in Sources */,
 				591E14141A64FAB90034FCB1 /* AppDetailsVC.m in Sources */,
 				5913DDAD1A755736005AD7DC /* NWImageVC.m in Sources */,
 				591E14171A64FEDC0034FCB1 /* ParseAppViewCell.m in Sources */,
@@ -470,6 +495,7 @@
 				591E113D1A5F7F2D00044F39 /* HomeVC.m in Sources */,
 				592A3FCA1A64BCC00077C0CB /* TableDetailsVC.m in Sources */,
 				591E11341A5F7F2D00044F39 /* main.m in Sources */,
+				5934164E1A7B6FFE00503B58 /* NWBaseTVC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

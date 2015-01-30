@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "NWBaseTVC.h"
 
-@interface AppDetailsVC : UITableViewController
+@interface AppDetailsVC : NWBaseTVC
 
 @property (strong, nonatomic) NSObject* parseApp;
 

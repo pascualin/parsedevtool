@@ -11,8 +11,9 @@
 #import <ParseUI.h>
 #import "NWChartVC.h"
 #import "PNChartLabel.h"
+#import "NWBaseQTVC.h"
 
-@interface TableDetailsVC : PFQueryTableViewController
+@interface TableDetailsVC : NWBaseQTVC
 
 @property (strong, nonatomic) NSObject* parseTable;
 @property (strong, nonatomic) NSObject* parseApp;

@@ -8,8 +8,9 @@
 
 #import <UIKit/UIKit.h>
 #import <Parse/Parse.h>
+#import "NWBaseTVC.h"
 
-@interface ItemDetailVC : UITableViewController <UITableViewDelegate, UITableViewDataSource>
+@interface ItemDetailVC : NWBaseTVC <UITableViewDelegate, UITableViewDataSource>
 
 @property (strong, nonatomic) NSObject* parseApp;
 @property (strong, nonatomic) NSObject* parseTable;

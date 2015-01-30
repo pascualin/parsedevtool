@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import <GoogleMaps/GoogleMaps.h>
+#import <GoogleAnalytics-iOS-SDK/GAI.h>
 
 @interface AppDelegate ()
 
@@ -18,6 +19,12 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    // ****************************************************************************
+    // Google Analytics
+    // ****************************************************************************
+    [[GAI sharedInstance] trackerWithTrackingId:@"UA-59147177-1"];
+    
     // Initialising Google Maps
     [GMSServices provideAPIKey:@"AIzaSyAhdFTfltM6k5V0flP1NP1TiiAxVbS86WU"];
     

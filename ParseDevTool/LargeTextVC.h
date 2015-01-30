@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "NWBaseVC.h"
 
-@interface LargeTextVC : UIViewController
+@interface LargeTextVC : NWBaseVC
 
 @property (weak, nonatomic) NSString* largeText;
 @property (weak, nonatomic) IBOutlet UITextView *txtLargeText;
