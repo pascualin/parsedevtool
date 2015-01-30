@@ -11,6 +11,7 @@
 @interface AddTableVC : UIViewController
 
 @property (weak, nonatomic) IBOutlet UITextField *txtName;
+@property (weak, nonatomic) IBOutlet UITextField *txtDisplayname;
 @property (strong, nonatomic) NSObject* parseApp;
 
 @end

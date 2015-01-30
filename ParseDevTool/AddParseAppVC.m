@@ -34,6 +34,7 @@
         
         // Set table name
         [userTable setValue:@"_User" forKey:@"name"];
+        [userTable setValue:@"username" forKey:@"displayProperty"];
         
         // Create Relationship
         NSMutableSet *tables = [newParseApp mutableSetValueForKey:@"tables"];

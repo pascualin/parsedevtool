@@ -71,7 +71,7 @@
     }
     
     cell.item = item;
-    cell.txtObjectId.text = item.objectId;
+    cell.txtObjectId.text = [item valueForKey:[self.parseTable valueForKey:@"displayProperty"]];
     
     return cell;
 }

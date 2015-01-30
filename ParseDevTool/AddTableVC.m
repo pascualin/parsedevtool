@@ -25,6 +25,14 @@
         NSManagedObject* newTable;
         newTable = [[NSManagedObject alloc] initWithEntity:tableDescription insertIntoManagedObjectContext:context];
         [newTable setValue:self.txtName.text forKey:@"name"];
+        if ([self.txtDisplayname.text length] > 0)
+        {
+            [newTable setValue:self.txtDisplayname.text forKey:@"displayProperty"];
+        }
+        else
+        {
+            [newTable setValue:@"objectId" forKey:@"displayProperty"];
+        }
         
         NSMutableSet *tables = [(NSManagedObject*)self.parseApp mutableSetValueForKey:@"tables"];
         [tables addObject:newTable];

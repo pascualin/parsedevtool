@@ -7,11 +7,12 @@
         <relationship name="tables" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Table" inverseName="pasreApp" inverseEntity="Table" syncable="YES"/>
     </entity>
     <entity name="Table" syncable="YES">
+        <attribute name="displayProperty" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="pasreApp" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ParseApp" inverseName="tables" inverseEntity="ParseApp" syncable="YES"/>
     </entity>
     <elements>
         <element name="ParseApp" positionX="-63" positionY="-18" width="128" height="103"/>
-        <element name="Table" positionX="178" positionY="9" width="128" height="73"/>
+        <element name="Table" positionX="178" positionY="9" width="128" height="90"/>
     </elements>
 </model>
