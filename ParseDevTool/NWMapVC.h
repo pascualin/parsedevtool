@@ -8,9 +8,8 @@
 
 #import <UIKit/UIKit.h>
 #import <Parse/Parse.h>
-#import "NWBaseVC.h"
 
-@interface NWMapVC : NWBaseVC
+@interface NWMapVC : UIViewController
 
 @property (strong,nonatomic) PFGeoPoint* geopoint;
 

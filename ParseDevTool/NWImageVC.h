@@ -9,9 +9,8 @@
 #import <UIKit/UIKit.h>
 #import <ParseUI.h>
 #import <Parse/Parse.h>
-#import "NWBaseVC.h"
 
-@interface NWImageVC : NWBaseVC
+@interface NWImageVC : UIViewController
 
 @property (weak, nonatomic) IBOutlet PFImageView *imageView;
 @property (weak, nonatomic) PFFile *pfFile;

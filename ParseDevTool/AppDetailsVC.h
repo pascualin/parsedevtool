@@ -7,9 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "NWBaseVC.h"
 
-@interface AppDetailsVC : NWBaseVC <UITableViewDelegate, UITableViewDataSource>
+@interface AppDetailsVC : UIViewController <UITableViewDelegate, UITableViewDataSource>
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (strong, nonatomic) NSObject* parseApp;
