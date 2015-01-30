@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface HomeVC : UIViewController <UITableViewDelegate, UITableViewDataSource>
+@interface HomeVC : UITableViewController
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 
