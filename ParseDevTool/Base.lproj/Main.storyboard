@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="kyK-ZS-PMP">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="kyK-ZS-PMP">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -194,13 +194,13 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Scn-Rb-iFj" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <customObject id="sXK-dB-EPa" customClass="TableDetailsVC"/>
-                <barButtonItem image="1422882564_7" id="4wW-Hw-Lre">
+                <barButtonItem tag="1" image="1422882564_7" id="4wW-Hw-Lre">
                     <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <connections>
                         <segue destination="4f8-tg-nd0" kind="modal" identifier="toChart" id="tYC-MW-tlF"/>
                     </connections>
                 </barButtonItem>
-                <barButtonItem tag="1" image="1422882745_icon-ios7-gear-outline-128" id="56f-WI-k1Q">
+                <barButtonItem image="1422882745_icon-ios7-gear-outline-128" id="56f-WI-k1Q">
                     <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <connections>
                         <segue destination="OFV-ez-99H" kind="modal" identifier="toEditTable" id="0gf-Oo-Nec"/>
@@ -328,8 +328,9 @@
                                 <rect key="frame" x="0.0" y="0.0" width="568" height="320"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="detailDisclosure" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sl3-Kj-L2D">
-                                <rect key="frame" x="530" y="25" width="22" height="22"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sl3-Kj-L2D">
+                                <rect key="frame" x="530" y="25" width="29" height="29"/>
+                                <state key="normal" image="close"/>
                                 <connections>
                                     <action selector="dismiss:" destination="4f8-tg-nd0" eventType="touchUpInside" id="acL-Oz-7g4"/>
                                 </connections>
@@ -353,7 +354,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5Wx-gV-t70" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1866" y="1850"/>
+            <point key="canvasLocation" x="1866" y="1729"/>
         </scene>
         <!--ImageVC-->
         <scene sceneID="8c8-lP-7YA">
@@ -598,6 +599,7 @@
         <image name="1422882564_7" width="22" height="22"/>
         <image name="1422882745_icon-ios7-gear-outline-128" width="22" height="22"/>
         <image name="1422890921_checkmark-128" width="22" height="22"/>
+        <image name="close" width="29" height="29"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
