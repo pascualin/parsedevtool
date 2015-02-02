@@ -10,6 +10,7 @@
 
 @interface NWChartVC ()
 
+@property BOOL isChartLoaded;
 @end
 
 @implementation NWChartVC
@@ -44,13 +45,13 @@
 
 - (void)viewDidLayoutSubviews {
     [super viewDidLayoutSubviews];
-    self.chartView.frame = self.view.bounds;
-}
-
--(void)viewWillAppear:(BOOL)animated
-{
-    [super viewWillAppear:animated];
-    [self.chartView refreshChart];
+    if (!self.isChartLoaded)
+    {
+        self.chartView.frame = self.view.frame;
+        self.chartView.bounds = self.view.bounds;
+        self.isChartLoaded = YES;
+        [self.chartView refreshChart];
+    }
 }
 
 -(BOOL)shouldAutorotate
