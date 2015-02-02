@@ -10,6 +10,7 @@
 
 @interface NWChartVC ()
 
+@property BOOL isChartLoaded;
 @end
 
 @implementation NWChartVC
@@ -19,14 +20,38 @@
 
     // Do any additional setup after loading the view.
     self.chartView.objects = self.objects;
+    
+    [[UIDevice currentDevice] beginGeneratingDeviceOrientationNotifications];
+    [[NSNotificationCenter defaultCenter]
+     addObserver:self selector:@selector(orientationChanged:)
+     name:UIDeviceOrientationDidChangeNotification
+     object:[UIDevice currentDevice]];
+    
+    self.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
+}
 
+- (void) orientationChanged:(NSNotification *)note
+{
+    UIDevice * device = note.object;
+    switch(device.orientation)
+    {
+        case UIDeviceOrientationPortrait:
+            [self.presentingViewController dismissViewControllerAnimated:YES completion:nil];
+            break;
+        default:
+            break;
+    };
 }
 
 - (void)viewDidLayoutSubviews {
     [super viewDidLayoutSubviews];
-    
-    self.chartView.frame = self.view.bounds;
-    [self.chartView refreshChart];
+    if (!self.isChartLoaded)
+    {
+        self.chartView.frame = self.view.frame;
+        self.chartView.bounds = self.view.bounds;
+        self.isChartLoaded = YES;
+        [self.chartView refreshChart];
+    }
 }
 
 -(BOOL)shouldAutorotate
@@ -36,7 +61,7 @@
 
 - (NSUInteger)supportedInterfaceOrientations
 {
-    return UIInterfaceOrientationMaskLandscapeLeft;
+    return UIInterfaceOrientationMaskLandscape;
 }
 
 - (IBAction)dismiss:(id)sender
