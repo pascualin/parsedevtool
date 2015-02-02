@@ -29,8 +29,6 @@
     self.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
 }
 
-
-
 - (void) orientationChanged:(NSNotification *)note
 {
     UIDevice * device = note.object;
