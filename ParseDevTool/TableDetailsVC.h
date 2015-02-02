@@ -18,6 +18,7 @@
 @property (strong, nonatomic) NSObject* parseTable;
 @property (strong, nonatomic) NSObject* parseApp;
 @property (strong, nonatomic) PFRelation* relation;
+@property (nonatomic, strong) IBOutletCollection(UIBarButtonItem) NSArray* rightBarButtonItemsCollection;
 
 @property (strong, nonatomic) PFObject* item;
 
