@@ -84,6 +84,9 @@
     }
     
     cell.item = item;
+    
+    cell.txtError.text = @"";
+    
     NSString* displayProperty = [self.parseTable valueForKey:@"displayProperty"];
     NSObject* assignableText = [item valueForKey:displayProperty];
     if (displayProperty.length > 0)
@@ -94,7 +97,8 @@
         }
         else
         {
-            cell.txtObjectId.text = @"!!Invalid display property!!";
+            cell.txtError.text = [NSString stringWithFormat:@"Undefined property %@", displayProperty];
+            cell.txtObjectId.text = item.objectId;
         }
     }
     else
