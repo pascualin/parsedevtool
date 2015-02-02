@@ -43,6 +43,7 @@
     self.objectsPerPage = 1000;
     
     [super viewDidLoad];
+    [self.tableView setSeparatorStyle:UITableViewCellSeparatorStyleSingleLine];
 }
 
 -(void)viewWillAppear:(BOOL)animated
@@ -114,7 +115,7 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return 43;
+    return 44;
 }
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
@@ -140,4 +141,9 @@
         editTableVC.parseApp = self.parseApp;
     }
 }
+
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    return self.objects.count;
+}
+
 @end
