@@ -46,8 +46,12 @@
 
 - (void)viewDidLayoutSubviews {
     [super viewDidLayoutSubviews];
-    
     self.chartView.frame = self.view.bounds;
+}
+
+-(void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
     [self.chartView refreshChart];
 }
 
