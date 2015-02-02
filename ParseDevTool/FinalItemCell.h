@@ -13,5 +13,6 @@
 
 @property (weak, nonatomic) IBOutlet UILabel *txtObjectId;
 @property (weak, nonatomic) PFObject* item;
+@property (weak, nonatomic) IBOutlet UILabel *txtError;
 
 @end
