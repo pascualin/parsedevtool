@@ -24,7 +24,7 @@
                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </textAttributes>
                                 <items>
-                                    <navigationItem title="Title" id="jM1-WE-3VA">
+                                    <navigationItem title="Add Parse App" id="jM1-WE-3VA">
                                         <barButtonItem key="leftBarButtonItem" title="Cancel" id="2GL-eN-aRW">
                                             <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <connections>
@@ -185,13 +185,13 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Scn-Rb-iFj" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <customObject id="sXK-dB-EPa" customClass="TableDetailsVC"/>
-                <barButtonItem tag="1" title="Edit" id="56f-WI-k1Q">
+                <barButtonItem tag="1" image="1422882745_icon-ios7-gear-outline-128" id="56f-WI-k1Q">
                     <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <connections>
                         <segue destination="OFV-ez-99H" kind="modal" identifier="toEditTable" id="0gf-Oo-Nec"/>
                     </connections>
                 </barButtonItem>
-                <barButtonItem title="Chart" id="4wW-Hw-Lre">
+                <barButtonItem image="1422882564_7" id="4wW-Hw-Lre">
                     <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <connections>
                         <segue destination="4f8-tg-nd0" kind="modal" identifier="toChart" id="tYC-MW-tlF"/>
@@ -395,7 +395,7 @@
                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </textAttributes>
                                 <items>
-                                    <navigationItem title="Title" id="6Mv-yC-bbQ">
+                                    <navigationItem title="Add Class" id="6Mv-yC-bbQ">
                                         <barButtonItem key="leftBarButtonItem" title="Cancel" id="Oxh-11-vdQ">
                                             <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <connections>
@@ -536,7 +536,7 @@
                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </textAttributes>
                                 <items>
-                                    <navigationItem title="Title" id="yPG-mD-GJk">
+                                    <navigationItem title="Edit" id="yPG-mD-GJk">
                                         <barButtonItem key="leftBarButtonItem" title="Cancel" id="vIM-qE-ZXe">
                                             <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <connections>
@@ -583,6 +583,10 @@
             <point key="canvasLocation" x="2320" y="568"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="1422882564_7" width="22" height="22"/>
+        <image name="1422882745_icon-ios7-gear-outline-128" width="22" height="22"/>
+    </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
