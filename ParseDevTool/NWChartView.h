@@ -12,6 +12,7 @@
 
 @property NSArray *reversedDate;
 @property NSArray *objects;
+@property int maxValue;
 
 -(void)refreshChart;
 

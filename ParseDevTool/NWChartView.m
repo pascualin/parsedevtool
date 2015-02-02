@@ -30,6 +30,10 @@
             int currentValue = [[tempValues objectAtIndex:j] intValue] + 1;
             NSNumber* currentValueObject = [NSNumber numberWithInt:currentValue];
             [tempValues replaceObjectAtIndex:j withObject:currentValueObject];
+            if (currentValue > self.maxValue)
+            {
+                self.maxValue = currentValue;
+            }
         }
         else
         {
@@ -43,18 +47,18 @@
             }
         }
     }
-    [self setStrokeColor:[UIColor colorWithRed:65.0f/255 green:120.0f/255 blue:250.0f/255 alpha:1]];
 }
 
 -(void)refreshChart
 {
     // Set up X-asix
     // Get dates from 6 days
-    int numberOfItems = 20;
+    self.maxValue = 0;
+    int numberOfItems = 30;
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
     NSTimeZone *timeZone = [NSTimeZone timeZoneWithName:@"GMT"]; // UTC is same as GMT
     [dateFormatter setTimeZone:timeZone];
-    [dateFormatter setDateFormat:@"MMM DD"];
+    [dateFormatter setDateFormat:@"MMM dd"];
     
     NSDate *now = [NSDate date];
     
@@ -68,6 +72,10 @@
         // Initialise to empty values
         [tempValues addObject:@0];
     }
+    
+    [self setStrokeColor:[UIColor colorWithRed:65.0f/255 green:120.0f/255 blue:250.0f/255 alpha:1]];
+    [self setXLabelSkip:2];
+    
     self.reversedDate = [[results reverseObjectEnumerator] allObjects];
     
     [self setXLabels:self.reversedDate];
@@ -75,23 +83,23 @@
     self.yLabelFormatter = ^(CGFloat yValue)
     {
         CGFloat yValueParsed = yValue;
-        NSString * labelText = [NSString stringWithFormat:@"%1.1f",yValueParsed];
+        NSString * labelText = [NSString stringWithFormat:@"%.0f",yValueParsed];
         return labelText;
     };
     
     // Set up Data
-    
-   
-    
     int j = numberOfItems-1;
     
     for (PFObject* object in self.objects)
     {
         [self compareDateWithIndex:j tempValues:tempValues compareDateOnly:now andObject:object];
     }
+    
+    [self setYLabelSum:self.maxValue];
     [self setYValues:tempValues];
     
     [self strokeChart];
+
 }
 
 @end
