@@ -58,4 +58,12 @@
     return UIBarPositionTopAttached;
 }
 
+- (BOOL)shouldAutorotate {
+    return NO;
+}
+
+- (NSUInteger)supportedInterfaceOrientations {
+    return UIInterfaceOrientationPortrait;
+}
+
 @end
