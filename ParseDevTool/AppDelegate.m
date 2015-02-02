@@ -28,6 +28,8 @@
     // Initialising Google Maps
     [GMSServices provideAPIKey:@"AIzaSyAhdFTfltM6k5V0flP1NP1TiiAxVbS86WU"];
     
+    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
+    
     return YES;
 }
 
