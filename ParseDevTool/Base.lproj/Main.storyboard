@@ -25,13 +25,13 @@
                                 </textAttributes>
                                 <items>
                                     <navigationItem title="Add Parse App" id="jM1-WE-3VA">
-                                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="2GL-eN-aRW">
+                                        <barButtonItem key="leftBarButtonItem" systemItem="stop" id="2GL-eN-aRW">
                                             <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <connections>
                                                 <action selector="cancelSave:" destination="KSX-UR-W3e" id="1TJ-Tx-Zb9"/>
                                             </connections>
                                         </barButtonItem>
-                                        <barButtonItem key="rightBarButtonItem" title="Save" id="QSJ-tQ-fj6">
+                                        <barButtonItem key="rightBarButtonItem" image="1422890921_checkmark-128" id="QSJ-tQ-fj6">
                                             <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <connections>
                                                 <action selector="saveNewParseApp:" destination="KSX-UR-W3e" id="FQl-HW-uBA"/>
@@ -134,7 +134,7 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Class" id="Aao-o2-DJZ">
-                        <barButtonItem key="backBarButtonItem" title="Back" id="0el-5Q-Aqs"/>
+                        <barButtonItem key="backBarButtonItem" title=" " id="hOg-6q-CJI"/>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="Qo8-Wz-9Fa">
                             <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>
@@ -177,7 +177,9 @@
                             </tableViewCell>
                         </prototypes>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Title" id="yB5-dg-c9j"/>
+                    <navigationItem key="navigationItem" title="Title" id="yB5-dg-c9j">
+                        <barButtonItem key="backBarButtonItem" title=" " id="tmM-IS-5K5"/>
+                    </navigationItem>
                     <connections>
                         <outletCollection property="rightBarButtonItemsCollection" destination="56f-WI-k1Q" id="Dhk-RS-49k"/>
                         <outletCollection property="rightBarButtonItemsCollection" destination="4wW-Hw-Lre" id="rTJ-EY-lEE"/>
@@ -185,16 +187,16 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Scn-Rb-iFj" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <customObject id="sXK-dB-EPa" customClass="TableDetailsVC"/>
-                <barButtonItem tag="1" image="1422882745_icon-ios7-gear-outline-128" id="56f-WI-k1Q">
-                    <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    <connections>
-                        <segue destination="OFV-ez-99H" kind="modal" identifier="toEditTable" id="0gf-Oo-Nec"/>
-                    </connections>
-                </barButtonItem>
                 <barButtonItem image="1422882564_7" id="4wW-Hw-Lre">
                     <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <connections>
                         <segue destination="4f8-tg-nd0" kind="modal" identifier="toChart" id="tYC-MW-tlF"/>
+                    </connections>
+                </barButtonItem>
+                <barButtonItem tag="1" image="1422882745_icon-ios7-gear-outline-128" id="56f-WI-k1Q">
+                    <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <segue destination="OFV-ez-99H" kind="modal" identifier="toEditTable" id="0gf-Oo-Nec"/>
                     </connections>
                 </barButtonItem>
             </objects>
@@ -239,7 +241,9 @@
                             <outlet property="delegate" destination="5kP-Xz-J4t" id="90i-T5-WaG"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="agk-83-bta"/>
+                    <navigationItem key="navigationItem" id="agk-83-bta">
+                        <barButtonItem key="backBarButtonItem" title=" " id="QBd-H5-Hiz"/>
+                    </navigationItem>
                     <connections>
                         <segue destination="OEO-tX-TSl" kind="push" identifier="toMap" id="fkh-Ar-KUR"/>
                         <segue destination="xEr-Ym-599" kind="push" identifier="toImage" id="TRJ-gj-7Ty"/>
@@ -396,13 +400,13 @@
                                 </textAttributes>
                                 <items>
                                     <navigationItem title="Add Class" id="6Mv-yC-bbQ">
-                                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="Oxh-11-vdQ">
+                                        <barButtonItem key="leftBarButtonItem" systemItem="stop" id="Oxh-11-vdQ">
                                             <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <connections>
                                                 <action selector="cancelSave:" destination="TbF-0D-cg8" id="nLx-aE-TFH"/>
                                             </connections>
                                         </barButtonItem>
-                                        <barButtonItem key="rightBarButtonItem" title="Save" id="B6B-za-G3u">
+                                        <barButtonItem key="rightBarButtonItem" image="1422890921_checkmark-128" id="B6B-za-G3u">
                                             <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <connections>
                                                 <action selector="saveNewTable:" destination="TbF-0D-cg8" id="yqc-WP-ogB"/>
@@ -504,7 +508,7 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Parse Dev Tool" id="Ijc-iY-Vhh">
-                        <barButtonItem key="backBarButtonItem" title="Back" id="SI6-OK-h1C"/>
+                        <barButtonItem key="backBarButtonItem" title=" " id="knU-TN-TR6"/>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="1yd-Am-08Q">
                             <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>
@@ -537,13 +541,13 @@
                                 </textAttributes>
                                 <items>
                                     <navigationItem title="Edit" id="yPG-mD-GJk">
-                                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="vIM-qE-ZXe">
+                                        <barButtonItem key="leftBarButtonItem" systemItem="stop" id="vIM-qE-ZXe">
                                             <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <connections>
                                                 <action selector="cancel:" destination="OFV-ez-99H" id="8tz-f3-pGi"/>
                                             </connections>
                                         </barButtonItem>
-                                        <barButtonItem key="rightBarButtonItem" title="Save" id="rNu-IL-Nfd">
+                                        <barButtonItem key="rightBarButtonItem" image="1422890921_checkmark-128" id="rNu-IL-Nfd">
                                             <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <connections>
                                                 <action selector="saveTable:" destination="OFV-ez-99H" id="DOg-WA-b6z"/>
@@ -586,6 +590,7 @@
     <resources>
         <image name="1422882564_7" width="22" height="22"/>
         <image name="1422882745_icon-ios7-gear-outline-128" width="22" height="22"/>
+        <image name="1422890921_checkmark-128" width="22" height="22"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
