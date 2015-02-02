@@ -84,14 +84,22 @@
     }
     
     cell.item = item;
-    NSObject* assignableText = [item valueForKey:[self.parseTable valueForKey:@"displayProperty"]];
-    if ([assignableText isKindOfClass:[NSString class]])
+    NSString* displayProperty = [self.parseTable valueForKey:@"displayProperty"];
+    NSObject* assignableText = [item valueForKey:displayProperty];
+    if (displayProperty.length > 0)
     {
-        cell.txtObjectId.text = (NSString*)assignableText;
+        if ([assignableText isKindOfClass:[NSString class]])
+        {
+            cell.txtObjectId.text = (NSString*)assignableText;
+        }
+        else
+        {
+            cell.txtObjectId.text = @"!!Invalid display property!!";
+        }
     }
     else
     {
-        cell.txtObjectId.text = @"!!Invalid display property!!";
+        cell.txtObjectId.text = item.objectId;
     }
     
     return cell;
