@@ -14,6 +14,8 @@
 
 @interface TableDetailsVC ()
 
+@property BOOL isScreenActive;
+
 @end
 
 @implementation TableDetailsVC
@@ -44,11 +46,35 @@
     
     [super viewDidLoad];
     [self.tableView setSeparatorStyle:UITableViewCellSeparatorStyleSingleLine];
+    [[UIDevice currentDevice] beginGeneratingDeviceOrientationNotifications];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(orientationChanged:) name:UIDeviceOrientationDidChangeNotification object:[UIDevice currentDevice]];
+}
+
+- (void) orientationChanged:(NSNotification *)note
+{
+    if (self.isScreenActive)
+    {
+        UIDevice * device = note.object;
+        switch(device.orientation)
+        {
+            case UIDeviceOrientationLandscapeRight:
+                [self performSegueWithIdentifier:@"toChart" sender:self];
+                break;
+                
+            case UIDeviceOrientationLandscapeLeft:
+                [self performSegueWithIdentifier:@"toChart" sender:self];
+                break;
+                
+            default:
+                break;
+        };
+    }
 }
 
 -(void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
+    self.isScreenActive = YES;
     [self loadObjects];
 }
 
@@ -140,21 +166,25 @@
         itemDetailsVC.parseApp = self.parseApp;
         itemDetailsVC.parseTable = self.parseTable;
         itemDetailsVC.title = itemDetailsVC.item.objectId;
+        self.isScreenActive = NO;
     }
     if ([segue.identifier isEqualToString:@"toChart"])
     {
         NWChartVC *chartVC = segue.destinationViewController;
         chartVC.objects = self.objects;
+        self.isScreenActive = NO;
     }
     if ([segue.identifier isEqualToString:@"toEditTable"])
     {
         EditTableVC *editTableVC = segue.destinationViewController;
         editTableVC.parseTable = self.parseTable;
         editTableVC.parseApp = self.parseApp;
+        self.isScreenActive = NO;
     }
 }
 
--(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
     return self.objects.count;
 }
 

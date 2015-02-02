@@ -197,7 +197,7 @@
                 <barButtonItem image="1422882564_7" id="4wW-Hw-Lre">
                     <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <connections>
-                        <segue destination="4f8-tg-nd0" kind="modal" identifier="toChart" id="tYC-MW-tlF"/>
+                        <segue destination="4f8-tg-nd0" kind="modal" identifier="toChart" modalTransitionStyle="crossDissolve" id="tYC-MW-tlF"/>
                     </connections>
                 </barButtonItem>
                 <barButtonItem tag="1" image="1422882745_icon-ios7-gear-outline-128" id="56f-WI-k1Q">

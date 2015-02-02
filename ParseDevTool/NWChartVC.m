@@ -19,7 +19,29 @@
 
     // Do any additional setup after loading the view.
     self.chartView.objects = self.objects;
+    
+    [[UIDevice currentDevice] beginGeneratingDeviceOrientationNotifications];
+    [[NSNotificationCenter defaultCenter]
+     addObserver:self selector:@selector(orientationChanged:)
+     name:UIDeviceOrientationDidChangeNotification
+     object:[UIDevice currentDevice]];
+    
+    self.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
+}
 
+
+
+- (void) orientationChanged:(NSNotification *)note
+{
+    UIDevice * device = note.object;
+    switch(device.orientation)
+    {
+        case UIDeviceOrientationPortrait:
+            [self.presentingViewController dismissViewControllerAnimated:YES completion:nil];
+            break;
+        default:
+            break;
+    };
 }
 
 - (void)viewDidLayoutSubviews {
@@ -36,7 +58,7 @@
 
 - (NSUInteger)supportedInterfaceOrientations
 {
-    return UIInterfaceOrientationMaskLandscapeLeft;
+    return UIInterfaceOrientationMaskLandscape;
 }
 
 - (IBAction)dismiss:(id)sender
