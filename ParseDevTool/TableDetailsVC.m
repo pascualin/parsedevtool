@@ -55,16 +55,20 @@
 {
     [super objectsDidLoad:error];
 
-    UINavigationBar* navBar = (UINavigationBar*)self.navigationItem.titleView;
     if (self.relation)
     {
-        navBar.topItem.title = [NSString stringWithFormat:@"%@ (%lu)", [self.relation valueForKey:@"key"], (unsigned long)self.objects.count];
+        self.navigationItem.title = [NSString stringWithFormat:@"%@ (%lu)", [self.relation valueForKey:@"key"], (unsigned long)self.objects.count];
     }
     else
     {
-        navBar.topItem.title = [NSString stringWithFormat:@"%@ (%lu)", [self.parseTable valueForKey:@"name"], (unsigned long)self.objects.count];
+       self.navigationItem.title = [NSString stringWithFormat:@"%@ (%lu)", [self.parseTable valueForKey:@"name"], (unsigned long)self.objects.count];
     }
 
+}
+
+- (void) setRightBarButtonItemsCollection:(NSArray *)rightBarButtonItemsCollection {
+    self.navigationItem.rightBarButtonItems = [rightBarButtonItemsCollection
+                                sortedArrayUsingDescriptors:@[[NSSortDescriptor sortDescriptorWithKey:@"tag" ascending:YES]]];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath object:(NSObject *)object

@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "NWBaseVC.h"
 
-@interface EditTableVC : NWBaseVC
+@interface EditTableVC : NWBaseVC <UIBarPositioningDelegate>
 
 @property (weak, nonatomic) IBOutlet UITextField *txtDisplayProperty;
 @property (strong, nonatomic) NSObject* parseTable;
