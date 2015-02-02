@@ -43,6 +43,7 @@
             }
         }
     }
+    [self setStrokeColor:[UIColor colorWithRed:65.0f/255 green:120.0f/255 blue:250.0f/255 alpha:1]];
 }
 
 -(void)refreshChart
