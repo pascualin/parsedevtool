@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import <GoogleMaps/GoogleMaps.h>
 #import <GoogleAnalytics-iOS-SDK/GAI.h>
+#import <Crashlytics/Crashlytics.h>
 
 @interface AppDelegate ()
 
@@ -27,6 +28,11 @@
     
     // Initialising Google Maps
     [GMSServices provideAPIKey:@"AIzaSyAhdFTfltM6k5V0flP1NP1TiiAxVbS86WU"];
+    
+    // ****************************************************************************
+    // Crashlytics Setup
+    // ****************************************************************************
+    [Crashlytics startWithAPIKey:@"87d9f8aac6966f8a02e9cad3462a2ec916625526"];
     
     [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
     
