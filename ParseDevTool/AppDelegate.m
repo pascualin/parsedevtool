@@ -10,6 +10,9 @@
 #import <GoogleMaps/GoogleMaps.h>
 #import <GoogleAnalytics-iOS-SDK/GAI.h>
 #import <Crashlytics/Crashlytics.h>
+#import "CJPAdController.h"
+#import "NWNavigationVC.h"
+#import "HomeVC.h"
 
 @interface AppDelegate ()
 
@@ -38,6 +41,16 @@
     
     #ifdef ISFREE
         NSLog(@"Free version");
+        [CJPAdController sharedInstance].adNetworks = @[@(CJPAdNetworkAdMob)];
+        [CJPAdController sharedInstance].adPosition = CJPAdPositionBottom;
+        [CJPAdController sharedInstance].initialDelay = 0.0;
+        [CJPAdController sharedInstance].adMobUnitID = @"ca-app-pub-4192187297198298/6243306365";
+
+        NWNavigationVC *nav = (NWNavigationVC*)[[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier: @"NWNavigationVC"];
+    
+    
+        [[CJPAdController sharedInstance] startWithViewController:nav];
+        self.window.rootViewController = [CJPAdController sharedInstance];
     #else
         NSLog(@"Pro version");
     #endif

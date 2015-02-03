@@ -12,6 +12,12 @@
 #define COCOAPODS_VERSION_MINOR_Bolts 1
 #define COCOAPODS_VERSION_PATCH_Bolts 3
 
+// CJPAdController
+#define COCOAPODS_POD_AVAILABLE_CJPAdController
+#define COCOAPODS_VERSION_MAJOR_CJPAdController 1
+#define COCOAPODS_VERSION_MINOR_CJPAdController 6
+#define COCOAPODS_VERSION_PATCH_CJPAdController 2
+
 // CrashlyticsFramework
 #define COCOAPODS_POD_AVAILABLE_CrashlyticsFramework
 // This library does not follow semantic-versioning,

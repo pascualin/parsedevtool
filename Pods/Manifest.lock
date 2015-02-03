@@ -1,5 +1,7 @@
 PODS:
   - Bolts (1.1.3)
+  - CJPAdController (1.6.2):
+    - Google-Mobile-Ads-SDK
   - CrashlyticsFramework (2.2.5.2)
   - Facebook-iOS-SDK (3.22.0):
     - Bolts (~> 1.0)
@@ -22,6 +24,7 @@ PODS:
   - UICountingLabel (1.0.0)
 
 DEPENDENCIES:
+  - CJPAdController
   - CrashlyticsFramework
   - Google-Maps-iOS-SDK
   - Google-Mobile-Ads-SDK
@@ -33,6 +36,7 @@ DEPENDENCIES:
 
 SPEC CHECKSUMS:
   Bolts: 3db0a875235e0c9042b013af13af0f00f79b102c
+  CJPAdController: 28782f630eb360a521e76ec7e0780a827eb8ebd6
   CrashlyticsFramework: 4e91082f3019bea7e718e1b67b0a3b56729dbc5d
   Facebook-iOS-SDK: 0eda8ff7120aada0a9c5f98552f7625da6c3440a
   Google-Maps-iOS-SDK: 25fa3c054c74a7dcb82e3ef38224cfa6b66c9344
@@ -45,4 +49,4 @@ SPEC CHECKSUMS:
   PNChart: 18d4c57f43df3357ab14b3847a930f36d1fbce48
   UICountingLabel: 0a0e9e34bf4690dbd127aaec552d19ed938087a9
 
-COCOAPODS: 0.36.0.beta.1
+COCOAPODS: 0.35.0

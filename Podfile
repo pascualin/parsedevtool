@@ -12,6 +12,7 @@ pod 'Google-Mobile-Ads-SDK'
 # Components
 pod 'MBProgressHUD'
 pod 'PNChart'
+pod 'CJPAdController'
 
 link_with "ParseDevToolFree"
 link_with "ParseDevToolPro"
