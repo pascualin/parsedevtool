@@ -4,6 +4,7 @@ PODS:
   - Facebook-iOS-SDK (3.22.0):
     - Bolts (~> 1.0)
   - Google-Maps-iOS-SDK (1.9.1)
+  - Google-Mobile-Ads-SDK (6.12.2)
   - GoogleAnalytics-iOS-SDK (3.10):
     - GoogleAnalytics-iOS-SDK/Core (= 3.10)
   - GoogleAnalytics-iOS-SDK/Core (3.10)
@@ -23,6 +24,7 @@ PODS:
 DEPENDENCIES:
   - CrashlyticsFramework
   - Google-Maps-iOS-SDK
+  - Google-Mobile-Ads-SDK
   - GoogleAnalytics-iOS-SDK
   - MBProgressHUD
   - Parse
@@ -34,6 +36,7 @@ SPEC CHECKSUMS:
   CrashlyticsFramework: 4e91082f3019bea7e718e1b67b0a3b56729dbc5d
   Facebook-iOS-SDK: 0eda8ff7120aada0a9c5f98552f7625da6c3440a
   Google-Maps-iOS-SDK: 25fa3c054c74a7dcb82e3ef38224cfa6b66c9344
+  Google-Mobile-Ads-SDK: 9761186eb5dc5e1493e71dcce2b525159f763d42
   GoogleAnalytics-iOS-SDK: f422062075d9ccb1ea8d783fc5ba3829461e9502
   MBProgressHUD: 2038dbcf3dce73215abed6001657043d53aa79a8
   Parse: b0ec7666167e212edb6fc94f60ba170248bd1869

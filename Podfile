@@ -7,6 +7,7 @@ pod 'ParseUI'
 pod 'GoogleAnalytics-iOS-SDK'
 pod 'Google-Maps-iOS-SDK'
 pod 'CrashlyticsFramework'
+pod 'Google-Mobile-Ads-SDK'
 
 # Components
 pod 'MBProgressHUD'
