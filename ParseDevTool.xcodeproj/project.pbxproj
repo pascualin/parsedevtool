@@ -76,7 +76,7 @@
 
 /* Begin PBXFileReference section */
 		14636A021A807A65006F044C /* ParseDevToolPro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ParseDevToolPro.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		14636A031A807A65006F044C /* ParseDevToolPro-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "ParseDevToolPro-Info.plist"; path = "/Volumes/MAC/Projects/NicewayAsiaLtd/ParseDevTool/code/ParseDevToolPro-Info.plist"; sourceTree = "<absolute>"; };
+		14636A031A807A65006F044C /* ParseDevToolPro-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ParseDevToolPro-Info.plist"; sourceTree = "<group>"; };
 		14A9CC421A7A264400B1C0EA /* NWNavigationVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NWNavigationVC.h; sourceTree = "<group>"; };
 		14A9CC431A7A264400B1C0EA /* NWNavigationVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NWNavigationVC.m; sourceTree = "<group>"; };
 		14F12AAB1A677D6600F3A424 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -85,7 +85,7 @@
 		14F12AB11A677D8500F3A424 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		5913DDAB1A755736005AD7DC /* NWImageVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NWImageVC.h; sourceTree = "<group>"; };
 		5913DDAC1A755736005AD7DC /* NWImageVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NWImageVC.m; sourceTree = "<group>"; };
-		591E112E1A5F7F2D00044F39 /* ParseDevTool.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ParseDevTool.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		591E112E1A5F7F2D00044F39 /* ParseDevToolFree.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ParseDevToolFree.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		591E11321A5F7F2D00044F39 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		591E11331A5F7F2D00044F39 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		591E11351A5F7F2D00044F39 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -209,7 +209,7 @@
 		591E112F1A5F7F2D00044F39 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				591E112E1A5F7F2D00044F39 /* ParseDevTool.app */,
+				591E112E1A5F7F2D00044F39 /* ParseDevToolFree.app */,
 				591E114A1A5F7F2D00044F39 /* ParseDevToolTests.xctest */,
 				14636A021A807A65006F044C /* ParseDevToolPro.app */,
 			);
@@ -414,7 +414,7 @@
 			);
 			name = ParseDevToolFree;
 			productName = ParseDevTool;
-			productReference = 591E112E1A5F7F2D00044F39 /* ParseDevTool.app */;
+			productReference = 591E112E1A5F7F2D00044F39 /* ParseDevToolFree.app */;
 			productType = "com.apple.product-type.application";
 		};
 		591E11491A5F7F2D00044F39 /* ParseDevToolTests */ = {
@@ -673,11 +673,11 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = F6306231816A88625F629A6C /* Pods.debug.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIconPro;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				INFOPLIST_FILE = "$(SRCROOT)/ParseDevToolPro-Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/ParseDevTool/ParseDevToolPro-Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = ParseDevToolPro;
+				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
 		};
@@ -685,11 +685,11 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = F73E04912D1418AD34E5D543 /* Pods.release.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIconPro;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				INFOPLIST_FILE = "$(SRCROOT)/ParseDevToolPro-Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/ParseDevTool/ParseDevToolPro-Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = ParseDevToolPro;
+				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
 		};
@@ -775,7 +775,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = F6306231816A88625F629A6C /* Pods.debug.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIconFree;
 				INFOPLIST_FILE = ParseDevTool/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -786,7 +786,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = F73E04912D1418AD34E5D543 /* Pods.release.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIconFree;
 				INFOPLIST_FILE = ParseDevTool/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
