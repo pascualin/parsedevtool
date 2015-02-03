@@ -336,6 +336,10 @@ You can get the attribution text by making a call to
 [GMSServices openSourceLicenseInfo].
 
 
+## Google-Mobile-Ads-SDK
+
+Copyright 2011 Google Inc. All Rights Reserved.
+
 ## GoogleAnalytics-iOS-SDK
 
 Copyright 2009 - 2014 Google, Inc. All rights reserved.
