@@ -7,9 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "NWBaseVC.h"
+#import "NWBaseTVC.h"
 
-@interface HomeVC : NWBaseVC <UITableViewDelegate, UITableViewDataSource>
+@interface HomeVC : NWBaseTVC <UITableViewDelegate, UITableViewDataSource>
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 
