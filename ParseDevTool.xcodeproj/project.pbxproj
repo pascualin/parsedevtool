@@ -8,6 +8,33 @@
 
 /* Begin PBXBuildFile section */
 		0D4397EAD74968096EE47032 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DFF007E25191009BC811568 /* libPods.a */; };
+		146369E11A807A65006F044C /* LargeTextVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 597DEEBA1A77A56800737CC7 /* LargeTextVC.m */; };
+		146369E21A807A65006F044C /* TableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 591E14191A6510200034FCB1 /* TableCell.m */; };
+		146369E31A807A65006F044C /* AddTableVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 591E141C1A6512DD0034FCB1 /* AddTableVC.m */; };
+		146369E41A807A65006F044C /* PropertyCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 59D1F8991A65764700F36839 /* PropertyCell.m */; };
+		146369E51A807A65006F044C /* NWChartVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 592CDEB31A77374500B70490 /* NWChartVC.m */; };
+		146369E61A807A65006F044C /* ParseDevTool.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 591E11381A5F7F2D00044F39 /* ParseDevTool.xcdatamodeld */; };
+		146369E71A807A65006F044C /* AddParseAppVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 592A3FC21A64BB1E0077C0CB /* AddParseAppVC.m */; };
+		146369E81A807A65006F044C /* NWBaseQTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 593416501A7B709700503B58 /* NWBaseQTVC.m */; };
+		146369E91A807A65006F044C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 591E11361A5F7F2D00044F39 /* AppDelegate.m */; };
+		146369EA1A807A65006F044C /* NWNavigationVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 14A9CC431A7A264400B1C0EA /* NWNavigationVC.m */; };
+		146369EB1A807A65006F044C /* NWChartView.m in Sources */ = {isa = PBXBuildFile; fileRef = 59C590E21A76236C00046063 /* NWChartView.m */; };
+		146369EC1A807A65006F044C /* NWMapVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 595D1A661A753E60002E9AD3 /* NWMapVC.m */; };
+		146369ED1A807A65006F044C /* EditTableVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 5935AE4C1A7B4CD2006637A5 /* EditTableVC.m */; };
+		146369EE1A807A65006F044C /* FinalItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 591E14201A651FA40034FCB1 /* FinalItemCell.m */; };
+		146369EF1A807A65006F044C /* NWBaseVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 5934164A1A7B6D7700503B58 /* NWBaseVC.m */; };
+		146369F01A807A65006F044C /* AppDetailsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 591E14131A64FAB90034FCB1 /* AppDetailsVC.m */; };
+		146369F11A807A65006F044C /* NWImageVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 5913DDAC1A755736005AD7DC /* NWImageVC.m */; };
+		146369F21A807A65006F044C /* ParseAppViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 591E14161A64FEDC0034FCB1 /* ParseAppViewCell.m */; };
+		146369F31A807A65006F044C /* ItemDetailVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 59D1F8961A65698500F36839 /* ItemDetailVC.m */; };
+		146369F41A807A65006F044C /* HomeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 591E113C1A5F7F2D00044F39 /* HomeVC.m */; };
+		146369F51A807A65006F044C /* TableDetailsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 592A3FC91A64BCC00077C0CB /* TableDetailsVC.m */; };
+		146369F61A807A65006F044C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 591E11331A5F7F2D00044F39 /* main.m */; };
+		146369F71A807A65006F044C /* NWBaseTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 5934164D1A7B6FFE00503B58 /* NWBaseTVC.m */; };
+		146369F91A807A65006F044C /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DFF007E25191009BC811568 /* libPods.a */; };
+		146369FB1A807A65006F044C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 591E113E1A5F7F2D00044F39 /* Main.storyboard */; };
+		146369FC1A807A65006F044C /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 591E11431A5F7F2D00044F39 /* LaunchScreen.xib */; };
+		146369FD1A807A65006F044C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 591E11411A5F7F2D00044F39 /* Images.xcassets */; };
 		14A9CC441A7A264400B1C0EA /* NWNavigationVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 14A9CC431A7A264400B1C0EA /* NWNavigationVC.m */; };
 		5913DDAD1A755736005AD7DC /* NWImageVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 5913DDAC1A755736005AD7DC /* NWImageVC.m */; };
 		591E11341A5F7F2D00044F39 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 591E11331A5F7F2D00044F39 /* main.m */; };
@@ -48,6 +75,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		14636A021A807A65006F044C /* ParseDevToolPro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ParseDevToolPro.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		14636A031A807A65006F044C /* ParseDevToolPro-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "ParseDevToolPro-Info.plist"; path = "/Volumes/MAC/Projects/NicewayAsiaLtd/ParseDevTool/code/ParseDevToolPro-Info.plist"; sourceTree = "<absolute>"; };
 		14A9CC421A7A264400B1C0EA /* NWNavigationVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NWNavigationVC.h; sourceTree = "<group>"; };
 		14A9CC431A7A264400B1C0EA /* NWNavigationVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NWNavigationVC.m; sourceTree = "<group>"; };
 		14F12AAB1A677D6600F3A424 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -110,6 +139,14 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		146369F81A807A65006F044C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				146369F91A807A65006F044C /* libPods.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		591E112B1A5F7F2D00044F39 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -174,6 +211,7 @@
 			children = (
 				591E112E1A5F7F2D00044F39 /* ParseDevTool.app */,
 				591E114A1A5F7F2D00044F39 /* ParseDevToolTests.xctest */,
+				14636A021A807A65006F044C /* ParseDevToolPro.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -212,6 +250,7 @@
 		591E11311A5F7F2D00044F39 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				14636A031A807A65006F044C /* ParseDevToolPro-Info.plist */,
 				591E11321A5F7F2D00044F39 /* Info.plist */,
 				591E11331A5F7F2D00044F39 /* main.m */,
 			);
@@ -340,9 +379,28 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		591E112D1A5F7F2D00044F39 /* ParseDevTool */ = {
+		146369DE1A807A65006F044C /* ParseDevToolPro */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 591E11541A5F7F2D00044F39 /* Build configuration list for PBXNativeTarget "ParseDevTool" */;
+			buildConfigurationList = 146369FF1A807A65006F044C /* Build configuration list for PBXNativeTarget "ParseDevToolPro" */;
+			buildPhases = (
+				146369DF1A807A65006F044C /* Check Pods Manifest.lock */,
+				146369E01A807A65006F044C /* Sources */,
+				146369F81A807A65006F044C /* Frameworks */,
+				146369FA1A807A65006F044C /* Resources */,
+				146369FE1A807A65006F044C /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ParseDevToolPro;
+			productName = ParseDevTool;
+			productReference = 14636A021A807A65006F044C /* ParseDevToolPro.app */;
+			productType = "com.apple.product-type.application";
+		};
+		591E112D1A5F7F2D00044F39 /* ParseDevToolFree */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 591E11541A5F7F2D00044F39 /* Build configuration list for PBXNativeTarget "ParseDevToolFree" */;
 			buildPhases = (
 				517C2D7BA9C3975FCBFCBF52 /* Check Pods Manifest.lock */,
 				591E112A1A5F7F2D00044F39 /* Sources */,
@@ -354,7 +412,7 @@
 			);
 			dependencies = (
 			);
-			name = ParseDevTool;
+			name = ParseDevToolFree;
 			productName = ParseDevTool;
 			productReference = 591E112E1A5F7F2D00044F39 /* ParseDevTool.app */;
 			productType = "com.apple.product-type.application";
@@ -386,6 +444,9 @@
 				LastUpgradeCheck = 0610;
 				ORGANIZATIONNAME = Niceway;
 				TargetAttributes = {
+					146369DE1A807A65006F044C = {
+						DevelopmentTeam = ZD78RB47HS;
+					};
 					591E112D1A5F7F2D00044F39 = {
 						CreatedOnToolsVersion = 6.1.1;
 						DevelopmentTeam = ZD78RB47HS;
@@ -409,13 +470,24 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				591E112D1A5F7F2D00044F39 /* ParseDevTool */,
+				591E112D1A5F7F2D00044F39 /* ParseDevToolFree */,
+				146369DE1A807A65006F044C /* ParseDevToolPro */,
 				591E11491A5F7F2D00044F39 /* ParseDevToolTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		146369FA1A807A65006F044C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				146369FB1A807A65006F044C /* Main.storyboard in Resources */,
+				146369FC1A807A65006F044C /* LaunchScreen.xib in Resources */,
+				146369FD1A807A65006F044C /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		591E112C1A5F7F2D00044F39 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -436,6 +508,36 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		146369DF1A807A65006F044C /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		146369FE1A807A65006F044C /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		517C2D7BA9C3975FCBFCBF52 /* Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -469,6 +571,36 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		146369E01A807A65006F044C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				146369E11A807A65006F044C /* LargeTextVC.m in Sources */,
+				146369E21A807A65006F044C /* TableCell.m in Sources */,
+				146369E31A807A65006F044C /* AddTableVC.m in Sources */,
+				146369E41A807A65006F044C /* PropertyCell.m in Sources */,
+				146369E51A807A65006F044C /* NWChartVC.m in Sources */,
+				146369E61A807A65006F044C /* ParseDevTool.xcdatamodeld in Sources */,
+				146369E71A807A65006F044C /* AddParseAppVC.m in Sources */,
+				146369E81A807A65006F044C /* NWBaseQTVC.m in Sources */,
+				146369E91A807A65006F044C /* AppDelegate.m in Sources */,
+				146369EA1A807A65006F044C /* NWNavigationVC.m in Sources */,
+				146369EB1A807A65006F044C /* NWChartView.m in Sources */,
+				146369EC1A807A65006F044C /* NWMapVC.m in Sources */,
+				146369ED1A807A65006F044C /* EditTableVC.m in Sources */,
+				146369EE1A807A65006F044C /* FinalItemCell.m in Sources */,
+				146369EF1A807A65006F044C /* NWBaseVC.m in Sources */,
+				146369F01A807A65006F044C /* AppDetailsVC.m in Sources */,
+				146369F11A807A65006F044C /* NWImageVC.m in Sources */,
+				146369F21A807A65006F044C /* ParseAppViewCell.m in Sources */,
+				146369F31A807A65006F044C /* ItemDetailVC.m in Sources */,
+				146369F41A807A65006F044C /* HomeVC.m in Sources */,
+				146369F51A807A65006F044C /* TableDetailsVC.m in Sources */,
+				146369F61A807A65006F044C /* main.m in Sources */,
+				146369F71A807A65006F044C /* NWBaseTVC.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		591E112A1A5F7F2D00044F39 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -512,7 +644,7 @@
 /* Begin PBXTargetDependency section */
 		591E114C1A5F7F2D00044F39 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 591E112D1A5F7F2D00044F39 /* ParseDevTool */;
+			target = 591E112D1A5F7F2D00044F39 /* ParseDevToolFree */;
 			targetProxy = 591E114B1A5F7F2D00044F39 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -537,6 +669,30 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		14636A001A807A65006F044C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F6306231816A88625F629A6C /* Pods.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = "$(SRCROOT)/ParseDevToolPro-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = ParseDevToolPro;
+			};
+			name = Debug;
+		};
+		14636A011A807A65006F044C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F73E04912D1418AD34E5D543 /* Pods.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = "$(SRCROOT)/ParseDevToolPro-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = ParseDevToolPro;
+			};
+			name = Release;
+		};
 		591E11521A5F7F2D00044F39 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -674,6 +830,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		146369FF1A807A65006F044C /* Build configuration list for PBXNativeTarget "ParseDevToolPro" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				14636A001A807A65006F044C /* Debug */,
+				14636A011A807A65006F044C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		591E11291A5F7F2D00044F39 /* Build configuration list for PBXProject "ParseDevTool" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -683,7 +848,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		591E11541A5F7F2D00044F39 /* Build configuration list for PBXNativeTarget "ParseDevTool" */ = {
+		591E11541A5F7F2D00044F39 /* Build configuration list for PBXNativeTarget "ParseDevToolFree" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				591E11551A5F7F2D00044F39 /* Debug */,
