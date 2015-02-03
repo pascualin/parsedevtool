@@ -36,6 +36,12 @@
     
     [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
     
+    #ifdef ISFREE
+        NSLog(@"Free version");
+    #else
+        NSLog(@"Pro version");
+    #endif
+    
     return YES;
 }
 
