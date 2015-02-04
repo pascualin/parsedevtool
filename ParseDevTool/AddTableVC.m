@@ -15,6 +15,24 @@
 
 @implementation AddTableVC
 
+-(void)viewDidLoad{
+    [super viewDidLoad];
+    [self.txtName becomeFirstResponder];
+}
+
+-(BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+    if (textField == self.txtName)
+    {
+        [self.txtDisplayname becomeFirstResponder];
+    } else
+    {
+        [textField resignFirstResponder];
+        [self saveNewTable:textField];
+    }
+    return YES;
+}
+
 - (IBAction)saveNewTable:(id)sender
 {
     if ((self.txtName.text.length > 0))

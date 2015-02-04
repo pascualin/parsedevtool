@@ -15,9 +15,31 @@
 
 @implementation AddParseAppVC
 
+- (void) viewDidLoad
+{
+    [super viewDidLoad];
+    [self.txtApplicationName becomeFirstResponder];
+}
+
+-(BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+    if (textField == self.txtApplicationName)
+    {
+        [self.txtApplicationId becomeFirstResponder];
+    }else if ( textField == self.txtApplicationId)
+    {
+        [self.txtClientKey becomeFirstResponder];
+    } else
+    {
+        [textField resignFirstResponder];
+        [self saveNewParseApp:textField];
+    }
+    return YES;
+}
+
 - (IBAction)saveNewParseApp:(id)sender
 {
-    if ((self.txtApplicationId.text.length > 0) && (self.txtClientKey.text.length > 0) && (self.txtName.text.length > 0))
+    if ((self.txtApplicationId.text.length > 0) && (self.txtClientKey.text.length > 0) && (self.txtApplicationName.text.length > 0))
     {
         AppDelegate* appDelegate = [[UIApplication sharedApplication] delegate];
         NSManagedObjectContext* context = [appDelegate managedObjectContext];
@@ -25,7 +47,7 @@
         NSEntityDescription *tableDescription = [NSEntityDescription entityForName:@"Table" inManagedObjectContext:context];
         NSManagedObject* newParseApp;
         newParseApp = [[NSManagedObject alloc] initWithEntity:parseAppDescription insertIntoManagedObjectContext:context];
-        [newParseApp setValue:self.txtName.text forKey:@"name"];
+        [newParseApp setValue:self.txtApplicationName.text forKey:@"name"];
         [newParseApp setValue:self.txtApplicationId.text forKey:@"applicationId"];
         [newParseApp setValue:self.txtClientKey.text forKey:@"clientKey"];
         
