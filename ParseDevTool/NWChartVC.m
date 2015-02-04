@@ -7,6 +7,7 @@
 //
 
 #import "NWChartVC.h"
+#import <CJPAdController.h>
 
 @interface NWChartVC ()
 
@@ -66,6 +67,13 @@
 
 - (IBAction)dismiss:(id)sender
 {
-    [self.presentingViewController dismissViewControllerAnimated:YES completion:nil];
+    if ([[[UIDevice currentDevice] valueForKey:@"orientation"] isEqualToNumber:[NSNumber numberWithInt:UIInterfaceOrientationPortrait]] )
+    {
+        NSNumber *value = [NSNumber numberWithInt:UIInterfaceOrientationLandscapeLeft];
+        [[UIDevice currentDevice] setValue:value forKey:@"orientation"];
+    }
+    
+    NSNumber *value = [NSNumber numberWithInt:UIInterfaceOrientationPortrait];
+    [[UIDevice currentDevice] setValue:value forKey:@"orientation"];
 }
 @end
