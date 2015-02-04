@@ -135,7 +135,10 @@
         appDetailsVC.title = [appDetailsVC.parseApp valueForKey:@"name"];
     } if ([segue.identifier isEqualToString:@"toAddApp"]){
         AddParseAppVC *addParseAppVC = segue.destinationViewController;
-        addParseAppVC.parseApp = sender;
+        if (![sender isKindOfClass:[UIBarButtonItem class]])
+        {
+            addParseAppVC.parseApp = sender;
+        }
     }
 }
 
