@@ -14,5 +14,6 @@
 @property (weak, nonatomic) IBOutlet UITextField *txtApplicationName;
 @property (weak, nonatomic) IBOutlet UITextField *txtApplicationId;
 @property (weak, nonatomic) IBOutlet UITextField *txtClientKey;
+@property (strong, nonatomic) NSObject *parseApp;
 
 @end

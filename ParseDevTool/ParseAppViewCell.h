@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "MGSwipeTableCell.h"
 
-@interface ParseAppViewCell : UITableViewCell
+@interface ParseAppViewCell : MGSwipeTableCell
 
 @property (strong, nonatomic) NSObject* parseApp;
 @property (weak, nonatomic) IBOutlet UILabel *txtTitle;

@@ -147,7 +147,7 @@
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="QSz-VN-7xb">
                             <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>
-                                <segue destination="KSX-UR-W3e" kind="modal" id="fpr-BP-yF8"/>
+                                <segue destination="KSX-UR-W3e" kind="modal" identifier="toAddApp" id="fpr-BP-yF8"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>

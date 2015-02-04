@@ -13,6 +13,7 @@ pod 'Google-Mobile-Ads-SDK'
 pod 'MBProgressHUD'
 pod 'PNChart'
 pod 'CJPAdController'
+pod 'MGSwipeTableCell'
 
 link_with "ParseDevToolFree"
 link_with "ParseDevToolPro"

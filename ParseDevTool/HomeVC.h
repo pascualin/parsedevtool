@@ -8,10 +8,9 @@
 
 #import <UIKit/UIKit.h>
 #import "NWBaseTVC.h"
+#import <MGSwipeTableCell/MGSwipeTableCell.h>
 
-@interface HomeVC : NWBaseTVC <UITableViewDelegate, UITableViewDataSource>
-
-@property (weak, nonatomic) IBOutlet UITableView *tableView;
+@interface HomeVC : NWBaseTVC <UITableViewDelegate, UITableViewDataSource, MGSwipeTableCellDelegate>
 
 @end
 

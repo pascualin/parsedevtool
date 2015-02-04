@@ -10,6 +10,8 @@
 #import "AppDelegate.h"
 #import "ParseAppViewCell.h"
 #import "AppDetailsVC.h"
+#import "AddParseAppVC.h"
+#import <MGSwipeTableCell/MGSwipeButton.h>
 
 @interface HomeVC ()
 
@@ -73,7 +75,9 @@
         NSArray *topLevelObjects = [[NSBundle mainBundle] loadNibNamed:@"ParseAppViewCell" owner:self options:nil];
         cell = [topLevelObjects objectAtIndex:0];
     }
-    
+    cell.rightButtons = @[[MGSwipeButton buttonWithTitle:@"Delete" backgroundColor:[UIColor redColor]],
+                          [MGSwipeButton buttonWithTitle:@"Edit" backgroundColor:[UIColor lightGrayColor]]];
+    cell.delegate = self;
     cell.parseApp = parseApp;
     cell.txtTitle.text = [parseApp valueForKey:@"name"];
     
@@ -97,21 +101,26 @@
     return YES;
 }
 
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        
+-(BOOL) swipeTableCell:(MGSwipeTableCell*) cell tappedButtonAtIndex:(NSInteger) index direction:(MGSwipeDirection)direction fromExpansion:(BOOL) fromExpansion
+{
+    NSManagedObject* parseApp = (NSManagedObject*)((ParseAppViewCell*)cell).parseApp;
+    
+    if (index == 0){
+        // Trigger Delete
         AppDelegate* appDelegate = [[UIApplication sharedApplication] delegate];
         NSManagedObjectContext* context = [appDelegate managedObjectContext];
-        
-        NSManagedObject* parseApp = (NSManagedObject*)[self.dataSource objectAtIndex:indexPath.row];
-        
         [context deleteObject:parseApp];
-        
         NSError* error;
         [context save:&error];
         
         [self refresh];
+        
+    } else {
+        // Trigger Edit
+        [self performSegueWithIdentifier: @"toAddApp" sender:parseApp];
+        
     }
+    return true;
 }
 
 #pragma Navigation
@@ -124,6 +133,9 @@
         ParseAppViewCell* cell = (ParseAppViewCell*)sender;
         appDetailsVC.parseApp = cell.parseApp;
         appDetailsVC.title = [appDetailsVC.parseApp valueForKey:@"name"];
+    } if ([segue.identifier isEqualToString:@"toAddApp"]){
+        AddParseAppVC *addParseAppVC = segue.destinationViewController;
+        addParseAppVC.parseApp = sender;
     }
 }
 
