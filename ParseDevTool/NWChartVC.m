@@ -27,6 +27,7 @@
      name:UIDeviceOrientationDidChangeNotification
      object:[UIDevice currentDevice]];
     
+    self.title = @"Creation history";
     self.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
 }
 
