@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="kyK-ZS-PMP">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="kyK-ZS-PMP">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -380,7 +380,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="568" height="320"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="g4N-M7-I4d" customClass="NWChartView">
+                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="g4N-M7-I4d" customClass="NWChartView">
                                 <rect key="frame" x="0.0" y="0.0" width="568" height="320"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
@@ -391,21 +391,24 @@
                                     <action selector="dismiss:" destination="4f8-tg-nd0" eventType="touchUpInside" id="acL-Oz-7g4"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="chartLegend" translatesAutoresizingMaskIntoConstraints="NO" id="SoX-rZ-DlF">
+                                <rect key="frame" x="24" y="34" width="15" height="15"/>
+                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="createdAt" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dUe-aX-7hx">
-                                <rect key="frame" x="23" y="29" width="537" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                <color key="textColor" red="0.2666666667" green="0.52941176469999995" blue="0.98431372549999996" alpha="1" colorSpace="calibratedRGB"/>
+                                <rect key="frame" x="41" y="29" width="100" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" red="0.25490196079999999" green="0.47058823529999999" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="sl3-Kj-L2D" firstAttribute="trailing" secondItem="Lko-D0-39m" secondAttribute="trailingMargin" constant="5" id="5a2-Cf-VKW"/>
-                            <constraint firstItem="gUF-9p-EJ3" firstAttribute="top" secondItem="g4N-M7-I4d" secondAttribute="bottom" constant="5" id="CMv-hU-988"/>
+                            <constraint firstItem="SoX-rZ-DlF" firstAttribute="top" secondItem="uHI-hN-q8X" secondAttribute="bottom" constant="20" id="PrF-zv-Tem"/>
                             <constraint firstItem="g4N-M7-I4d" firstAttribute="leading" secondItem="Lko-D0-39m" secondAttribute="leadingMargin" constant="5" id="Ybx-Al-1ed"/>
                             <constraint firstAttribute="trailingMargin" secondItem="g4N-M7-I4d" secondAttribute="trailing" constant="5" id="b2x-Ij-acH"/>
                             <constraint firstItem="sl3-Kj-L2D" firstAttribute="top" secondItem="uHI-hN-q8X" secondAttribute="bottom" constant="5" id="kRy-jS-9Z9"/>
-                            <constraint firstItem="dUe-aX-7hx" firstAttribute="top" secondItem="uHI-hN-q8X" secondAttribute="bottom" constant="13" id="pEu-nE-Mpz"/>
+                            <constraint firstItem="dUe-aX-7hx" firstAttribute="top" secondItem="uHI-hN-q8X" secondAttribute="bottom" constant="16" id="pEu-nE-Mpz"/>
                             <constraint firstItem="g4N-M7-I4d" firstAttribute="top" secondItem="Lko-D0-39m" secondAttribute="topMargin" constant="20" id="w6G-9U-sk5"/>
                         </constraints>
                     </view>
@@ -621,6 +624,7 @@
         <image name="1422882564_7" width="22" height="22"/>
         <image name="1422882745_icon-ios7-gear-outline-128" width="22" height="22"/>
         <image name="1422890921_checkmark-128" width="22" height="22"/>
+        <image name="chartLegend" width="12" height="12"/>
         <image name="close" width="29" height="29"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
