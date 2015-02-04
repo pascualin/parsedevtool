@@ -7,7 +7,6 @@
 //
 
 #import "NWChartVC.h"
-#import <CJPAdController.h>
 
 @interface NWChartVC ()
 
