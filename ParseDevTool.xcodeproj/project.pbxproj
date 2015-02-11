@@ -554,7 +554,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "${SRCROOT}/Pods/CrashlyticsFramework/Crashlytics.framework/run 87d9f8aac6966f8a02e9cad3462a2ec916625526 0533b86ceea81ab617d2bfc65a8327f8ed2785841ad9cb1c84b30c43300922fa\n";
+			shellScript = "${SRCROOT}/Pods/Fabric/Fabric.framework/run 87d9f8aac6966f8a02e9cad3462a2ec916625526 0533b86ceea81ab617d2bfc65a8327f8ed2785841ad9cb1c84b30c43300922fa";
 		};
 		59D4B1841A80828C0066C277 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -567,7 +567,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "${SRCROOT}/Pods/CrashlyticsFramework/Crashlytics.framework/run 87d9f8aac6966f8a02e9cad3462a2ec916625526 0533b86ceea81ab617d2bfc65a8327f8ed2785841ad9cb1c84b30c43300922fa\n";
+			shellScript = "${SRCROOT}/Pods/Fabric/Fabric.framework/run 87d9f8aac6966f8a02e9cad3462a2ec916625526 0533b86ceea81ab617d2bfc65a8327f8ed2785841ad9cb1c84b30c43300922fa";
 		};
 		B04A0C7EB99AE3F7C6CAEEB5 /* Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;

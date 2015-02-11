@@ -15,20 +15,25 @@
 // CJPAdController
 #define COCOAPODS_POD_AVAILABLE_CJPAdController
 #define COCOAPODS_VERSION_MAJOR_CJPAdController 1
-#define COCOAPODS_VERSION_MINOR_CJPAdController 6
-#define COCOAPODS_VERSION_PATCH_CJPAdController 2
+#define COCOAPODS_VERSION_MINOR_CJPAdController 7
+#define COCOAPODS_VERSION_PATCH_CJPAdController 0
 
-// CrashlyticsFramework
-#define COCOAPODS_POD_AVAILABLE_CrashlyticsFramework
-// This library does not follow semantic-versioning,
-// so we were not able to define version macros.
-// Please contact the author.
-// Version: 2.2.5.2.
+// Fabric/Core
+#define COCOAPODS_POD_AVAILABLE_Fabric_Core
+#define COCOAPODS_VERSION_MAJOR_Fabric_Core 1
+#define COCOAPODS_VERSION_MINOR_Fabric_Core 1
+#define COCOAPODS_VERSION_PATCH_Fabric_Core 1
+
+// Fabric/Crashlytics
+#define COCOAPODS_POD_AVAILABLE_Fabric_Crashlytics
+#define COCOAPODS_VERSION_MAJOR_Fabric_Crashlytics 1
+#define COCOAPODS_VERSION_MINOR_Fabric_Crashlytics 1
+#define COCOAPODS_VERSION_PATCH_Fabric_Crashlytics 1
 
 // Facebook-iOS-SDK
 #define COCOAPODS_POD_AVAILABLE_Facebook_iOS_SDK
 #define COCOAPODS_VERSION_MAJOR_Facebook_iOS_SDK 3
-#define COCOAPODS_VERSION_MINOR_Facebook_iOS_SDK 22
+#define COCOAPODS_VERSION_MINOR_Facebook_iOS_SDK 23
 #define COCOAPODS_VERSION_PATCH_Facebook_iOS_SDK 0
 
 // Google-Maps-iOS-SDK
@@ -39,9 +44,9 @@
 
 // Google-Mobile-Ads-SDK
 #define COCOAPODS_POD_AVAILABLE_Google_Mobile_Ads_SDK
-#define COCOAPODS_VERSION_MAJOR_Google_Mobile_Ads_SDK 6
-#define COCOAPODS_VERSION_MINOR_Google_Mobile_Ads_SDK 12
-#define COCOAPODS_VERSION_PATCH_Google_Mobile_Ads_SDK 2
+#define COCOAPODS_VERSION_MAJOR_Google_Mobile_Ads_SDK 7
+#define COCOAPODS_VERSION_MINOR_Google_Mobile_Ads_SDK 0
+#define COCOAPODS_VERSION_PATCH_Google_Mobile_Ads_SDK 0
 
 // GoogleAnalytics-iOS-SDK
 #define COCOAPODS_POD_AVAILABLE_GoogleAnalytics_iOS_SDK
@@ -77,19 +82,19 @@
 #define COCOAPODS_POD_AVAILABLE_Parse
 #define COCOAPODS_VERSION_MAJOR_Parse 1
 #define COCOAPODS_VERSION_MINOR_Parse 6
-#define COCOAPODS_VERSION_PATCH_Parse 1
+#define COCOAPODS_VERSION_PATCH_Parse 2
 
 // ParseFacebookUtils
 #define COCOAPODS_POD_AVAILABLE_ParseFacebookUtils
 #define COCOAPODS_VERSION_MAJOR_ParseFacebookUtils 1
 #define COCOAPODS_VERSION_MINOR_ParseFacebookUtils 6
-#define COCOAPODS_VERSION_PATCH_ParseFacebookUtils 1
+#define COCOAPODS_VERSION_PATCH_ParseFacebookUtils 2
 
 // ParseUI
 #define COCOAPODS_POD_AVAILABLE_ParseUI
 #define COCOAPODS_VERSION_MAJOR_ParseUI 1
-#define COCOAPODS_VERSION_MINOR_ParseUI 0
-#define COCOAPODS_VERSION_PATCH_ParseUI 2
+#define COCOAPODS_VERSION_MINOR_ParseUI 1
+#define COCOAPODS_VERSION_PATCH_ParseUI 0
 
 // UICountingLabel
 #define COCOAPODS_POD_AVAILABLE_UICountingLabel

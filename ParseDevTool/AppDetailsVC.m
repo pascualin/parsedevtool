@@ -23,6 +23,11 @@
 
 @synthesize parseApp;
 
+- (NSUInteger)supportedInterfaceOrientations
+{
+    return UIInterfaceOrientationMaskPortrait;
+}
+
 - (void)refresh {
     [self.dataSource removeAllObjects];
     

@@ -1,1 +1,2 @@
-PODS_CJPADCONTROLLER_OTHER_LDFLAGS = -framework "iAd" -weak_framework "AdSupport"
+PODS_CJPADCONTROLLER_FRAMEWORK_SEARCH_PATHS = $(PODS_ROOT)/Google-Mobile-Ads-SDK/**
+PODS_CJPADCONTROLLER_OTHER_LDFLAGS = -framework "AdSupport" -framework "iAd"

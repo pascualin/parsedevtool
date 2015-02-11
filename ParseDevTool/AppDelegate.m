@@ -10,6 +10,7 @@
 #import <GoogleMaps/GoogleMaps.h>
 #import <GoogleAnalytics-iOS-SDK/GAI.h>
 #import <Crashlytics/Crashlytics.h>
+#import <Fabric/Fabric.h>
 #import "CJPAdController.h"
 #import "NWNavigationVC.h"
 #import "HomeVC.h"
@@ -35,7 +36,7 @@
     // ****************************************************************************
     // Crashlytics Setup
     // ****************************************************************************
-    [Crashlytics startWithAPIKey:@"87d9f8aac6966f8a02e9cad3462a2ec916625526"];
+    [Fabric with:@[CrashlyticsKit]];
     
     [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
     
