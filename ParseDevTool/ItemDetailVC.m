@@ -76,7 +76,8 @@
     }
     else if ([temp isKindOfClass:[NSNumber class]])
     {
-        cell.txtValue.text = [(NSNumber*)[self.item valueForKey:propertyKey] stringValue];
+        NSNumber* tempNumber = [self.item objectForKey:propertyKey];
+        cell.txtValue.text = [tempNumber stringValue];
     }
     else if ([temp isKindOfClass:[NSDate class]])
     {
