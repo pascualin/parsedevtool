@@ -53,7 +53,9 @@
         if (self.parseApp)
         {
             newParseApp = self.parseApp;
-        } else {
+        }
+        else
+        {
             NSEntityDescription *parseAppDescription = [NSEntityDescription entityForName:@"ParseApp" inManagedObjectContext:context];
             NSEntityDescription *tableDescription = [NSEntityDescription entityForName:@"Table" inManagedObjectContext:context];
             newParseApp = [[NSManagedObject alloc] initWithEntity:parseAppDescription insertIntoManagedObjectContext:context];
