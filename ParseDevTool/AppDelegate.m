@@ -9,8 +9,8 @@
 #import "AppDelegate.h"
 #import <GoogleMaps/GoogleMaps.h>
 #import <GoogleAnalytics-iOS-SDK/GAI.h>
+#import <Crashlytics/Crashlytics.h>
 #import <Fabric/Fabric.h>
-#import <Fabric/Crashlytics.h>
 #import "CJPAdController.h"
 #import "NWNavigationVC.h"
 #import "HomeVC.h"
