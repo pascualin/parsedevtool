@@ -7,17 +7,18 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "PNGenericChart.h"
 #import "PNChartDelegate.h"
 #import "PNBar.h"
 
-#define xLabelMargin 15
-#define yLabelMargin 15
-#define yLabelHeight 11
-#define xLabelHeight 20
+#define kXLabelMargin 15
+#define kYLabelMargin 15
+#define kYLabelHeight 11
+#define kXLabelHeight 20
 
 typedef NSString *(^PNYLabelFormatter)(CGFloat yLabelValue);
 
-@interface PNBarChart : UIView
+@interface PNBarChart : PNGenericChart
 
 /**
  * Draws the chart in an animated fashion.
@@ -94,6 +95,6 @@ typedef NSString *(^PNYLabelFormatter)(CGFloat yLabelValue);
 /** Controls whether text for x-axis be straight or rotate 45 degree. */
 @property (nonatomic) BOOL rotateForXAxisText;
 
-@property (nonatomic, retain) id<PNChartDelegate> delegate;
+@property (nonatomic, weak) id<PNChartDelegate> delegate;
 
 @end

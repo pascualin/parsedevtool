@@ -1,11 +1,12 @@
 source 'https://github.com/CocoaPods/Specs.git'
-platform :ios, '7.0'
+platform :ios, '8.1'
 
 # Frameworks/SDK
 pod 'Parse'
 pod 'ParseUI'
 pod 'GoogleAnalytics-iOS-SDK'
 pod 'Google-Maps-iOS-SDK'
+pod 'Fabric'
 pod 'Fabric/Crashlytics'
 pod 'Google-Mobile-Ads-SDK'
 

@@ -1,33 +1,35 @@
 PODS:
-  - Bolts (1.1.3)
+  - Bolts (1.1.4)
   - CJPAdController (1.7):
     - Google-Mobile-Ads-SDK (~> 7.0)
-  - Fabric/Core (1.1.1)
-  - Fabric/Crashlytics (1.1.1):
-    - Fabric/Core
-  - Facebook-iOS-SDK (3.23.0):
+  - Fabric (1.2):
+    - Fabric/Core (= 1.2)
+  - Fabric/Core (1.2)
+  - Fabric/Crashlytics (1.2)
+  - Facebook-iOS-SDK (3.23.1):
     - Bolts (~> 1.0)
-  - Google-Maps-iOS-SDK (1.9.1)
+  - Google-Maps-iOS-SDK (1.9.2)
   - Google-Mobile-Ads-SDK (7.0.0)
   - GoogleAnalytics-iOS-SDK (3.10):
     - GoogleAnalytics-iOS-SDK/Core (= 3.10)
   - GoogleAnalytics-iOS-SDK/Core (3.10)
-  - MBProgressHUD (0.9)
-  - MGSwipeTableCell (1.3.5)
-  - Parse (1.6.2):
+  - MBProgressHUD (0.9.1)
+  - MGSwipeTableCell (1.4.0)
+  - Parse (1.6.4):
     - Bolts (~> 1.1)
-  - ParseFacebookUtils (1.6.2):
+  - ParseFacebookUtils (1.6.4):
     - Facebook-iOS-SDK (~> 3.20)
-    - Parse (~> 1.6.2)
-  - ParseUI (1.1.0):
+    - Parse (~> 1.6.4)
+  - ParseUI (1.1.1):
     - Parse (~> 1.6)
     - ParseFacebookUtils (~> 1.6)
-  - PNChart (0.7.5):
+  - PNChart (0.8.2):
     - UICountingLabel (~> 1.0.0)
   - UICountingLabel (1.0.0)
 
 DEPENDENCIES:
   - CJPAdController
+  - Fabric
   - Fabric/Crashlytics
   - Google-Maps-iOS-SDK
   - Google-Mobile-Ads-SDK
@@ -39,19 +41,19 @@ DEPENDENCIES:
   - PNChart
 
 SPEC CHECKSUMS:
-  Bolts: 3db0a875235e0c9042b013af13af0f00f79b102c
+  Bolts: dd9fb8433d67f5acc3b6b4d1379bbc5513d716c1
   CJPAdController: fca6d9e83a9bad2727f52a4146dfd515a44e23f8
-  Fabric: 567f47540bd93de0e15ad60a7492bcefb54da6db
-  Facebook-iOS-SDK: 3d65f685348b789e46a9aacf92bfa85b60b63755
-  Google-Maps-iOS-SDK: 25fa3c054c74a7dcb82e3ef38224cfa6b66c9344
+  Fabric: acd4f0864b7d9e054f799d27be2843e1db08fad4
+  Facebook-iOS-SDK: 89dae50e975ebab95a01b0962d27277fc9cf08fd
+  Google-Maps-iOS-SDK: 4c008abdb68e03ae125c7f674be841d369e2b3de
   Google-Mobile-Ads-SDK: 55632bafa382a0987a4cbdefdfea362e24cbe814
   GoogleAnalytics-iOS-SDK: f422062075d9ccb1ea8d783fc5ba3829461e9502
-  MBProgressHUD: 2038dbcf3dce73215abed6001657043d53aa79a8
-  MGSwipeTableCell: fe0d8896b57db2498d81bccf18a8ff98c72539aa
-  Parse: 60d65108fe39da77ec16c9e51d74b4d296b21424
-  ParseFacebookUtils: 0b86cd67283c60d10e3ddc8427f989f5e60ebbd7
-  ParseUI: 00c4c39aab3944d88758b55416581650caa37f89
-  PNChart: 18d4c57f43df3357ab14b3847a930f36d1fbce48
+  MBProgressHUD: f3747dcbd45a9e855a6b0674550651e0b7ed250c
+  MGSwipeTableCell: 59643a884736a0a2fb0f07258b7a97b4f4f9000f
+  Parse: c2610f7a12ad0defc974803b819c4efe7746e6db
+  ParseFacebookUtils: 00833ccf6fec7d6429e2403fe457496a5089358b
+  ParseUI: f7e9e0e5271f75a19c74ead8fdd95d36160e268e
+  PNChart: 32b4ffa1ca525e255083204a3601447e85367321
   UICountingLabel: 0a0e9e34bf4690dbd127aaec552d19ed938087a9
 
-COCOAPODS: 0.36.0.beta.1
+COCOAPODS: 0.36.0
