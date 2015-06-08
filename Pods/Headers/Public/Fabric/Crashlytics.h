@@ -1,1 +1,1 @@
-../../../Fabric/Crashlytics.framework/Versions/A/Headers/Crashlytics.h
+../../../Fabric/Crashlytics.framework/Headers/Crashlytics.h

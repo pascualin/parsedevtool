@@ -21,11 +21,15 @@
 
 #import "PFQueryTableViewController.h"
 
+#import <Bolts/BFTask.h>
+#import <Bolts/BFTaskCompletionSource.h>
+
 #import <Parse/Parse.h>
 
 #import "PFActivityIndicatorTableViewCell.h"
 #import "PFImageView.h"
 #import "PFLoadingView.h"
+#import "PFLocalization.h"
 #import "PFTableViewCell.h"
 
 // Add headers to kill any warnings.
@@ -113,11 +117,6 @@
 - (void)loadView {
     [super loadView];
 
-    if (self.loadingViewEnabled) {
-        self.loadingView = [[PFLoadingView alloc] initWithFrame:CGRectZero];
-        [self.tableView addSubview:self.loadingView];
-    }
-
     // Setup the Pull to Refresh UI if needed
     if (self.pullToRefreshEnabled) {
         UIRefreshControl *refreshControl = [[UIRefreshControl alloc] init];
@@ -140,6 +139,26 @@
     self.loadingView.frame = self.tableView.bounds;
 }
 
+- (void)setEditing:(BOOL)editing animated:(BOOL)animated {
+    [self.tableView beginUpdates];
+
+    // If we're currently showing the pagination cell, we need to hide it during editing.
+    if ([self paginationEnabled] && [self _shouldShowPaginationCell]) {
+        [self.tableView deleteRowsAtIndexPaths:@[ [self _indexPathForPaginationCell] ]
+                              withRowAnimation:UITableViewRowAnimationAutomatic];
+    }
+
+    [super setEditing:editing animated:animated];
+
+    // Ensure proper re-insertion of the pagination cell.
+    if ([self paginationEnabled] && [self _shouldShowPaginationCell]) {
+        [self.tableView insertRowsAtIndexPaths:@[ [self _indexPathForPaginationCell] ]
+                              withRowAnimation:UITableViewRowAnimationAutomatic];
+    }
+
+    [self.tableView endUpdates];
+}
+
 #pragma mark -
 #pragma mark Data
 
@@ -148,6 +167,7 @@
         _savedSeparatorStyle = self.tableView.separatorStyle;
         self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     }
+    [self _refreshLoadingView];
 }
 
 - (void)objectsDidLoad:(NSError *)error {
@@ -155,8 +175,7 @@
         _firstLoad = NO;
         self.tableView.separatorStyle = _savedSeparatorStyle;
     }
-    [self.loadingView removeFromSuperview];
-    self.loadingView = nil;
+    [self _refreshLoadingView];
 }
 
 - (PFQuery *)queryForTable {
@@ -192,13 +211,15 @@
     _currentPage = 0;
 }
 
-- (void)loadObjects {
-    [self loadObjects:0 clear:YES];
+- (BFTask *)loadObjects {
+    return [self loadObjects:0 clear:YES];
 }
 
-- (void)loadObjects:(NSInteger)page clear:(BOOL)clear {
+- (BFTask *)loadObjects:(NSInteger)page clear:(BOOL)clear {
     self.loading = YES;
     [self objectsWillLoad];
+
+    BFTaskCompletionSource *source = [BFTaskCompletionSource taskCompletionSource];
 
     PFQuery *query = [self queryForTable];
     [self _alterQuery:query forLoadingPage:page];
@@ -222,21 +243,24 @@
             if (clear) {
                 [_mutableObjects removeAllObjects];
             }
-            [_mutableObjects addObjectsFromArray:foundObjects];
 
-            // Reload the table data
+            [_mutableObjects addObjectsFromArray:foundObjects];
             [self.tableView reloadData];
         }
 
         [self objectsDidLoad:error];
         [self.refreshControl endRefreshing];
+
+        [source setError:error];
     }];
+
+    return source.task;
 }
 
 - (void)loadNextPage {
     if (!self.loading) {
-      [self loadObjects:(_currentPage + 1) clear:NO];
-      [self _refreshPaginationCell];
+        [self loadObjects:(_currentPage + 1) clear:NO];
+        [self _refreshPaginationCell];
     }
 }
 
@@ -320,6 +344,63 @@
     return self.objects[indexPath.row];
 }
 
+- (void)removeObjectAtIndexPath:(NSIndexPath *)indexPath {
+    [self removeObjectAtIndexPath:indexPath animated:YES];
+}
+
+- (void)removeObjectAtIndexPath:(NSIndexPath *)indexPath animated:(BOOL)animated {
+    [self removeObjectsAtIndexPaths:@[ indexPath ] animated:animated];
+}
+
+- (void)removeObjectsAtIndexPaths:(NSArray *)indexPaths {
+    [self removeObjectsAtIndexPaths:indexPaths animated:YES];
+}
+
+- (void)removeObjectsAtIndexPaths:(NSArray *)indexPaths animated:(BOOL)animated {
+    if (indexPaths.count == 0) {
+        return;
+    }
+
+    // We need the contents as both an index set and a list of index paths.
+    NSMutableIndexSet *indexes = [NSMutableIndexSet indexSet];
+
+    for (NSIndexPath *indexPath in indexPaths) {
+        if (indexPath.section != 0) {
+            [NSException raise:NSRangeException format:@"Index Path section %lu out of range!", (long)indexPath.section];
+        }
+
+        if (indexPath.row >= self.objects.count) {
+            [NSException raise:NSRangeException format:@"Index Path row %lu out of range!", (long)indexPath.row];
+        }
+
+        [indexes addIndex:indexPath.row];
+    }
+
+    BFContinuationBlock deletionHandlerBlock = ^id (BFTask *task) {
+        self.refreshControl.enabled = YES;
+        if (task.error) {
+            [self _handleDeletionError:task.error];
+        }
+
+        return nil;
+    };
+
+    NSMutableArray *allDeletionTasks = [NSMutableArray arrayWithCapacity:indexes.count];
+    NSArray *objectsToRemove = [self.objects objectsAtIndexes:indexes];
+
+    // Remove the contents from our local cache so we can give the user immediate feedback.
+    [_mutableObjects removeObjectsInArray:objectsToRemove];
+    [self.tableView deleteRowsAtIndexPaths:indexPaths
+                          withRowAnimation:animated ? UITableViewRowAnimationAutomatic : UITableViewRowAnimationNone];
+
+    for (id obj in objectsToRemove) {
+        [allDeletionTasks addObject:[obj deleteInBackground]];
+    }
+
+    [[BFTask taskForCompletionOfAllTasks:allDeletionTasks]
+                       continueWithBlock:deletionHandlerBlock];
+}
+
 - (PFTableViewCell *)tableView:(UITableView *)otherTableView cellForNextPageAtIndexPath:(NSIndexPath *)indexPath {
     static NSString *cellIdentifier = @"PFTableViewCellNextPage";
 
@@ -371,12 +452,30 @@
     }
 }
 
+- (UITableViewCellEditingStyle)tableView:(UITableView *)tableView
+           editingStyleForRowAtIndexPath:(NSIndexPath *)indexPath {
+    if ([indexPath isEqual:[self _indexPathForPaginationCell]]) {
+        return UITableViewCellEditingStyleNone;
+    }
+
+    return UITableViewCellEditingStyleDelete;
+}
+
+- (BOOL)tableView:(UITableView *)tableView shouldIndentWhileEditingRowAtIndexPath:(NSIndexPath *)indexPath {
+    if ([indexPath isEqual:[self _indexPathForPaginationCell]]) {
+        return NO;
+    }
+
+    return YES;
+}
+
 #pragma mark -
 #pragma mark Private
 
 // Whether we need to show the pagination cell
 - (BOOL)_shouldShowPaginationCell {
     return (self.paginationEnabled &&
+            !self.editing &&
             [self.objects count] != 0 &&
             (_lastLoadCount == -1 || _lastLoadCount >= (NSInteger)self.objectsPerPage));
 }
@@ -411,6 +510,38 @@
 }
 
 #pragma mark -
+#pragma mark Error handling
+
+- (void)_handleDeletionError:(NSError *)error {
+    // Fully reload on error.
+    [self loadObjects];
+
+    NSString *errorMessage = [NSString stringWithFormat:@"%@: \"%@\"",
+                              NSLocalizedString(@"Error occurred during deletion", @"Error occurred during deletion"),
+                              error.localizedDescription];
+
+    if ([UIAlertController class]) {
+        UIAlertController *errorController = [UIAlertController alertControllerWithTitle:NSLocalizedString(@"Error", @"Error")
+                                                                                 message:errorMessage
+                                                                          preferredStyle:UIAlertControllerStyleAlert];
+
+        [errorController addAction:[UIAlertAction actionWithTitle:NSLocalizedString(@"OK", @"OK")
+                                                            style:UIAlertActionStyleCancel
+                                                          handler:nil]];
+
+        [self presentViewController:errorController animated:YES completion:nil];
+    } else {
+        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Error", @"Error")
+                                                            message:errorMessage
+                                                           delegate:nil
+                                                  cancelButtonTitle:NSLocalizedString(@"OK", @"OK")
+                                                  otherButtonTitles:nil];
+
+        [alertView show];
+    }
+}
+
+#pragma mark -
 #pragma mark Actions
 
 - (void)_refreshControlValueChanged:(UIRefreshControl *)refreshControl {
@@ -422,6 +553,31 @@
 
 - (NSArray *)objects {
     return _mutableObjects;
+}
+
+#pragma mark -
+#pragma mark Loading View
+
+- (void)_refreshLoadingView {
+    BOOL showLoadingView = self.loadingViewEnabled && self.loading && _firstLoad;
+
+    if (showLoadingView) {
+        [self.tableView addSubview:self.loadingView];
+        [self.view setNeedsLayout];
+    } else {
+        // Avoid loading `loadingView` - just use an ivar.
+        if (_loadingView) {
+            [self.loadingView removeFromSuperview];
+            self.loadingView = nil;
+        }
+    }
+}
+
+- (PFLoadingView *)loadingView {
+    if (!_loadingView) {
+        _loadingView = [[PFLoadingView alloc] initWithFrame:CGRectZero];
+    }
+    return _loadingView;
 }
 
 @end

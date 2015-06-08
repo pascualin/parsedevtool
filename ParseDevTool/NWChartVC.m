@@ -44,7 +44,8 @@
     };
 }
 
-- (void)viewDidLayoutSubviews {
+- (void)viewDidLayoutSubviews
+{
     [super viewDidLayoutSubviews];
     if (!self.isChartLoaded)
     {
