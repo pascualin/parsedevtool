@@ -436,11 +436,16 @@
                         <rect key="frame" x="0.0" y="64" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1RD-0h-8qw" customClass="PFImageView">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1RD-0h-8qw" customClass="PFImageView">
                                 <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="1RD-0h-8qw" secondAttribute="trailing" constant="-16" id="4Fv-v1-05K"/>
+                            <constraint firstItem="1RD-0h-8qw" firstAttribute="top" secondItem="oUz-T8-JXf" secondAttribute="bottom" id="Q73-0V-DbN"/>
+                            <constraint firstItem="1RD-0h-8qw" firstAttribute="leading" secondItem="VgZ-cq-q2Q" secondAttribute="leadingMargin" constant="-16" id="nev-s8-5Z7"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="ok5-uW-5rE"/>
                     <connections>
