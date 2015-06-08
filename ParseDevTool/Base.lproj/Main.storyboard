@@ -311,6 +311,7 @@
                         <segue destination="OEO-tX-TSl" kind="push" identifier="toMap" id="fkh-Ar-KUR"/>
                         <segue destination="xEr-Ym-599" kind="push" identifier="toImage" id="TRJ-gj-7Ty"/>
                         <segue destination="iJM-xM-Rfx" kind="push" identifier="toLargeText" id="ayu-t2-Lrm"/>
+                        <segue destination="OcK-xW-zFB" kind="push" identifier="toArray" id="Q6j-bg-F6f"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="A1g-8h-KPt" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -633,4 +634,7 @@
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
+    <inferredMetricsTieBreakers>
+        <segue reference="Q6j-bg-F6f"/>
+    </inferredMetricsTieBreakers>
 </document>

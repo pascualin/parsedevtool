@@ -44,6 +44,18 @@
     self.paginationEnabled = YES;
     self.objectsPerPage = 1000;
     
+    if(self.isArray)
+    {
+        [PFObject fetchAllInBackground:self.array block:^(NSArray* objects, NSError* error)
+         {
+             if(!error)
+             {
+                 self.array = objects;
+                 [self.tableView reloadData];
+             }
+         }];
+    }
+    
     [super viewDidLoad];
     [self.tableView setSeparatorStyle:UITableViewCellSeparatorStyleSingleLine];
     [[UIDevice currentDevice] beginGeneratingDeviceOrientationNotifications];
@@ -98,9 +110,39 @@
                                 sortedArrayUsingDescriptors:@[[NSSortDescriptor sortDescriptorWithKey:@"tag" ascending:YES]]];
 }
 
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    if (self.isArray)
+    {
+        return self.array.count;
+    }
+    else
+    {
+        return self.objects.count;
+    }
+}
+
+-(nullable PFObject *)objectAtIndexPath:(nullable NSIndexPath *)indexPath
+{
+    if (self.isArray)
+    {
+        return self.array[indexPath.row];
+    }
+    else
+    {
+        return self.objects[indexPath.row];
+    }
+}
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath object:(NSObject *)object
 {
     PFObject* item = (PFObject*) object;
+
+    if (self.isArray)
+    {
+        item = [self.array objectAtIndex:indexPath.row];
+    }
+    
     static NSString *cellIdentifier = @"FinalItemCell";
     
     FinalItemCell* cell = (FinalItemCell *)[tableView dequeueReusableCellWithIdentifier:cellIdentifier];
@@ -137,6 +179,11 @@
 
 -(PFQuery *)queryForTable
 {
+    if (self.isArray)
+    {
+        [self objectsDidLoad:nil];
+        return nil;
+    }
     PFQuery* query;
     if (self.relation)
     {
@@ -181,11 +228,6 @@
         editTableVC.parseApp = self.parseApp;
         self.isScreenActive = NO;
     }
-}
-
--(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
-{
-    return self.objects.count;
 }
 
 @end

@@ -12,12 +12,14 @@
 #import "NWMapVC.h"
 #import "NWImageVC.h"
 #import "LargeTextVC.h"
+#import "AppDelegate.h"
 
 @interface ItemDetailVC ()
 
 @property (strong, nonatomic) NSMutableArray* dataSource;
 @property (strong, nonatomic) PFGeoPoint* geopoint;
 @property (strong, nonatomic) PFFile* pfFile;
+@property (strong, nonatomic) NSArray* array;
 @property (strong, nonatomic) NSString* largeText;
 
 @end
@@ -66,6 +68,7 @@
     cell.relation = nil;
     cell.pfObject = nil;
     cell.pfFile = nil;
+    cell.array = nil;
     cell.txtValue.textColor = [UIColor blackColor];
     
     NSObject* temp = [self.item valueForKey:propertyKey];
@@ -113,8 +116,17 @@
     else if ([temp isKindOfClass:[PFFile class]])
     {
         // Image
+        NSLog(@"we have an image here.");
         cell.pfFile =(PFFile*) temp;
         cell.txtValue.text = @"Image";
+        cell.txtValue.textColor = [UIColor blueColor];
+    }
+    else if ([temp isKindOfClass:[NSArray class]])
+    {
+        // Array
+        NSLog(@"we have an array here.");
+        cell.array = (NSArray*) temp;
+        cell.txtValue.text = [NSString stringWithFormat:@"Array: %li items.", cell.array.count];
         cell.txtValue.textColor = [UIColor blueColor];
     }
     else
@@ -173,9 +185,18 @@
         self.pfFile = cell.pfFile;
         [self performSegueWithIdentifier:@"toImage" sender:self];
     }
+    else if(cell.array)
+    {
+        // Array
+        self.array = cell.array;
+        if (self.array.count > 0)
+        {
+            [self performSegueWithIdentifier:@"toArray" sender:self];
+        }
+    }
     else
     {
-        // we might have a long text, lest see
+        // we might have a long text, lets see
         CGSize size = [cell.txtValue.text sizeWithFont:cell.txtValue.font];
         if (size.width > cell.txtValue.bounds.size.width)
         {
@@ -196,6 +217,27 @@
     {
         NWImageVC* imageController = segue.destinationViewController;
         imageController.pfFile = self.pfFile;
+    }
+    else if ([segue.identifier isEqualToString:@"toArray"])
+    {
+        TableDetailsVC* arrayController = segue.destinationViewController;
+        arrayController.isArray = YES;
+        arrayController.array = self.array;
+        PFObject* item;
+        if (self.array.count > 0)
+        {
+            item = [self.array objectAtIndex:0];
+        }
+        
+        AppDelegate* appDelegate = [[UIApplication sharedApplication] delegate];
+        NSManagedObjectContext* context = [appDelegate managedObjectContext];
+        NSEntityDescription *tableDescription = [NSEntityDescription entityForName:@"Table" inManagedObjectContext:context];
+        NSManagedObject* newTable;
+        newTable = [[NSManagedObject alloc] initWithEntity:tableDescription insertIntoManagedObjectContext:context];
+        [newTable setValue:item.parseClassName forKey:@"name"];
+        [newTable setValue:@"objectId" forKey:@"displayProperty"];
+        
+        arrayController.parseTable = newTable;
     }
     else if ([segue.identifier isEqualToString:@"toLargeText"])
     {

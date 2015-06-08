@@ -17,5 +17,6 @@
 @property (weak, nonatomic) PFRelation *relation;
 @property (weak, nonatomic) PFObject *pfObject;
 @property (weak, nonatomic) PFFile *pfFile;
+@property (weak, nonatomic) NSArray *array;
 
 @end
