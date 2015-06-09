@@ -14,6 +14,7 @@
 #import "CJPAdController.h"
 #import "NWNavigationVC.h"
 #import "HomeVC.h"
+#import <iRate.h>
 
 @interface AppDelegate ()
 
@@ -40,6 +41,9 @@
     
     [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
     
+    [iRate sharedInstance].daysUntilPrompt = 10;
+    [iRate sharedInstance].usesUntilPrompt = 5;
+    [iRate sharedInstance].remindPeriod = 5;
     #ifdef ISFREE
         NSLog(@"Free version");
         [CJPAdController sharedInstance].adNetworks = @[@(CJPAdNetworkAdMob)];
@@ -52,8 +56,10 @@
     
         [[CJPAdController sharedInstance] startWithViewController:nav];
         self.window.rootViewController = [CJPAdController sharedInstance];
+        [iRate sharedInstance].message = @"Go ad-free with our PRO version! ;)";
     #else
         NSLog(@"Pro version");
+        [iRate sharedInstance].message = @"Your ratings help us improve :)";
     #endif
     
     return YES;

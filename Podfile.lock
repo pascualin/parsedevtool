@@ -11,6 +11,7 @@ PODS:
   - GoogleAnalytics-iOS-SDK (3.12):
     - GoogleAnalytics-iOS-SDK/Core (= 3.12)
   - GoogleAnalytics-iOS-SDK/Core (3.12)
+  - iRate (1.11.4)
   - MBProgressHUD (0.9.1)
   - MGSwipeTableCell (1.4.3)
   - Parse (1.7.4):
@@ -28,6 +29,7 @@ DEPENDENCIES:
   - Google-Maps-iOS-SDK
   - Google-Mobile-Ads-SDK
   - GoogleAnalytics-iOS-SDK
+  - iRate
   - MBProgressHUD
   - MGSwipeTableCell
   - Parse
@@ -41,6 +43,7 @@ SPEC CHECKSUMS:
   Google-Maps-iOS-SDK: 4c008abdb68e03ae125c7f674be841d369e2b3de
   Google-Mobile-Ads-SDK: 3647bfddc7384c514ab96a8bed86d98b31e623e4
   GoogleAnalytics-iOS-SDK: 0a3327a993b8ed2b8fe1c6c4a8dcf5b76d2237a8
+  iRate: 599ed07c854e0695f3c605d1b2a64c67d912acb7
   MBProgressHUD: c47f2c166c126cf2ce36498d80f33e754d4e93ad
   MGSwipeTableCell: cb9805df3cc5cad75ad43a5c1eb424be0316f0bf
   Parse: 6ca512c6e860b66739c95151b2f76ac4712b7842

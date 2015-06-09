@@ -15,6 +15,7 @@ pod 'MBProgressHUD'
 pod 'PNChart'
 pod 'CJPAdController'
 pod 'MGSwipeTableCell'
+pod 'iRate'
 
 link_with "ParseDevToolFree"
 link_with "ParseDevToolPro"

@@ -60,10 +60,12 @@ install_resource()
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_resource "Google-Maps-iOS-SDK/GoogleMaps.framework/Versions/A/Resources/GoogleMaps.bundle"
   install_resource "ParseUI/ParseUI/Resources/Localization/en.lproj"
+  install_resource "iRate/iRate/iRate.bundle"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_resource "Google-Maps-iOS-SDK/GoogleMaps.framework/Versions/A/Resources/GoogleMaps.bundle"
   install_resource "ParseUI/ParseUI/Resources/Localization/en.lproj"
+  install_resource "iRate/iRate/iRate.bundle"
 fi
 
 rsync -avr --copy-links --no-relative --exclude '*/.svn/*' --files-from="$RESOURCES_TO_COPY" / "${CONFIGURATION_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}"
