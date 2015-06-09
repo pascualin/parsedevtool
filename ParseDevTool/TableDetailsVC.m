@@ -187,6 +187,7 @@
     static NSString *cellIdentifier = @"FinalItemCell";
     
     FinalItemCell* cell = (FinalItemCell *)[tableView dequeueReusableCellWithIdentifier:cellIdentifier];
+    
     if (cell == nil){
         NSArray *topLevelObjects = [[NSBundle mainBundle] loadNibNamed:@"FinalItemCell" owner:self options:nil];
         cell = [topLevelObjects objectAtIndex:0];
