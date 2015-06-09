@@ -52,7 +52,7 @@
         
         if (self.parseApp)
         {
-            newParseApp = self.parseApp;
+            newParseApp = (NSManagedObject*) self.parseApp;
         }
         else
         {
@@ -89,11 +89,6 @@
 - (IBAction)cancelSave:(id)sender
 {
     [self.presentingViewController dismissViewControllerAnimated:YES completion:nil];
-}
-
--(UIBarPosition)positionForBar:(id<UIBarPositioning>)bar
-{    
-    return UIBarPositionTopAttached;
 }
 
 - (BOOL)shouldAutorotate {

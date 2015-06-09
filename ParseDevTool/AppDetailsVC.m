@@ -130,9 +130,8 @@
     }
     else if ([segue.identifier isEqualToString:@"toAddTable"])
     {
-        AddTableVC *addTableVC = segue.destinationViewController;
+        AddTableVC *addTableVC = [[segue.destinationViewController viewControllers] objectAtIndex:0];
         addTableVC.parseApp = self.parseApp;
-        addTableVC.title = @"Add Table";
     }
 }
 

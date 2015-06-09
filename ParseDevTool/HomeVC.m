@@ -53,7 +53,6 @@
     [super viewDidLoad];
     
     self.dataSource = [[NSMutableArray alloc] init];
-    
     [self refresh];
 }
 
@@ -133,10 +132,10 @@
         ParseAppViewCell* cell = (ParseAppViewCell*)sender;
         appDetailsVC.parseApp = cell.parseApp;
         appDetailsVC.title = [appDetailsVC.parseApp valueForKey:@"name"];
-    } if ([segue.identifier isEqualToString:@"toAddApp"]){
-        AddParseAppVC *addParseAppVC = segue.destinationViewController;
-        if (![sender isKindOfClass:[UIBarButtonItem class]])
-        {
+    } if ([segue.identifier isEqualToString:@"toAddApp"])
+    {
+        AddParseAppVC *addParseAppVC = [[segue.destinationViewController viewControllers] objectAtIndex:0];
+        if (![sender isKindOfClass:[UIBarButtonItem class]]){
             addParseAppVC.parseApp = sender;
         }
     }
