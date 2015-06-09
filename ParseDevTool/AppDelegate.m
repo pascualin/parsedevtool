@@ -15,6 +15,7 @@
 #import "NWNavigationVC.h"
 #import "HomeVC.h"
 #import <iRate.h>
+#import "NWUtils.h"
 
 @interface AppDelegate ()
 
@@ -61,6 +62,8 @@
         NSLog(@"Pro version");
         [iRate sharedInstance].message = @"Your ratings help us improve :)";
     #endif
+    
+    [NWUtils instance];
     
     return YES;
 }

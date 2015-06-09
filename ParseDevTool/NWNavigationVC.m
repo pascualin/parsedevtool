@@ -17,7 +17,8 @@
 
 @implementation NWNavigationVC
 
-- (void)viewDidLoad {
+- (void)viewDidLoad
+{
     [super viewDidLoad];
 
     [[UINavigationBar appearance] setTintColor:[UIColor whiteColor]];
@@ -25,16 +26,13 @@
     [[UIBarButtonItem appearance] setBackButtonBackgroundImage:[UIImage imageNamed:@"1422885925_back-48.png"] forState:UIControlStateNormal barMetrics:UIBarMetricsDefault];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
-- (BOOL)shouldAutorotate {
+- (BOOL)shouldAutorotate
+{
     return NO;
 }
 
-- (NSUInteger)supportedInterfaceOrientations {
+- (NSUInteger)supportedInterfaceOrientations
+{
     return self.topViewController.supportedInterfaceOrientations;
 }
 

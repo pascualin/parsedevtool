@@ -57,6 +57,8 @@
 		5934164E1A7B6FFE00503B58 /* NWBaseTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 5934164D1A7B6FFE00503B58 /* NWBaseTVC.m */; };
 		593416511A7B709700503B58 /* NWBaseQTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 593416501A7B709700503B58 /* NWBaseQTVC.m */; };
 		5935AE4D1A7B4CD2006637A5 /* EditTableVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 5935AE4C1A7B4CD2006637A5 /* EditTableVC.m */; };
+		5951757B1B26D7900014B8CC /* NWUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 5951757A1B26D7900014B8CC /* NWUtils.m */; };
+		5951757C1B26D7900014B8CC /* NWUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 5951757A1B26D7900014B8CC /* NWUtils.m */; };
 		595D1A671A753E60002E9AD3 /* NWMapVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 595D1A661A753E60002E9AD3 /* NWMapVC.m */; };
 		597DEEBB1A77A56800737CC7 /* LargeTextVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 597DEEBA1A77A56800737CC7 /* LargeTextVC.m */; };
 		59C590E31A76236C00046063 /* NWChartView.m in Sources */ = {isa = PBXBuildFile; fileRef = 59C590E21A76236C00046063 /* NWChartView.m */; };
@@ -113,6 +115,9 @@
 		593416501A7B709700503B58 /* NWBaseQTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NWBaseQTVC.m; sourceTree = "<group>"; };
 		5935AE4B1A7B4CD2006637A5 /* EditTableVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditTableVC.h; sourceTree = "<group>"; };
 		5935AE4C1A7B4CD2006637A5 /* EditTableVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditTableVC.m; sourceTree = "<group>"; };
+		595175791B26D7900014B8CC /* NWUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NWUtils.h; sourceTree = "<group>"; };
+		5951757A1B26D7900014B8CC /* NWUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NWUtils.m; sourceTree = "<group>"; };
+		5951757D1B26DC060014B8CC /* AdsDisplayController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdsDisplayController.h; sourceTree = "<group>"; };
 		595D1A651A753E60002E9AD3 /* NWMapVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NWMapVC.h; sourceTree = "<group>"; };
 		595D1A661A753E60002E9AD3 /* NWMapVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NWMapVC.m; sourceTree = "<group>"; };
 		597DEEB91A77A56800737CC7 /* LargeTextVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LargeTextVC.h; sourceTree = "<group>"; };
@@ -307,12 +312,15 @@
 		593416481A7B6D6300503B58 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				595175791B26D7900014B8CC /* NWUtils.h */,
+				5951757A1B26D7900014B8CC /* NWUtils.m */,
 				593416491A7B6D7700503B58 /* NWBaseVC.h */,
 				5934164A1A7B6D7700503B58 /* NWBaseVC.m */,
 				5934164C1A7B6FFE00503B58 /* NWBaseTVC.h */,
 				5934164D1A7B6FFE00503B58 /* NWBaseTVC.m */,
 				5934164F1A7B709700503B58 /* NWBaseQTVC.h */,
 				593416501A7B709700503B58 /* NWBaseQTVC.m */,
+				5951757D1B26DC060014B8CC /* AdsDisplayController.h */,
 			);
 			name = Utils;
 			sourceTree = "<group>";
@@ -593,6 +601,7 @@
 			files = (
 				146369E11A807A65006F044C /* LargeTextVC.m in Sources */,
 				146369E21A807A65006F044C /* TableCell.m in Sources */,
+				5951757C1B26D7900014B8CC /* NWUtils.m in Sources */,
 				146369E31A807A65006F044C /* AddTableVC.m in Sources */,
 				146369E41A807A65006F044C /* PropertyCell.m in Sources */,
 				146369E51A807A65006F044C /* NWChartVC.m in Sources */,
@@ -623,6 +632,7 @@
 			files = (
 				597DEEBB1A77A56800737CC7 /* LargeTextVC.m in Sources */,
 				591E141A1A6510200034FCB1 /* TableCell.m in Sources */,
+				5951757B1B26D7900014B8CC /* NWUtils.m in Sources */,
 				591E141D1A6512DD0034FCB1 /* AddTableVC.m in Sources */,
 				59D1F89A1A65764700F36839 /* PropertyCell.m in Sources */,
 				592CDEB41A77374500B70490 /* NWChartVC.m in Sources */,

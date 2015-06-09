@@ -11,10 +11,13 @@
 #import <Parse/Parse.h>
 #import "ItemDetailVC.h"
 #import "EditTableVC.h"
+#import "NWUtils.h"
+#import "AdsDisplayController.h"
 
-@interface TableDetailsVC ()
+@interface TableDetailsVC () <AdsDisplayController>
 
 @property BOOL isScreenActive;
+@property BOOL isShowingAd;
 
 @end
 
@@ -22,7 +25,14 @@
 
 - (NSUInteger)supportedInterfaceOrientations
 {
-    return UIInterfaceOrientationMaskPortrait;
+    if(!self.isShowingAd)
+    {
+        return UIInterfaceOrientationMaskPortrait;
+    }
+    else
+    {
+        return (UIInterfaceOrientationMaskPortrait | UIInterfaceOrientationMaskLandscapeRight | UIInterfaceOrientationMaskLandscapeLeft);
+    }
 }
 
 - (id)initWithStyle:(UITableViewStyle)style
@@ -37,10 +47,44 @@
     return self;
 }
 
+- (void)startListeningToOrientationChanges
+{
+    [self.tableView setSeparatorStyle:UITableViewCellSeparatorStyleSingleLine];
+    [[UIDevice currentDevice] beginGeneratingDeviceOrientationNotifications];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(orientationChanged:) name:UIDeviceOrientationDidChangeNotification object:[UIDevice currentDevice]];
+}
+
 -(void)viewDidLoad
 {
-    self.parseClassName = [self.parseTable valueForKey:@"name"];
+    NWUtils* utils = [NWUtils instance];
     
+    #ifdef ISFREE
+        NSLog(@"Free version - Full screen ads");
+        NSInteger totalDisplays = [[NSUserDefaults standardUserDefaults] integerForKey:@"totalFullScreenAdsDisplayed"];
+        if (!totalDisplays)
+        {
+            totalDisplays = 0;
+        }
+
+        double rest = fmod(totalDisplays, 10.0f);
+        [utils incrementAdsCount];
+        
+        if (rest == 0)
+        {
+            if ([utils.interstitial isReady])
+            {
+                self.isShowingAd = YES;
+                utils.adDisplayController = self;
+                [utils.interstitial presentFromRootViewController:self];
+            }
+        }
+    #else
+        NSLog(@"Pro version - No full screen ads");
+    #endif
+    
+    [self startListeningToOrientationChanges];
+    
+    self.parseClassName = [self.parseTable valueForKey:@"name"];
     self.paginationEnabled = YES;
     self.objectsPerPage = 1000;
     
@@ -57,14 +101,11 @@
     }
     
     [super viewDidLoad];
-    [self.tableView setSeparatorStyle:UITableViewCellSeparatorStyleSingleLine];
-    [[UIDevice currentDevice] beginGeneratingDeviceOrientationNotifications];
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(orientationChanged:) name:UIDeviceOrientationDidChangeNotification object:[UIDevice currentDevice]];
 }
 
 - (void) orientationChanged:(NSNotification *)note
 {
-    if (self.isScreenActive)
+    if (self.isScreenActive && !self.isShowingAd)
     {
         UIDevice * device = note.object;
         switch(device.orientation)
@@ -228,6 +269,14 @@
         editTableVC.parseApp = self.parseApp;
         self.isScreenActive = NO;
     }
+}
+
+-(void)performClosedAdsAction
+{
+    self.isShowingAd = NO;
+    self.isScreenActive = YES;
+    NSNumber *value = [NSNumber numberWithInt:UIInterfaceOrientationPortrait];
+    [[UIDevice currentDevice] setValue:value forKey:@"orientation"];
 }
 
 @end

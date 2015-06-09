@@ -23,12 +23,13 @@
 
 @synthesize parseApp;
 
-- (NSUInteger)supportedInterfaceOrientations
-{
-    return UIInterfaceOrientationMaskPortrait;
-}
+//- (NSUInteger)supportedInterfaceOrientations
+//{
+//    return UIInterfaceOrientationMaskPortrait;
+//}
 
-- (void)refresh {
+- (void)refresh
+{
     [self.dataSource removeAllObjects];
     
     // We need to retrieve the data for the app again
@@ -43,7 +44,8 @@
     [self.tableView reloadData];
 }
 
-- (void)viewDidLoad {
+- (void)viewDidLoad
+{
     [super viewDidLoad];
     
     self.dataSource = [[NSMutableArray alloc] init];

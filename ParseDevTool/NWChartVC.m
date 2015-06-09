@@ -11,13 +11,13 @@
 @interface NWChartVC ()
 
 @property BOOL isChartLoaded;
+
 @end
 
 @implementation NWChartVC
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
     // Do any additional setup after loading the view.
     self.chartView.objects = self.objects;
     
