@@ -265,7 +265,7 @@
     }
     if ([segue.identifier isEqualToString:@"toEditTable"])
     {
-        EditClassDetail *editTableVC = segue.destinationViewController;
+        EditClassDetail *editTableVC = [[segue.destinationViewController viewControllers] objectAtIndex:0];
         editTableVC.parseTable = self.parseTable;
         editTableVC.parseApp = self.parseApp;
         self.isScreenActive = NO;

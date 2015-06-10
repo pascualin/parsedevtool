@@ -48,11 +48,6 @@
     [self.presentingViewController dismissViewControllerAnimated:YES completion:nil];
 }
 
--(UIBarPosition)positionForBar:(id<UIBarPositioning>)bar
-{
-    return UIBarPositionTopAttached;
-}
-
 - (BOOL)shouldAutorotate {
     return NO;
 }
