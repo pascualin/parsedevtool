@@ -45,7 +45,7 @@
     NSInteger totalDisplays = [[NSUserDefaults standardUserDefaults] integerForKey:@"totalFullScreenAdsDisplayed"];
     totalDisplays++;
     [[NSUserDefaults standardUserDefaults] setInteger:totalDisplays forKey:@"totalFullScreenAdsDisplayed"];
-    NSLog([NSString stringWithFormat:@"Full screen ads scenarios count: %li", totalDisplays]);
+    //NSLog([NSString stringWithFormat:@"Full screen ads scenarios count: %li", totalDisplays]);
 }
 
 @end
