@@ -6,9 +6,9 @@
 //  Copyright (c) 2015 Niceway. All rights reserved.
 //
 
-#import "TableCell.h"
+#import "ClassCell.h"
 
-@implementation TableCell
+@implementation ClassCell
 
 - (void)awakeFromNib {
     // Initialization code

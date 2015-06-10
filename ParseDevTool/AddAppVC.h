@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "NWBaseVC.h"
 
-@interface AddParseAppVC : NWBaseVC <UIBarPositioningDelegate, UITextFieldDelegate>
+@interface AddAppVC : NWBaseVC <UIBarPositioningDelegate, UITextFieldDelegate>
 
 @property (weak, nonatomic) IBOutlet UITextField *txtApplicationName;
 @property (weak, nonatomic) IBOutlet UITextField *txtApplicationId;

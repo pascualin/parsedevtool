@@ -6,20 +6,20 @@
 //  Copyright (c) 2015 Niceway. All rights reserved.
 //
 
-#import "HomeVC.h"
+#import "ParseAppTVC.h"
 #import "AppDelegate.h"
-#import "ParseAppViewCell.h"
-#import "AppDetailsVC.h"
-#import "AddParseAppVC.h"
+#import "ParseAppCell.h"
+#import "ParseAppClassTVC.h"
+#import "AddAppVC.h"
 #import <MGSwipeTableCell/MGSwipeButton.h>
 
-@interface HomeVC ()
+@interface ParseAppTVC ()
 
 @property (strong, nonatomic) NSMutableArray* dataSource;
 
 @end
 
-@implementation HomeVC
+@implementation ParseAppTVC
 
 - (void)refresh
 {
@@ -69,7 +69,7 @@
     
     static NSString *cellIdentifier = @"ParseAppCell";
     
-    ParseAppViewCell* cell = (ParseAppViewCell *)[tableView dequeueReusableCellWithIdentifier:cellIdentifier];
+    ParseAppCell* cell = (ParseAppCell *)[tableView dequeueReusableCellWithIdentifier:cellIdentifier];
     if (cell == nil){
         NSArray *topLevelObjects = [[NSBundle mainBundle] loadNibNamed:@"ParseAppViewCell" owner:self options:nil];
         cell = [topLevelObjects objectAtIndex:0];
@@ -102,7 +102,7 @@
 
 -(BOOL) swipeTableCell:(MGSwipeTableCell*) cell tappedButtonAtIndex:(NSInteger) index direction:(MGSwipeDirection)direction fromExpansion:(BOOL) fromExpansion
 {
-    NSManagedObject* parseApp = (NSManagedObject*)((ParseAppViewCell*)cell).parseApp;
+    NSManagedObject* parseApp = (NSManagedObject*)((ParseAppCell*)cell).parseApp;
     
     if (index == 0){
         // Trigger Delete
@@ -128,13 +128,13 @@
 {
     if ([segue.identifier isEqualToString:@"toAppDetails"])
     {
-        AppDetailsVC *appDetailsVC = segue.destinationViewController;
-        ParseAppViewCell* cell = (ParseAppViewCell*)sender;
+        ParseAppClassTVC *appDetailsVC = segue.destinationViewController;
+        ParseAppCell* cell = (ParseAppCell*)sender;
         appDetailsVC.parseApp = cell.parseApp;
         appDetailsVC.title = [appDetailsVC.parseApp valueForKey:@"name"];
     } if ([segue.identifier isEqualToString:@"toAddApp"])
     {
-        AddParseAppVC *addParseAppVC = [[segue.destinationViewController viewControllers] objectAtIndex:0];
+        AddAppVC *addParseAppVC = [[segue.destinationViewController viewControllers] objectAtIndex:0];
         if (![sender isKindOfClass:[UIBarButtonItem class]]){
             addParseAppVC.parseApp = sender;
         }

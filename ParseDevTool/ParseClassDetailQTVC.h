@@ -13,7 +13,7 @@
 #import "PNChartLabel.h"
 #import "NWBaseQTVC.h"
 
-@interface TableDetailsVC : NWBaseQTVC
+@interface ParseClassDetailQTVC : NWBaseQTVC
 
 @property (strong, nonatomic) NSObject* parseTable;
 @property (strong, nonatomic) NSObject* parseApp;

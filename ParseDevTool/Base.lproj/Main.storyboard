@@ -29,7 +29,7 @@
         <!--Add Parse App-->
         <scene sceneID="xzW-eI-u1U">
             <objects>
-                <viewController id="KSX-UR-W3e" customClass="AddParseAppVC" sceneMemberID="viewController">
+                <viewController id="KSX-UR-W3e" customClass="AddAppVC" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="RGO-Ed-i6s"/>
                         <viewControllerLayoutGuide type="bottom" id="Rl3-R6-p44"/>
@@ -121,13 +121,13 @@
         <!--Parse Dev Tool-->
         <scene sceneID="gHD-v3-MKg">
             <objects>
-                <tableViewController id="6vL-5z-OiP" customClass="HomeVC" sceneMemberID="viewController">
+                <tableViewController id="6vL-5z-OiP" customClass="ParseAppTVC" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="OBf-P9-jv7">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.95686274509803926" alpha="1" colorSpace="calibratedRGB"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="ParseAppCell" textLabel="dPc-W5-VTu" style="IBUITableViewCellStyleDefault" id="MWn-9G-a1B" customClass="ParseAppViewCell">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="ParseAppCell" textLabel="dPc-W5-VTu" style="IBUITableViewCellStyleDefault" id="MWn-9G-a1B" customClass="ParseAppCell">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="MWn-9G-a1B" id="K6k-29-hz5">
                                     <autoresizingMask key="autoresizingMask"/>
@@ -168,13 +168,13 @@
         <!--Class-->
         <scene sceneID="MHI-oH-Z2o">
             <objects>
-                <tableViewController id="bwg-OR-nV4" customClass="AppDetailsVC" sceneMemberID="viewController">
+                <tableViewController id="bwg-OR-nV4" customClass="ParseAppClassTVC" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="NAu-K9-IfZ">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.95686274509803926" alpha="1" colorSpace="calibratedRGB"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="TableCell" textLabel="OF9-Sn-vGX" style="IBUITableViewCellStyleDefault" id="a0w-pc-SVT" customClass="TableCell">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="TableCell" textLabel="OF9-Sn-vGX" style="IBUITableViewCellStyleDefault" id="a0w-pc-SVT" customClass="ClassCell">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="a0w-pc-SVT" id="CTb-FQ-exr">
                                     <autoresizingMask key="autoresizingMask"/>
@@ -232,7 +232,7 @@
         <!--Title-->
         <scene sceneID="335-JG-diy">
             <objects>
-                <viewController storyboardIdentifier="TableDetailsVC" id="OcK-xW-zFB" customClass="TableDetailsVC" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="TableDetailsVC" id="OcK-xW-zFB" customClass="ParseClassDetailQTVC" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="73" sectionHeaderHeight="22" sectionFooterHeight="22" id="kxG-WK-5pp">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -302,7 +302,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Scn-Rb-iFj" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <customObject id="sXK-dB-EPa" customClass="TableDetailsVC"/>
+                <customObject id="sXK-dB-EPa" customClass="ParseClassDetailQTVC"/>
             </objects>
             <point key="canvasLocation" x="1140" y="1392"/>
         </scene>
@@ -500,7 +500,7 @@
         <!--Add Class-->
         <scene sceneID="6AW-DV-dOI">
             <objects>
-                <viewController id="TbF-0D-cg8" customClass="AddTableVC" sceneMemberID="viewController">
+                <viewController id="TbF-0D-cg8" customClass="AddClassVC" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="9jG-QC-DDo"/>
                         <viewControllerLayoutGuide type="bottom" id="6eZ-nx-0Fw"/>
@@ -599,10 +599,10 @@
             </objects>
             <point key="canvasLocation" x="772" y="92"/>
         </scene>
-        <!--Edit TableVC-->
+        <!--Edit Class Detail-->
         <scene sceneID="mLm-mZ-dY4">
             <objects>
-                <viewController id="OFV-ez-99H" customClass="EditTableVC" sceneMemberID="viewController">
+                <viewController id="OFV-ez-99H" customClass="EditClassDetail" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="suY-4a-jqy"/>
                         <viewControllerLayoutGuide type="bottom" id="cs8-Sh-BKM"/>

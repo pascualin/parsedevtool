@@ -6,22 +6,22 @@
 //  Copyright (c) 2015 Niceway. All rights reserved.
 //
 
-#import "TableDetailsVC.h"
+#import "ParseClassDetailQTVC.h"
 #import "FinalItemCell.h"
 #import <Parse/Parse.h>
 #import "ItemDetailVC.h"
-#import "EditTableVC.h"
+#import "EditClassDetail.h"
 #import "NWUtils.h"
 #import "AdsDisplayController.h"
 
-@interface TableDetailsVC () <AdsDisplayController>
+@interface ParseClassDetailQTVC () <AdsDisplayController>
 
 @property BOOL isScreenActive;
 @property BOOL isShowingAd;
 
 @end
 
-@implementation TableDetailsVC
+@implementation ParseClassDetailQTVC
 
 - (NSUInteger)supportedInterfaceOrientations
 {
@@ -265,7 +265,7 @@
     }
     if ([segue.identifier isEqualToString:@"toEditTable"])
     {
-        EditTableVC *editTableVC = segue.destinationViewController;
+        EditClassDetail *editTableVC = segue.destinationViewController;
         editTableVC.parseTable = self.parseTable;
         editTableVC.parseApp = self.parseApp;
         self.isScreenActive = NO;

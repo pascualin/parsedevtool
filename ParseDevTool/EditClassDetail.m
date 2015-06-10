@@ -6,14 +6,14 @@
 //  Copyright (c) 2015 Niceway. All rights reserved.
 //
 
-#import "EditTableVC.h"
+#import "EditClassDetail.h"
 #import "AppDelegate.h"
 
-@interface EditTableVC ()
+@interface EditClassDetail ()
 
 @end
 
-@implementation EditTableVC
+@implementation EditClassDetail
 
 - (void)viewDidLoad
 {

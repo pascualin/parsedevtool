@@ -9,26 +9,26 @@
 /* Begin PBXBuildFile section */
 		0D4397EAD74968096EE47032 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DFF007E25191009BC811568 /* libPods.a */; };
 		146369E11A807A65006F044C /* LargeTextVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 597DEEBA1A77A56800737CC7 /* LargeTextVC.m */; };
-		146369E21A807A65006F044C /* TableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 591E14191A6510200034FCB1 /* TableCell.m */; };
-		146369E31A807A65006F044C /* AddTableVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 591E141C1A6512DD0034FCB1 /* AddTableVC.m */; };
+		146369E21A807A65006F044C /* ClassCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 591E14191A6510200034FCB1 /* ClassCell.m */; };
+		146369E31A807A65006F044C /* AddClassVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 591E141C1A6512DD0034FCB1 /* AddClassVC.m */; };
 		146369E41A807A65006F044C /* PropertyCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 59D1F8991A65764700F36839 /* PropertyCell.m */; };
 		146369E51A807A65006F044C /* NWChartVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 592CDEB31A77374500B70490 /* NWChartVC.m */; };
 		146369E61A807A65006F044C /* ParseDevTool.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 591E11381A5F7F2D00044F39 /* ParseDevTool.xcdatamodeld */; };
-		146369E71A807A65006F044C /* AddParseAppVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 592A3FC21A64BB1E0077C0CB /* AddParseAppVC.m */; };
+		146369E71A807A65006F044C /* AddAppVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 592A3FC21A64BB1E0077C0CB /* AddAppVC.m */; };
 		146369E81A807A65006F044C /* NWBaseQTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 593416501A7B709700503B58 /* NWBaseQTVC.m */; };
 		146369E91A807A65006F044C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 591E11361A5F7F2D00044F39 /* AppDelegate.m */; };
 		146369EA1A807A65006F044C /* NWNavigationVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 14A9CC431A7A264400B1C0EA /* NWNavigationVC.m */; };
 		146369EB1A807A65006F044C /* NWChartView.m in Sources */ = {isa = PBXBuildFile; fileRef = 59C590E21A76236C00046063 /* NWChartView.m */; };
 		146369EC1A807A65006F044C /* NWMapVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 595D1A661A753E60002E9AD3 /* NWMapVC.m */; };
-		146369ED1A807A65006F044C /* EditTableVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 5935AE4C1A7B4CD2006637A5 /* EditTableVC.m */; };
+		146369ED1A807A65006F044C /* EditClassDetail.m in Sources */ = {isa = PBXBuildFile; fileRef = 5935AE4C1A7B4CD2006637A5 /* EditClassDetail.m */; };
 		146369EE1A807A65006F044C /* FinalItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 591E14201A651FA40034FCB1 /* FinalItemCell.m */; };
 		146369EF1A807A65006F044C /* NWBaseVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 5934164A1A7B6D7700503B58 /* NWBaseVC.m */; };
-		146369F01A807A65006F044C /* AppDetailsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 591E14131A64FAB90034FCB1 /* AppDetailsVC.m */; };
+		146369F01A807A65006F044C /* ParseAppClassTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 591E14131A64FAB90034FCB1 /* ParseAppClassTVC.m */; };
 		146369F11A807A65006F044C /* NWImageVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 5913DDAC1A755736005AD7DC /* NWImageVC.m */; };
-		146369F21A807A65006F044C /* ParseAppViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 591E14161A64FEDC0034FCB1 /* ParseAppViewCell.m */; };
+		146369F21A807A65006F044C /* ParseAppCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 591E14161A64FEDC0034FCB1 /* ParseAppCell.m */; };
 		146369F31A807A65006F044C /* ItemDetailVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 59D1F8961A65698500F36839 /* ItemDetailVC.m */; };
-		146369F41A807A65006F044C /* HomeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 591E113C1A5F7F2D00044F39 /* HomeVC.m */; };
-		146369F51A807A65006F044C /* TableDetailsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 592A3FC91A64BCC00077C0CB /* TableDetailsVC.m */; };
+		146369F41A807A65006F044C /* ParseAppTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 591E113C1A5F7F2D00044F39 /* ParseAppTVC.m */; };
+		146369F51A807A65006F044C /* ParseClassDetailQTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 592A3FC91A64BCC00077C0CB /* ParseClassDetailQTVC.m */; };
 		146369F61A807A65006F044C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 591E11331A5F7F2D00044F39 /* main.m */; };
 		146369F71A807A65006F044C /* NWBaseTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 5934164D1A7B6FFE00503B58 /* NWBaseTVC.m */; };
 		146369F91A807A65006F044C /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DFF007E25191009BC811568 /* libPods.a */; };
@@ -40,23 +40,23 @@
 		591E11341A5F7F2D00044F39 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 591E11331A5F7F2D00044F39 /* main.m */; };
 		591E11371A5F7F2D00044F39 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 591E11361A5F7F2D00044F39 /* AppDelegate.m */; };
 		591E113A1A5F7F2D00044F39 /* ParseDevTool.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 591E11381A5F7F2D00044F39 /* ParseDevTool.xcdatamodeld */; };
-		591E113D1A5F7F2D00044F39 /* HomeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 591E113C1A5F7F2D00044F39 /* HomeVC.m */; };
+		591E113D1A5F7F2D00044F39 /* ParseAppTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 591E113C1A5F7F2D00044F39 /* ParseAppTVC.m */; };
 		591E11401A5F7F2D00044F39 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 591E113E1A5F7F2D00044F39 /* Main.storyboard */; };
 		591E11421A5F7F2D00044F39 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 591E11411A5F7F2D00044F39 /* Images.xcassets */; };
 		591E11451A5F7F2D00044F39 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 591E11431A5F7F2D00044F39 /* LaunchScreen.xib */; };
 		591E11511A5F7F2D00044F39 /* ParseDevToolTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 591E11501A5F7F2D00044F39 /* ParseDevToolTests.m */; };
-		591E14141A64FAB90034FCB1 /* AppDetailsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 591E14131A64FAB90034FCB1 /* AppDetailsVC.m */; };
-		591E14171A64FEDC0034FCB1 /* ParseAppViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 591E14161A64FEDC0034FCB1 /* ParseAppViewCell.m */; };
-		591E141A1A6510200034FCB1 /* TableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 591E14191A6510200034FCB1 /* TableCell.m */; };
-		591E141D1A6512DD0034FCB1 /* AddTableVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 591E141C1A6512DD0034FCB1 /* AddTableVC.m */; };
+		591E14141A64FAB90034FCB1 /* ParseAppClassTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 591E14131A64FAB90034FCB1 /* ParseAppClassTVC.m */; };
+		591E14171A64FEDC0034FCB1 /* ParseAppCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 591E14161A64FEDC0034FCB1 /* ParseAppCell.m */; };
+		591E141A1A6510200034FCB1 /* ClassCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 591E14191A6510200034FCB1 /* ClassCell.m */; };
+		591E141D1A6512DD0034FCB1 /* AddClassVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 591E141C1A6512DD0034FCB1 /* AddClassVC.m */; };
 		591E14221A651FA40034FCB1 /* FinalItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 591E14201A651FA40034FCB1 /* FinalItemCell.m */; };
-		592A3FC31A64BB1E0077C0CB /* AddParseAppVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 592A3FC21A64BB1E0077C0CB /* AddParseAppVC.m */; };
-		592A3FCA1A64BCC00077C0CB /* TableDetailsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 592A3FC91A64BCC00077C0CB /* TableDetailsVC.m */; };
+		592A3FC31A64BB1E0077C0CB /* AddAppVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 592A3FC21A64BB1E0077C0CB /* AddAppVC.m */; };
+		592A3FCA1A64BCC00077C0CB /* ParseClassDetailQTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 592A3FC91A64BCC00077C0CB /* ParseClassDetailQTVC.m */; };
 		592CDEB41A77374500B70490 /* NWChartVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 592CDEB31A77374500B70490 /* NWChartVC.m */; };
 		5934164B1A7B6D7700503B58 /* NWBaseVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 5934164A1A7B6D7700503B58 /* NWBaseVC.m */; };
 		5934164E1A7B6FFE00503B58 /* NWBaseTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 5934164D1A7B6FFE00503B58 /* NWBaseTVC.m */; };
 		593416511A7B709700503B58 /* NWBaseQTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 593416501A7B709700503B58 /* NWBaseQTVC.m */; };
-		5935AE4D1A7B4CD2006637A5 /* EditTableVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 5935AE4C1A7B4CD2006637A5 /* EditTableVC.m */; };
+		5935AE4D1A7B4CD2006637A5 /* EditClassDetail.m in Sources */ = {isa = PBXBuildFile; fileRef = 5935AE4C1A7B4CD2006637A5 /* EditClassDetail.m */; };
 		5951757B1B26D7900014B8CC /* NWUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 5951757A1B26D7900014B8CC /* NWUtils.m */; };
 		5951757C1B26D7900014B8CC /* NWUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 5951757A1B26D7900014B8CC /* NWUtils.m */; };
 		595D1A671A753E60002E9AD3 /* NWMapVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 595D1A661A753E60002E9AD3 /* NWMapVC.m */; };
@@ -83,28 +83,28 @@
 		591E11351A5F7F2D00044F39 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		591E11361A5F7F2D00044F39 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		591E11391A5F7F2D00044F39 /* ParseDevTool.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ParseDevTool.xcdatamodel; sourceTree = "<group>"; };
-		591E113B1A5F7F2D00044F39 /* HomeVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeVC.h; sourceTree = "<group>"; };
-		591E113C1A5F7F2D00044F39 /* HomeVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeVC.m; sourceTree = "<group>"; };
+		591E113B1A5F7F2D00044F39 /* ParseAppTVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ParseAppTVC.h; sourceTree = "<group>"; };
+		591E113C1A5F7F2D00044F39 /* ParseAppTVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ParseAppTVC.m; sourceTree = "<group>"; };
 		591E113F1A5F7F2D00044F39 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		591E11411A5F7F2D00044F39 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		591E11441A5F7F2D00044F39 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		591E114A1A5F7F2D00044F39 /* ParseDevToolTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ParseDevToolTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		591E114F1A5F7F2D00044F39 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		591E11501A5F7F2D00044F39 /* ParseDevToolTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ParseDevToolTests.m; sourceTree = "<group>"; };
-		591E14121A64FAB90034FCB1 /* AppDetailsVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDetailsVC.h; sourceTree = "<group>"; };
-		591E14131A64FAB90034FCB1 /* AppDetailsVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDetailsVC.m; sourceTree = "<group>"; };
-		591E14151A64FEDC0034FCB1 /* ParseAppViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParseAppViewCell.h; sourceTree = "<group>"; };
-		591E14161A64FEDC0034FCB1 /* ParseAppViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ParseAppViewCell.m; sourceTree = "<group>"; };
-		591E14181A6510200034FCB1 /* TableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableCell.h; sourceTree = "<group>"; };
-		591E14191A6510200034FCB1 /* TableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableCell.m; sourceTree = "<group>"; };
-		591E141B1A6512DD0034FCB1 /* AddTableVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddTableVC.h; sourceTree = "<group>"; };
-		591E141C1A6512DD0034FCB1 /* AddTableVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddTableVC.m; sourceTree = "<group>"; };
+		591E14121A64FAB90034FCB1 /* ParseAppClassTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParseAppClassTVC.h; sourceTree = "<group>"; };
+		591E14131A64FAB90034FCB1 /* ParseAppClassTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ParseAppClassTVC.m; sourceTree = "<group>"; };
+		591E14151A64FEDC0034FCB1 /* ParseAppCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParseAppCell.h; sourceTree = "<group>"; };
+		591E14161A64FEDC0034FCB1 /* ParseAppCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ParseAppCell.m; sourceTree = "<group>"; };
+		591E14181A6510200034FCB1 /* ClassCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClassCell.h; sourceTree = "<group>"; };
+		591E14191A6510200034FCB1 /* ClassCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClassCell.m; sourceTree = "<group>"; };
+		591E141B1A6512DD0034FCB1 /* AddClassVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddClassVC.h; sourceTree = "<group>"; };
+		591E141C1A6512DD0034FCB1 /* AddClassVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddClassVC.m; sourceTree = "<group>"; };
 		591E141F1A651FA40034FCB1 /* FinalItemCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FinalItemCell.h; sourceTree = "<group>"; };
 		591E14201A651FA40034FCB1 /* FinalItemCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FinalItemCell.m; sourceTree = "<group>"; };
-		592A3FC11A64BB1E0077C0CB /* AddParseAppVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddParseAppVC.h; sourceTree = "<group>"; };
-		592A3FC21A64BB1E0077C0CB /* AddParseAppVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddParseAppVC.m; sourceTree = "<group>"; };
-		592A3FC81A64BCC00077C0CB /* TableDetailsVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableDetailsVC.h; sourceTree = "<group>"; };
-		592A3FC91A64BCC00077C0CB /* TableDetailsVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableDetailsVC.m; sourceTree = "<group>"; };
+		592A3FC11A64BB1E0077C0CB /* AddAppVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddAppVC.h; sourceTree = "<group>"; };
+		592A3FC21A64BB1E0077C0CB /* AddAppVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddAppVC.m; sourceTree = "<group>"; };
+		592A3FC81A64BCC00077C0CB /* ParseClassDetailQTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParseClassDetailQTVC.h; sourceTree = "<group>"; };
+		592A3FC91A64BCC00077C0CB /* ParseClassDetailQTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ParseClassDetailQTVC.m; sourceTree = "<group>"; };
 		592CDEB21A77374500B70490 /* NWChartVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NWChartVC.h; sourceTree = "<group>"; };
 		592CDEB31A77374500B70490 /* NWChartVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NWChartVC.m; sourceTree = "<group>"; };
 		593416491A7B6D7700503B58 /* NWBaseVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NWBaseVC.h; sourceTree = "<group>"; };
@@ -113,8 +113,8 @@
 		5934164D1A7B6FFE00503B58 /* NWBaseTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NWBaseTVC.m; sourceTree = "<group>"; };
 		5934164F1A7B709700503B58 /* NWBaseQTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NWBaseQTVC.h; sourceTree = "<group>"; };
 		593416501A7B709700503B58 /* NWBaseQTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NWBaseQTVC.m; sourceTree = "<group>"; };
-		5935AE4B1A7B4CD2006637A5 /* EditTableVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditTableVC.h; sourceTree = "<group>"; };
-		5935AE4C1A7B4CD2006637A5 /* EditTableVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditTableVC.m; sourceTree = "<group>"; };
+		5935AE4B1A7B4CD2006637A5 /* EditClassDetail.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditClassDetail.h; sourceTree = "<group>"; };
+		5935AE4C1A7B4CD2006637A5 /* EditClassDetail.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditClassDetail.m; sourceTree = "<group>"; };
 		595175791B26D7900014B8CC /* NWUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NWUtils.h; sourceTree = "<group>"; };
 		5951757A1B26D7900014B8CC /* NWUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NWUtils.m; sourceTree = "<group>"; };
 		5951757D1B26DC060014B8CC /* AdsDisplayController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdsDisplayController.h; sourceTree = "<group>"; };
@@ -163,11 +163,11 @@
 		14AD181D1B27C37D006797A7 /* ParseApp */ = {
 			isa = PBXGroup;
 			children = (
-				592A3FC01A64BAED0077C0CB /* Add Parse App */,
-				591E113B1A5F7F2D00044F39 /* HomeVC.h */,
-				591E113C1A5F7F2D00044F39 /* HomeVC.m */,
-				591E14151A64FEDC0034FCB1 /* ParseAppViewCell.h */,
-				591E14161A64FEDC0034FCB1 /* ParseAppViewCell.m */,
+				592A3FC01A64BAED0077C0CB /* Add App */,
+				591E113B1A5F7F2D00044F39 /* ParseAppTVC.h */,
+				591E113C1A5F7F2D00044F39 /* ParseAppTVC.m */,
+				591E14151A64FEDC0034FCB1 /* ParseAppCell.h */,
+				591E14161A64FEDC0034FCB1 /* ParseAppCell.m */,
 			);
 			name = ParseApp;
 			sourceTree = "<group>";
@@ -229,7 +229,7 @@
 				593416481A7B6D6300503B58 /* Utils */,
 				14AD181D1B27C37D006797A7 /* ParseApp */,
 				591E14111A64FA970034FCB1 /* ParseClass */,
-				592A3FC71A64BCAD0077C0CB /* ParseColumn */,
+				592A3FC71A64BCAD0077C0CB /* ParseClassDetail */,
 				59D1F8941A65696500F36839 /* ParseObject */,
 				591E11351A5F7F2D00044F39 /* AppDelegate.h */,
 				591E11361A5F7F2D00044F39 /* AppDelegate.m */,
@@ -274,44 +274,44 @@
 		591E14111A64FA970034FCB1 /* ParseClass */ = {
 			isa = PBXGroup;
 			children = (
-				591E141E1A6512E20034FCB1 /* Add Parse Class */,
-				591E14121A64FAB90034FCB1 /* AppDetailsVC.h */,
-				591E14131A64FAB90034FCB1 /* AppDetailsVC.m */,
-				591E14181A6510200034FCB1 /* TableCell.h */,
-				591E14191A6510200034FCB1 /* TableCell.m */,
+				591E141E1A6512E20034FCB1 /* Add Class */,
+				591E14121A64FAB90034FCB1 /* ParseAppClassTVC.h */,
+				591E14131A64FAB90034FCB1 /* ParseAppClassTVC.m */,
+				591E14181A6510200034FCB1 /* ClassCell.h */,
+				591E14191A6510200034FCB1 /* ClassCell.m */,
 			);
 			name = ParseClass;
 			sourceTree = "<group>";
 		};
-		591E141E1A6512E20034FCB1 /* Add Parse Class */ = {
+		591E141E1A6512E20034FCB1 /* Add Class */ = {
 			isa = PBXGroup;
 			children = (
-				591E141B1A6512DD0034FCB1 /* AddTableVC.h */,
-				591E141C1A6512DD0034FCB1 /* AddTableVC.m */,
+				591E141B1A6512DD0034FCB1 /* AddClassVC.h */,
+				591E141C1A6512DD0034FCB1 /* AddClassVC.m */,
 			);
-			name = "Add Parse Class";
+			name = "Add Class";
 			sourceTree = "<group>";
 		};
-		592A3FC01A64BAED0077C0CB /* Add Parse App */ = {
+		592A3FC01A64BAED0077C0CB /* Add App */ = {
 			isa = PBXGroup;
 			children = (
-				592A3FC11A64BB1E0077C0CB /* AddParseAppVC.h */,
-				592A3FC21A64BB1E0077C0CB /* AddParseAppVC.m */,
+				592A3FC11A64BB1E0077C0CB /* AddAppVC.h */,
+				592A3FC21A64BB1E0077C0CB /* AddAppVC.m */,
 			);
-			name = "Add Parse App";
+			name = "Add App";
 			sourceTree = "<group>";
 		};
-		592A3FC71A64BCAD0077C0CB /* ParseColumn */ = {
+		592A3FC71A64BCAD0077C0CB /* ParseClassDetail */ = {
 			isa = PBXGroup;
 			children = (
-				5935AE4A1A7B4CBF006637A5 /* Edit Table */,
+				5935AE4A1A7B4CBF006637A5 /* Edit Class Detail */,
 				59C590E01A76234300046063 /* Chart */,
-				592A3FC81A64BCC00077C0CB /* TableDetailsVC.h */,
-				592A3FC91A64BCC00077C0CB /* TableDetailsVC.m */,
+				592A3FC81A64BCC00077C0CB /* ParseClassDetailQTVC.h */,
+				592A3FC91A64BCC00077C0CB /* ParseClassDetailQTVC.m */,
 				591E141F1A651FA40034FCB1 /* FinalItemCell.h */,
 				591E14201A651FA40034FCB1 /* FinalItemCell.m */,
 			);
-			name = ParseColumn;
+			name = ParseClassDetail;
 			sourceTree = "<group>";
 		};
 		593416481A7B6D6300503B58 /* Utils */ = {
@@ -330,13 +330,13 @@
 			name = Utils;
 			sourceTree = "<group>";
 		};
-		5935AE4A1A7B4CBF006637A5 /* Edit Table */ = {
+		5935AE4A1A7B4CBF006637A5 /* Edit Class Detail */ = {
 			isa = PBXGroup;
 			children = (
-				5935AE4B1A7B4CD2006637A5 /* EditTableVC.h */,
-				5935AE4C1A7B4CD2006637A5 /* EditTableVC.m */,
+				5935AE4B1A7B4CD2006637A5 /* EditClassDetail.h */,
+				5935AE4C1A7B4CD2006637A5 /* EditClassDetail.m */,
 			);
-			name = "Edit Table";
+			name = "Edit Class Detail";
 			sourceTree = "<group>";
 		};
 		595D1A641A753E18002E9AD3 /* Location */ = {
@@ -608,27 +608,27 @@
 			buildActionMask = 2147483647;
 			files = (
 				146369E11A807A65006F044C /* LargeTextVC.m in Sources */,
-				146369E21A807A65006F044C /* TableCell.m in Sources */,
+				146369E21A807A65006F044C /* ClassCell.m in Sources */,
 				5951757C1B26D7900014B8CC /* NWUtils.m in Sources */,
-				146369E31A807A65006F044C /* AddTableVC.m in Sources */,
+				146369E31A807A65006F044C /* AddClassVC.m in Sources */,
 				146369E41A807A65006F044C /* PropertyCell.m in Sources */,
 				146369E51A807A65006F044C /* NWChartVC.m in Sources */,
 				146369E61A807A65006F044C /* ParseDevTool.xcdatamodeld in Sources */,
-				146369E71A807A65006F044C /* AddParseAppVC.m in Sources */,
+				146369E71A807A65006F044C /* AddAppVC.m in Sources */,
 				146369E81A807A65006F044C /* NWBaseQTVC.m in Sources */,
 				146369E91A807A65006F044C /* AppDelegate.m in Sources */,
 				146369EA1A807A65006F044C /* NWNavigationVC.m in Sources */,
 				146369EB1A807A65006F044C /* NWChartView.m in Sources */,
 				146369EC1A807A65006F044C /* NWMapVC.m in Sources */,
-				146369ED1A807A65006F044C /* EditTableVC.m in Sources */,
+				146369ED1A807A65006F044C /* EditClassDetail.m in Sources */,
 				146369EE1A807A65006F044C /* FinalItemCell.m in Sources */,
 				146369EF1A807A65006F044C /* NWBaseVC.m in Sources */,
-				146369F01A807A65006F044C /* AppDetailsVC.m in Sources */,
+				146369F01A807A65006F044C /* ParseAppClassTVC.m in Sources */,
 				146369F11A807A65006F044C /* NWImageVC.m in Sources */,
-				146369F21A807A65006F044C /* ParseAppViewCell.m in Sources */,
+				146369F21A807A65006F044C /* ParseAppCell.m in Sources */,
 				146369F31A807A65006F044C /* ItemDetailVC.m in Sources */,
-				146369F41A807A65006F044C /* HomeVC.m in Sources */,
-				146369F51A807A65006F044C /* TableDetailsVC.m in Sources */,
+				146369F41A807A65006F044C /* ParseAppTVC.m in Sources */,
+				146369F51A807A65006F044C /* ParseClassDetailQTVC.m in Sources */,
 				146369F61A807A65006F044C /* main.m in Sources */,
 				146369F71A807A65006F044C /* NWBaseTVC.m in Sources */,
 			);
@@ -639,27 +639,27 @@
 			buildActionMask = 2147483647;
 			files = (
 				597DEEBB1A77A56800737CC7 /* LargeTextVC.m in Sources */,
-				591E141A1A6510200034FCB1 /* TableCell.m in Sources */,
+				591E141A1A6510200034FCB1 /* ClassCell.m in Sources */,
 				5951757B1B26D7900014B8CC /* NWUtils.m in Sources */,
-				591E141D1A6512DD0034FCB1 /* AddTableVC.m in Sources */,
+				591E141D1A6512DD0034FCB1 /* AddClassVC.m in Sources */,
 				59D1F89A1A65764700F36839 /* PropertyCell.m in Sources */,
 				592CDEB41A77374500B70490 /* NWChartVC.m in Sources */,
 				591E113A1A5F7F2D00044F39 /* ParseDevTool.xcdatamodeld in Sources */,
-				592A3FC31A64BB1E0077C0CB /* AddParseAppVC.m in Sources */,
+				592A3FC31A64BB1E0077C0CB /* AddAppVC.m in Sources */,
 				593416511A7B709700503B58 /* NWBaseQTVC.m in Sources */,
 				591E11371A5F7F2D00044F39 /* AppDelegate.m in Sources */,
 				14A9CC441A7A264400B1C0EA /* NWNavigationVC.m in Sources */,
 				59C590E31A76236C00046063 /* NWChartView.m in Sources */,
 				595D1A671A753E60002E9AD3 /* NWMapVC.m in Sources */,
-				5935AE4D1A7B4CD2006637A5 /* EditTableVC.m in Sources */,
+				5935AE4D1A7B4CD2006637A5 /* EditClassDetail.m in Sources */,
 				591E14221A651FA40034FCB1 /* FinalItemCell.m in Sources */,
 				5934164B1A7B6D7700503B58 /* NWBaseVC.m in Sources */,
-				591E14141A64FAB90034FCB1 /* AppDetailsVC.m in Sources */,
+				591E14141A64FAB90034FCB1 /* ParseAppClassTVC.m in Sources */,
 				5913DDAD1A755736005AD7DC /* NWImageVC.m in Sources */,
-				591E14171A64FEDC0034FCB1 /* ParseAppViewCell.m in Sources */,
+				591E14171A64FEDC0034FCB1 /* ParseAppCell.m in Sources */,
 				59D1F8971A65698500F36839 /* ItemDetailVC.m in Sources */,
-				591E113D1A5F7F2D00044F39 /* HomeVC.m in Sources */,
-				592A3FCA1A64BCC00077C0CB /* TableDetailsVC.m in Sources */,
+				591E113D1A5F7F2D00044F39 /* ParseAppTVC.m in Sources */,
+				592A3FCA1A64BCC00077C0CB /* ParseClassDetailQTVC.m in Sources */,
 				591E11341A5F7F2D00044F39 /* main.m in Sources */,
 				5934164E1A7B6FFE00503B58 /* NWBaseTVC.m in Sources */,
 			);

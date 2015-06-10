@@ -6,9 +6,9 @@
 //  Copyright (c) 2015 Niceway. All rights reserved.
 //
 
-#import "ParseAppViewCell.h"
+#import "ParseAppCell.h"
 
-@implementation ParseAppViewCell
+@implementation ParseAppCell
 
 - (void)awakeFromNib {
     // Initialization code

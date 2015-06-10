@@ -6,14 +6,14 @@
 //  Copyright (c) 2015 Niceway. All rights reserved.
 //
 
-#import "AddTableVC.h"
+#import "AddClassVC.h"
 #import "AppDelegate.h"
 
-@interface AddTableVC ()
+@interface AddClassVC ()
 
 @end
 
-@implementation AddTableVC
+@implementation AddClassVC
 
 -(void)viewDidLoad{
     [super viewDidLoad];

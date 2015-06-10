@@ -7,7 +7,7 @@
 //
 
 #import "ItemDetailVC.h"
-#import "TableDetailsVC.h"
+#import "ParseClassDetailQTVC.h"
 #import "PropertyCell.h"
 #import "NWMapVC.h"
 #import "NWImageVC.h"
@@ -168,7 +168,7 @@
     else if (cell.relation)
     {
         //Relation
-        TableDetailsVC *tableDetailVC =
+        ParseClassDetailQTVC *tableDetailVC =
         [[UIStoryboard storyboardWithName:@"Main"
                                    bundle:NULL] instantiateViewControllerWithIdentifier:@"TableDetailsVC"];
         
@@ -220,7 +220,7 @@
     }
     else if ([segue.identifier isEqualToString:@"toArray"])
     {
-        TableDetailsVC* arrayController = segue.destinationViewController;
+        ParseClassDetailQTVC* arrayController = segue.destinationViewController;
         arrayController.isArray = YES;
         arrayController.array = self.array;
         PFObject* item;

@@ -10,7 +10,7 @@
 #import "NWBaseTVC.h"
 #import <MGSwipeTableCell/MGSwipeTableCell.h>
 
-@interface HomeVC : NWBaseTVC <UITableViewDelegate, UITableViewDataSource, MGSwipeTableCellDelegate>
+@interface ParseAppTVC : NWBaseTVC <UITableViewDelegate, UITableViewDataSource, MGSwipeTableCellDelegate>
 
 @end
 

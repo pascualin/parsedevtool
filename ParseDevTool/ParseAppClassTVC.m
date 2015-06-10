@@ -6,20 +6,20 @@
 //  Copyright (c) 2015 Niceway. All rights reserved.
 //
 
-#import "AppDetailsVC.h"
+#import "ParseAppClassTVC.h"
 #import "AppDelegate.h"
-#import "TableCell.h"
-#import "TableDetailsVC.h"
-#import "AddTableVC.h"
+#import "ClassCell.h"
+#import "ParseClassDetailQTVC.h"
+#import "AddClassVC.h"
 #import <Parse/Parse.h>
 
-@interface AppDetailsVC ()
+@interface ParseAppClassTVC ()
 
 @property (strong, nonatomic) NSMutableArray* dataSource;
 
 @end
 
-@implementation AppDetailsVC
+@implementation ParseAppClassTVC
 
 @synthesize parseApp;
 
@@ -73,7 +73,7 @@
     
     static NSString *cellIdentifier = @"TableCell";
     
-    TableCell* cell = (TableCell *)[tableView dequeueReusableCellWithIdentifier:cellIdentifier];
+    ClassCell* cell = (ClassCell *)[tableView dequeueReusableCellWithIdentifier:cellIdentifier];
     if (cell == nil){
         NSArray *topLevelObjects = [[NSBundle mainBundle] loadNibNamed:@"TableCell" owner:self options:nil];
         cell = [topLevelObjects objectAtIndex:0];
@@ -120,8 +120,8 @@
 {
     if ([segue.identifier isEqualToString:@"toTableDetails"])
     {
-        TableDetailsVC *tableDetailVC = segue.destinationViewController;
-        TableCell* cell = (TableCell*)sender;
+        ParseClassDetailQTVC *tableDetailVC = segue.destinationViewController;
+        ClassCell* cell = (ClassCell*)sender;
         
         tableDetailVC.parseTable = cell.parseTable;
         tableDetailVC.parseApp = self.parseApp;
@@ -130,7 +130,7 @@
     }
     else if ([segue.identifier isEqualToString:@"toAddTable"])
     {
-        AddTableVC *addTableVC = [[segue.destinationViewController viewControllers] objectAtIndex:0];
+        AddClassVC *addTableVC = [[segue.destinationViewController viewControllers] objectAtIndex:0];
         addTableVC.parseApp = self.parseApp;
     }
 }

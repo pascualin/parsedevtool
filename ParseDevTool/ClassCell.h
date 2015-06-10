@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface TableCell : UITableViewCell
+@interface ClassCell : UITableViewCell
 
 @property (strong, nonatomic) NSObject* parseTable;
 @property (weak, nonatomic) IBOutlet UILabel *txtTitle;

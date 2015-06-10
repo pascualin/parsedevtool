@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "NWBaseTVC.h"
 
-@interface AppDetailsVC : NWBaseTVC
+@interface ParseAppClassTVC : NWBaseTVC
 
 @property (strong, nonatomic) NSObject* parseApp;
 

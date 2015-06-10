@@ -6,14 +6,14 @@
 //  Copyright (c) 2015 Niceway. All rights reserved.
 //
 
-#import "AddParseAppVC.h"
+#import "AddAppVC.h"
 #import "AppDelegate.h"
 
-@interface AddParseAppVC ()
+@interface AddAppVC ()
 
 @end
 
-@implementation AddParseAppVC
+@implementation AddAppVC
 
 - (void) viewDidLoad
 {

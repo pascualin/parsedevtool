@@ -13,7 +13,7 @@
 #import <Fabric/Fabric.h>
 #import "CJPAdController.h"
 #import "NWNavigationVC.h"
-#import "HomeVC.h"
+#import "ParseAppTVC.h"
 #import <iRate.h>
 #import "NWUtils.h"
 
