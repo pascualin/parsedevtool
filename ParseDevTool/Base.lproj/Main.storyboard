@@ -268,26 +268,41 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Title" id="yB5-dg-c9j">
                         <barButtonItem key="backBarButtonItem" title=" " id="tmM-IS-5K5"/>
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="rRN-PF-vx1">
+                            <view key="customView" contentMode="scaleToFill" id="SIg-da-TJg">
+                                <rect key="frame" x="0.0" y="0.0" width="71" height="33"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3oJ-oP-zWH">
+                                        <rect key="frame" x="0.0" y="-5" width="71" height="44"/>
+                                        <items>
+                                            <barButtonItem tag="1" image="1422882564_7" id="4wW-Hw-Lre">
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <connections>
+                                                    <segue destination="4f8-tg-nd0" kind="modal" identifier="toChart" modalTransitionStyle="crossDissolve" id="tYC-MW-tlF"/>
+                                                </connections>
+                                            </barButtonItem>
+                                            <barButtonItem image="1422882745_icon-ios7-gear-outline-128" id="56f-WI-k1Q">
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <connections>
+                                                    <segue destination="OFV-ez-99H" kind="modal" identifier="toEditTable" id="0gf-Oo-Nec"/>
+                                                </connections>
+                                            </barButtonItem>
+                                        </items>
+                                        <color key="barTintColor" red="0.2666666667" green="0.52941176469999995" blue="0.98431372549999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </toolbar>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outletCollection property="rightBarButtonItemsCollection" destination="56f-WI-k1Q" id="Dhk-RS-49k"/>
                         <outletCollection property="rightBarButtonItemsCollection" destination="4wW-Hw-Lre" id="rTJ-EY-lEE"/>
+                        <outletCollection property="rightBarButtonItemsCollection" destination="56f-WI-k1Q" id="Dhk-RS-49k"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Scn-Rb-iFj" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <customObject id="sXK-dB-EPa" customClass="TableDetailsVC"/>
-                <barButtonItem tag="1" image="1422882564_7" id="4wW-Hw-Lre">
-                    <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    <connections>
-                        <segue destination="4f8-tg-nd0" kind="modal" identifier="toChart" modalTransitionStyle="crossDissolve" id="tYC-MW-tlF"/>
-                    </connections>
-                </barButtonItem>
-                <barButtonItem image="1422882745_icon-ios7-gear-outline-128" id="56f-WI-k1Q">
-                    <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    <connections>
-                        <segue destination="OFV-ez-99H" kind="modal" identifier="toEditTable" id="0gf-Oo-Nec"/>
-                    </connections>
-                </barButtonItem>
             </objects>
             <point key="canvasLocation" x="1140" y="1392"/>
         </scene>
@@ -587,7 +602,6 @@
         <!--Edit TableVC-->
         <scene sceneID="mLm-mZ-dY4">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ztY-UV-MXJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="OFV-ez-99H" customClass="EditTableVC" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="suY-4a-jqy"/>
@@ -646,6 +660,7 @@
                         <outlet property="txtDisplayProperty" destination="BWD-Xw-Vde" id="t1h-DD-HHE"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ztY-UV-MXJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1506" y="1392"/>
         </scene>

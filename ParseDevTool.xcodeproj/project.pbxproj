@@ -160,6 +160,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		14AD181D1B27C37D006797A7 /* ParseApp */ = {
+			isa = PBXGroup;
+			children = (
+				592A3FC01A64BAED0077C0CB /* Add Parse App */,
+				591E113B1A5F7F2D00044F39 /* HomeVC.h */,
+				591E113C1A5F7F2D00044F39 /* HomeVC.m */,
+				591E14151A64FEDC0034FCB1 /* ParseAppViewCell.h */,
+				591E14161A64FEDC0034FCB1 /* ParseAppViewCell.m */,
+			);
+			name = ParseApp;
+			sourceTree = "<group>";
+		};
 		47DDF6172DC8AB81DB2CA3C9 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -215,24 +227,14 @@
 			isa = PBXGroup;
 			children = (
 				593416481A7B6D6300503B58 /* Utils */,
-				5935AE4A1A7B4CBF006637A5 /* Edit Table */,
-				597DEEB81A77A54000737CC7 /* LargeText */,
-				59C590E01A76234300046063 /* Chart */,
-				5913DDAA1A755717005AD7DC /* Image */,
-				595D1A641A753E18002E9AD3 /* Location */,
-				591E14111A64FA970034FCB1 /* App Details */,
-				592A3FC71A64BCAD0077C0CB /* Table Details */,
-				59D1F8941A65696500F36839 /* Item Details */,
-				592A3FC01A64BAED0077C0CB /* Add Parse App */,
-				591E141E1A6512E20034FCB1 /* Add Table */,
+				14AD181D1B27C37D006797A7 /* ParseApp */,
+				591E14111A64FA970034FCB1 /* ParseClass */,
+				592A3FC71A64BCAD0077C0CB /* ParseColumn */,
+				59D1F8941A65696500F36839 /* ParseObject */,
 				591E11351A5F7F2D00044F39 /* AppDelegate.h */,
 				591E11361A5F7F2D00044F39 /* AppDelegate.m */,
 				14A9CC421A7A264400B1C0EA /* NWNavigationVC.h */,
 				14A9CC431A7A264400B1C0EA /* NWNavigationVC.m */,
-				591E113B1A5F7F2D00044F39 /* HomeVC.h */,
-				591E113C1A5F7F2D00044F39 /* HomeVC.m */,
-				591E14151A64FEDC0034FCB1 /* ParseAppViewCell.h */,
-				591E14161A64FEDC0034FCB1 /* ParseAppViewCell.m */,
 				591E113E1A5F7F2D00044F39 /* Main.storyboard */,
 				591E11411A5F7F2D00044F39 /* Images.xcassets */,
 				591E11431A5F7F2D00044F39 /* LaunchScreen.xib */,
@@ -269,24 +271,25 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		591E14111A64FA970034FCB1 /* App Details */ = {
+		591E14111A64FA970034FCB1 /* ParseClass */ = {
 			isa = PBXGroup;
 			children = (
+				591E141E1A6512E20034FCB1 /* Add Parse Class */,
 				591E14121A64FAB90034FCB1 /* AppDetailsVC.h */,
 				591E14131A64FAB90034FCB1 /* AppDetailsVC.m */,
 				591E14181A6510200034FCB1 /* TableCell.h */,
 				591E14191A6510200034FCB1 /* TableCell.m */,
 			);
-			name = "App Details";
+			name = ParseClass;
 			sourceTree = "<group>";
 		};
-		591E141E1A6512E20034FCB1 /* Add Table */ = {
+		591E141E1A6512E20034FCB1 /* Add Parse Class */ = {
 			isa = PBXGroup;
 			children = (
 				591E141B1A6512DD0034FCB1 /* AddTableVC.h */,
 				591E141C1A6512DD0034FCB1 /* AddTableVC.m */,
 			);
-			name = "Add Table";
+			name = "Add Parse Class";
 			sourceTree = "<group>";
 		};
 		592A3FC01A64BAED0077C0CB /* Add Parse App */ = {
@@ -298,15 +301,17 @@
 			name = "Add Parse App";
 			sourceTree = "<group>";
 		};
-		592A3FC71A64BCAD0077C0CB /* Table Details */ = {
+		592A3FC71A64BCAD0077C0CB /* ParseColumn */ = {
 			isa = PBXGroup;
 			children = (
+				5935AE4A1A7B4CBF006637A5 /* Edit Table */,
+				59C590E01A76234300046063 /* Chart */,
 				592A3FC81A64BCC00077C0CB /* TableDetailsVC.h */,
 				592A3FC91A64BCC00077C0CB /* TableDetailsVC.m */,
 				591E141F1A651FA40034FCB1 /* FinalItemCell.h */,
 				591E14201A651FA40034FCB1 /* FinalItemCell.m */,
 			);
-			name = "Table Details";
+			name = ParseColumn;
 			sourceTree = "<group>";
 		};
 		593416481A7B6D6300503B58 /* Utils */ = {
@@ -363,15 +368,18 @@
 			name = Chart;
 			sourceTree = "<group>";
 		};
-		59D1F8941A65696500F36839 /* Item Details */ = {
+		59D1F8941A65696500F36839 /* ParseObject */ = {
 			isa = PBXGroup;
 			children = (
+				5913DDAA1A755717005AD7DC /* Image */,
+				597DEEB81A77A54000737CC7 /* LargeText */,
+				595D1A641A753E18002E9AD3 /* Location */,
 				59D1F8951A65698500F36839 /* ItemDetailVC.h */,
 				59D1F8961A65698500F36839 /* ItemDetailVC.m */,
 				59D1F8981A65764700F36839 /* PropertyCell.h */,
 				59D1F8991A65764700F36839 /* PropertyCell.m */,
 			);
-			name = "Item Details";
+			name = ParseObject;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
