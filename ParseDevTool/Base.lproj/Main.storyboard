@@ -234,7 +234,7 @@
             <objects>
                 <viewController storyboardIdentifier="TableDetailsVC" id="OcK-xW-zFB" customClass="ParseClassDetailQTVC" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="73" sectionHeaderHeight="22" sectionFooterHeight="22" id="kxG-WK-5pp">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
@@ -311,7 +311,7 @@
             <objects>
                 <tableViewController storyboardIdentifier="ItemDetailVC" id="5kP-Xz-J4t" customClass="ItemDetailVC" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="54" sectionHeaderHeight="22" sectionFooterHeight="22" id="qsu-wA-YWo">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
@@ -368,7 +368,7 @@
                         <viewControllerLayoutGuide type="bottom" id="aHe-nk-dBD"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="9XL-yR-ina">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -387,7 +387,7 @@
                         <viewControllerLayoutGuide type="bottom" id="YU1-ff-lmy"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="X7b-fq-nAI">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="J7b-74-gqq">
@@ -474,7 +474,7 @@
                         <viewControllerLayoutGuide type="bottom" id="Ige-Ge-4dT"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="VgZ-cq-q2Q">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1RD-0h-8qw" customClass="PFImageView">
@@ -625,7 +625,7 @@
                         <viewControllerLayoutGuide type="bottom" id="cs8-Sh-BKM"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="gyV-NK-vqR">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BWD-Xw-Vde">
@@ -680,6 +680,6 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="Q6j-bg-F6f"/>
+        <segue reference="DVe-JG-1Co"/>
     </inferredMetricsTieBreakers>
 </document>
