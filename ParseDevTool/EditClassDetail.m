@@ -22,25 +22,27 @@
     self.txtDisplayProperty.text = [self.parseTable valueForKey:@"displayProperty"];
 }
 
-
-- (IBAction)saveTable:(id)sender
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    AppDelegate* appDelegate = [[UIApplication sharedApplication] delegate];
-    NSManagedObjectContext* context = [appDelegate managedObjectContext];
-
-    if ([self.txtDisplayProperty.text length] > 0)
+    if([segue.identifier isEqualToString:@"updateClassDetail"])
     {
-        [self.parseTable setValue:self.txtDisplayProperty.text forKey:@"displayProperty"];
+        AppDelegate* appDelegate = [[UIApplication sharedApplication] delegate];
+        NSManagedObjectContext* context = [appDelegate managedObjectContext];
+        
+        if ([self.txtDisplayProperty.text length] > 0)
+        {
+            [self.parseTable setValue:self.txtDisplayProperty.text forKey:@"displayProperty"];
+        }
+        else
+        {
+            [self.parseTable setValue:@"objectId" forKey:@"displayProperty"];
+        }
+        
+        NSError* error;
+        [context save:&error];
+        
+        [self.presentingViewController dismissViewControllerAnimated:YES completion:nil];
     }
-    else
-    {
-        [self.parseTable setValue:@"objectId" forKey:@"displayProperty"];
-    }
-    
-    NSError* error;
-    [context save:&error];
-    
-    [self.presentingViewController dismissViewControllerAnimated:YES completion:nil];
 }
 
 - (IBAction)cancel:(id)sender

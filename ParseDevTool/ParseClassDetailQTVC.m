@@ -128,7 +128,6 @@
 {
     [super viewWillAppear:animated];
     self.isScreenActive = YES;
-    [self loadObjects];
 }
 
 -(void)objectsDidLoad:(NSError *)error
@@ -146,7 +145,8 @@
 
 }
 
-- (void) setRightBarButtonItemsCollection:(NSArray *)rightBarButtonItemsCollection {
+- (void) setRightBarButtonItemsCollection:(NSArray *)rightBarButtonItemsCollection
+{
     self.navigationItem.rightBarButtonItems = [rightBarButtonItemsCollection
                                 sortedArrayUsingDescriptors:@[[NSSortDescriptor sortDescriptorWithKey:@"tag" ascending:YES]]];
 }
@@ -269,6 +269,14 @@
         editTableVC.parseTable = self.parseTable;
         editTableVC.parseApp = self.parseApp;
         self.isScreenActive = NO;
+    }
+}
+
+- (IBAction)unwindToParseClassDetailQTVC:(UIStoryboardSegue *)unwindSegue
+{
+    if([unwindSegue.identifier isEqualToString:@"updateClassDetail"])
+    {
+        [self.tableView reloadData];
     }
 }
 
